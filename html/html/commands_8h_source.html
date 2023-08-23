@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Versionador: Código-Fonte de src/commands/commands.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Versionador<span id="projectnumber">&#160;2.0.0</span>
+   </div>
+   <div id="projectbrief">Estudo de Caso ED</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5e80d29b61c444378a543be4dd1414df.html">commands</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">commands.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="commands_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef COMMANDS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define COMMANDS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#a4d2dd7b285f4f229d11679504ccfcb07">iniciarVersionador</a>();</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#a93c490ef867a1689b406e2e266b494f9">adicionarArquivos</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]);</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keywordtype">char</span>* <a class="code hl_function" href="commands_8h.html#a7235c2a813b1ba295b85ec1d2826544d">registrarSnapshot</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* texto);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#aeaec5ecab3b57770fd335262a7d1ba8c">exibirLog</a>(<span class="keywordtype">int</span> showContent);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#a74d4a62a5cba5ec8e0ef9088ad347c2f">mostrarVersao</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* identificador);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#a8d155d6034bbd711c085c0cf28d08b48">mudarVersao</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* identificador);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#a35dabf1a4e62844344b1f73fbbf9cf91">reverterVersaoAtual</a>();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">void</span>  <a class="code hl_function" href="commands_8h.html#adcbd9e1523dfa92f3c6922e4cc682c2a">saveSnapshotFilesInContent</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* identifier);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#afa419d53953b8b69b8b62831ad8255a8">getLogsContent</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#a442c0d06b8e876525a559a55b1f31895">changeVersion</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* identifier);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#ae15e48fad77840a372296fb093cb0d58">restoreCurrentVersion</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#a2f1413d418f22031a626c9fb3538d29f">createBranch</a>(<span class="keywordtype">char</span>* name);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#aa74ecc1cbd9a93efe3dc1a9b2f36d9ec">removeBranch</a>(<span class="keywordtype">char</span>* branchName);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#ad666f9c17a62bc35e8de0c9dfbab1609">renameBranch</a>(<span class="keywordtype">char</span>* nameAtual,<span class="keywordtype">char</span>* novoNome);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#a83f539fd31fd40ba064eb8db9a42e99d">exibirLogInCommands</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="commands_8h.html#ad30cce477e9c4766a11231c73fff293d">mostrarLogInCommands</a>(<span class="keywordtype">char</span>* identifier);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif  </span><span class="comment">// COMMANDS_H</span></div>
+<div class="ttc" id="acommands_8h_html_a2f1413d418f22031a626c9fb3538d29f"><div class="ttname"><a href="commands_8h.html#a2f1413d418f22031a626c9fb3538d29f">createBranch</a></div><div class="ttdeci">void createBranch(char *name)</div><div class="ttdef"><b>Definição</b> commands.c:30</div></div>
+<div class="ttc" id="acommands_8h_html_a35dabf1a4e62844344b1f73fbbf9cf91"><div class="ttname"><a href="commands_8h.html#a35dabf1a4e62844344b1f73fbbf9cf91">reverterVersaoAtual</a></div><div class="ttdeci">void reverterVersaoAtual()</div><div class="ttdoc">Reverte a versão atual.</div><div class="ttdef"><b>Definição</b> commands.c:159</div></div>
+<div class="ttc" id="acommands_8h_html_a442c0d06b8e876525a559a55b1f31895"><div class="ttname"><a href="commands_8h.html#a442c0d06b8e876525a559a55b1f31895">changeVersion</a></div><div class="ttdeci">void changeVersion(const char *identifier)</div><div class="ttdoc">Muda para uma versão específica.</div><div class="ttdef"><b>Definição</b> commands.c:226</div></div>
+<div class="ttc" id="acommands_8h_html_a4d2dd7b285f4f229d11679504ccfcb07"><div class="ttname"><a href="commands_8h.html#a4d2dd7b285f4f229d11679504ccfcb07">iniciarVersionador</a></div><div class="ttdeci">void iniciarVersionador()</div><div class="ttdoc">Inicia o versionador.</div><div class="ttdef"><b>Definição</b> commands.c:16</div></div>
+<div class="ttc" id="acommands_8h_html_a7235c2a813b1ba295b85ec1d2826544d"><div class="ttname"><a href="commands_8h.html#a7235c2a813b1ba295b85ec1d2826544d">registrarSnapshot</a></div><div class="ttdeci">char * registrarSnapshot(const char *texto)</div><div class="ttdoc">Registra um snapshot.</div><div class="ttdef"><b>Definição</b> commands.c:93</div></div>
+<div class="ttc" id="acommands_8h_html_a74d4a62a5cba5ec8e0ef9088ad347c2f"><div class="ttname"><a href="commands_8h.html#a74d4a62a5cba5ec8e0ef9088ad347c2f">mostrarVersao</a></div><div class="ttdeci">void mostrarVersao(const char *identificador)</div><div class="ttdoc">Mostra o conteúdo de uma versão específica.</div><div class="ttdef"><b>Definição</b> commands.c:131</div></div>
+<div class="ttc" id="acommands_8h_html_a83f539fd31fd40ba064eb8db9a42e99d"><div class="ttname"><a href="commands_8h.html#a83f539fd31fd40ba064eb8db9a42e99d">exibirLogInCommands</a></div><div class="ttdeci">void exibirLogInCommands()</div><div class="ttdef"><b>Definição</b> commands.c:333</div></div>
+<div class="ttc" id="acommands_8h_html_a8d155d6034bbd711c085c0cf28d08b48"><div class="ttname"><a href="commands_8h.html#a8d155d6034bbd711c085c0cf28d08b48">mudarVersao</a></div><div class="ttdeci">void mudarVersao(const char *identificador)</div><div class="ttdoc">Muda para uma versão específica.</div><div class="ttdef"><b>Definição</b> commands.c:144</div></div>
+<div class="ttc" id="acommands_8h_html_a93c490ef867a1689b406e2e266b494f9"><div class="ttname"><a href="commands_8h.html#a93c490ef867a1689b406e2e266b494f9">adicionarArquivos</a></div><div class="ttdeci">void adicionarArquivos(int argc, char *argv[])</div><div class="ttdoc">Adiciona arquivos ao snapshot.</div><div class="ttdef"><b>Definição</b> commands.c:72</div></div>
+<div class="ttc" id="acommands_8h_html_aa74ecc1cbd9a93efe3dc1a9b2f36d9ec"><div class="ttname"><a href="commands_8h.html#aa74ecc1cbd9a93efe3dc1a9b2f36d9ec">removeBranch</a></div><div class="ttdeci">void removeBranch(char *branchName)</div><div class="ttdef"><b>Definição</b> commands.c:21</div></div>
+<div class="ttc" id="acommands_8h_html_ad30cce477e9c4766a11231c73fff293d"><div class="ttname"><a href="commands_8h.html#ad30cce477e9c4766a11231c73fff293d">mostrarLogInCommands</a></div><div class="ttdeci">void mostrarLogInCommands(char *identifier)</div><div class="ttdef"><b>Definição</b> commands.c:322</div></div>
+<div class="ttc" id="acommands_8h_html_ad666f9c17a62bc35e8de0c9dfbab1609"><div class="ttname"><a href="commands_8h.html#ad666f9c17a62bc35e8de0c9dfbab1609">renameBranch</a></div><div class="ttdeci">void renameBranch(char *nameAtual, char *novoNome)</div><div class="ttdef"><b>Definição</b> commands.c:25</div></div>
+<div class="ttc" id="acommands_8h_html_adcbd9e1523dfa92f3c6922e4cc682c2a"><div class="ttname"><a href="commands_8h.html#adcbd9e1523dfa92f3c6922e4cc682c2a">saveSnapshotFilesInContent</a></div><div class="ttdeci">void saveSnapshotFilesInContent(const char *identifier)</div><div class="ttdoc">Salva os arquivos do snapshot no conteúdo.</div><div class="ttdef"><b>Definição</b> commands.c:175</div></div>
+<div class="ttc" id="acommands_8h_html_ae15e48fad77840a372296fb093cb0d58"><div class="ttname"><a href="commands_8h.html#ae15e48fad77840a372296fb093cb0d58">restoreCurrentVersion</a></div><div class="ttdeci">void restoreCurrentVersion()</div><div class="ttdoc">Restaura a versão atual.</div><div class="ttdef"><b>Definição</b> commands.c:281</div></div>
+<div class="ttc" id="acommands_8h_html_aeaec5ecab3b57770fd335262a7d1ba8c"><div class="ttname"><a href="commands_8h.html#aeaec5ecab3b57770fd335262a7d1ba8c">exibirLog</a></div><div class="ttdeci">void exibirLog(int showContent)</div><div class="ttdoc">Exibe o log do versionador.</div><div class="ttdef"><b>Definição</b> commands.c:108</div></div>
+<div class="ttc" id="acommands_8h_html_afa419d53953b8b69b8b62831ad8255a8"><div class="ttname"><a href="commands_8h.html#afa419d53953b8b69b8b62831ad8255a8">getLogsContent</a></div><div class="ttdeci">void getLogsContent()</div><div class="ttdoc">Obtém o conteúdo dos logs.</div><div class="ttdef"><b>Definição</b> commands.c:208</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

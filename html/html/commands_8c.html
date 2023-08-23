@@ -1,0 +1,788 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Versionador: Referência do Arquivo src/commands/commands.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Versionador<span id="projectnumber">&#160;2.0.0</span>
+   </div>
+   <div id="projectbrief">Estudo de Caso ED</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5e80d29b61c444378a543be4dd1414df.html">commands</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo commands.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="commands_8h_source.html">commands.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">../utils/utils.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="database_8h_source.html">../database/database.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lista_8h_source.html">../utils/lista.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arvore_8h_source.html">../utils/arvore.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a4d2dd7b285f4f229d11679504ccfcb07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#a4d2dd7b285f4f229d11679504ccfcb07">iniciarVersionador</a> ()</td></tr>
+<tr class="memdesc:a4d2dd7b285f4f229d11679504ccfcb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia o versionador.  <br /></td></tr>
+<tr class="separator:a4d2dd7b285f4f229d11679504ccfcb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74ecc1cbd9a93efe3dc1a9b2f36d9ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#aa74ecc1cbd9a93efe3dc1a9b2f36d9ec">removeBranch</a> (char *branchName)</td></tr>
+<tr class="separator:aa74ecc1cbd9a93efe3dc1a9b2f36d9ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad666f9c17a62bc35e8de0c9dfbab1609"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#ad666f9c17a62bc35e8de0c9dfbab1609">renameBranch</a> (char *nameAtual, char *novoNome)</td></tr>
+<tr class="separator:ad666f9c17a62bc35e8de0c9dfbab1609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1413d418f22031a626c9fb3538d29f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#a2f1413d418f22031a626c9fb3538d29f">createBranch</a> (char *name)</td></tr>
+<tr class="separator:a2f1413d418f22031a626c9fb3538d29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c490ef867a1689b406e2e266b494f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#a93c490ef867a1689b406e2e266b494f9">adicionarArquivos</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a93c490ef867a1689b406e2e266b494f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona arquivos ao snapshot.  <br /></td></tr>
+<tr class="separator:a93c490ef867a1689b406e2e266b494f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7235c2a813b1ba295b85ec1d2826544d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#a7235c2a813b1ba295b85ec1d2826544d">registrarSnapshot</a> (const char *texto)</td></tr>
+<tr class="memdesc:a7235c2a813b1ba295b85ec1d2826544d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registra um snapshot.  <br /></td></tr>
+<tr class="separator:a7235c2a813b1ba295b85ec1d2826544d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaec5ecab3b57770fd335262a7d1ba8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#aeaec5ecab3b57770fd335262a7d1ba8c">exibirLog</a> (int showContent)</td></tr>
+<tr class="memdesc:aeaec5ecab3b57770fd335262a7d1ba8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe o log do versionador.  <br /></td></tr>
+<tr class="separator:aeaec5ecab3b57770fd335262a7d1ba8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d4a62a5cba5ec8e0ef9088ad347c2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#a74d4a62a5cba5ec8e0ef9088ad347c2f">mostrarVersao</a> (const char *identificador)</td></tr>
+<tr class="memdesc:a74d4a62a5cba5ec8e0ef9088ad347c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mostra o conteúdo de uma versão específica.  <br /></td></tr>
+<tr class="separator:a74d4a62a5cba5ec8e0ef9088ad347c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d155d6034bbd711c085c0cf28d08b48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#a8d155d6034bbd711c085c0cf28d08b48">mudarVersao</a> (const char *identificador)</td></tr>
+<tr class="memdesc:a8d155d6034bbd711c085c0cf28d08b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muda para uma versão específica.  <br /></td></tr>
+<tr class="separator:a8d155d6034bbd711c085c0cf28d08b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35dabf1a4e62844344b1f73fbbf9cf91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#a35dabf1a4e62844344b1f73fbbf9cf91">reverterVersaoAtual</a> ()</td></tr>
+<tr class="memdesc:a35dabf1a4e62844344b1f73fbbf9cf91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverte a versão atual.  <br /></td></tr>
+<tr class="separator:a35dabf1a4e62844344b1f73fbbf9cf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbd9e1523dfa92f3c6922e4cc682c2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#adcbd9e1523dfa92f3c6922e4cc682c2a">saveSnapshotFilesInContent</a> (const char *identifier)</td></tr>
+<tr class="memdesc:adcbd9e1523dfa92f3c6922e4cc682c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salva os arquivos do snapshot no conteúdo.  <br /></td></tr>
+<tr class="separator:adcbd9e1523dfa92f3c6922e4cc682c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa419d53953b8b69b8b62831ad8255a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#afa419d53953b8b69b8b62831ad8255a8">getLogsContent</a> ()</td></tr>
+<tr class="memdesc:afa419d53953b8b69b8b62831ad8255a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o conteúdo dos logs.  <br /></td></tr>
+<tr class="separator:afa419d53953b8b69b8b62831ad8255a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a442c0d06b8e876525a559a55b1f31895"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#a442c0d06b8e876525a559a55b1f31895">changeVersion</a> (const char *identifier)</td></tr>
+<tr class="memdesc:a442c0d06b8e876525a559a55b1f31895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muda para uma versão específica.  <br /></td></tr>
+<tr class="separator:a442c0d06b8e876525a559a55b1f31895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae15e48fad77840a372296fb093cb0d58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#ae15e48fad77840a372296fb093cb0d58">restoreCurrentVersion</a> ()</td></tr>
+<tr class="memdesc:ae15e48fad77840a372296fb093cb0d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restaura a versão atual.  <br /></td></tr>
+<tr class="separator:ae15e48fad77840a372296fb093cb0d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad30cce477e9c4766a11231c73fff293d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#ad30cce477e9c4766a11231c73fff293d">mostrarLogInCommands</a> (char *identifier)</td></tr>
+<tr class="separator:ad30cce477e9c4766a11231c73fff293d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83f539fd31fd40ba064eb8db9a42e99d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands_8c.html#a83f539fd31fd40ba064eb8db9a42e99d">exibirLogInCommands</a> ()</td></tr>
+<tr class="separator:a83f539fd31fd40ba064eb8db9a42e99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funções</h2>
+<a id="a93c490ef867a1689b406e2e266b494f9" name="a93c490ef867a1689b406e2e266b494f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93c490ef867a1689b406e2e266b494f9">&#9670;&#160;</a></span>adicionarArquivos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void adicionarArquivos </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona arquivos ao snapshot. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Número de argumentos. </td></tr>
+    <tr><td class="paramname">argv</td><td>Vetor de argumentos contendo os nomes dos arquivos.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Percorre os argumentos passados e verifica se cada arquivo existe. Se o arquivo existir, adiciona ao snapshot e exibe uma mensagem de sucesso. Caso contrário, exibe uma mensagem informando que o arquivo não foi encontrado. </p>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                               {</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; argc; i++) {</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="util_8c.html#a5c3fee518af0ba8b435624e66e850f73">fileExists</a>(argv[i])) {</div>
+<div class="line"><span class="lineno">   75</span>            <a class="code hl_function" href="database_8c.html#a01f7156b1678fabe1036805c30758279">addFileToSnapshot</a>(argv[i]);</div>
+<div class="line"><span class="lineno">   76</span>            <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(<span class="stringliteral">&quot;Arquivo adicionado com sucesso.&quot;</span>);</div>
+<div class="line"><span class="lineno">   77</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   78</span>            printf(<span class="stringliteral">&quot;Arquivo não encontrado: %s&quot;</span>, argv[i]);</div>
+<div class="line"><span class="lineno">   79</span>        }</div>
+<div class="line"><span class="lineno">   80</span>    }</div>
+<div class="line"><span class="lineno">   81</span>}</div>
+<div class="ttc" id="adatabase_8c_html_a01f7156b1678fabe1036805c30758279"><div class="ttname"><a href="database_8c.html#a01f7156b1678fabe1036805c30758279">addFileToSnapshot</a></div><div class="ttdeci">void addFileToSnapshot(const char *filename)</div><div class="ttdoc">Adiciona um arquivo ao próximo snapshot.</div><div class="ttdef"><b>Definição</b> database.c:205</div></div>
+<div class="ttc" id="autil_8c_html_a2ecc69cced4dcf1393217677224d08b7"><div class="ttname"><a href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a></div><div class="ttdeci">void printInfo(const char *message)</div><div class="ttdoc">Imprime uma mensagem de informação.</div><div class="ttdef"><b>Definição</b> util.c:37</div></div>
+<div class="ttc" id="autil_8c_html_a5c3fee518af0ba8b435624e66e850f73"><div class="ttname"><a href="util_8c.html#a5c3fee518af0ba8b435624e66e850f73">fileExists</a></div><div class="ttdeci">int fileExists(const char *filename)</div><div class="ttdoc">Verifica se um arquivo existe.</div><div class="ttdef"><b>Definição</b> util.c:228</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a442c0d06b8e876525a559a55b1f31895" name="a442c0d06b8e876525a559a55b1f31895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a442c0d06b8e876525a559a55b1f31895">&#9670;&#160;</a></span>changeVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void changeVersion </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>identifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muda para uma versão específica. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Identificador da versão.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Verifica se a versão com o identificador informado existe. Se existir, muda para essa versão. Caso contrário, exibe uma mensagem informando que a versão não existe. Faz um backup dos arquivos atuais em uma pasta temporária. Restaura os arquivos da versão especificada. </p>
+<div class="fragment"><div class="line"><span class="lineno">  226</span>                                           {</div>
+<div class="line"><span class="lineno">  227</span>    <span class="comment">// Mudar para a versão com o identificador especificado</span></div>
+<div class="line"><span class="lineno">  228</span>    <span class="comment">// Salvar um backup dos arquivos atuais em uma pasta temporária</span></div>
+<div class="line"><span class="lineno">  229</span>    <span class="comment">// Restaurar os arquivos da versão com o identificador especificado</span></div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>    <span class="comment">// Verificar se a versão com o identificador especificado existe</span></div>
+<div class="line"><span class="lineno">  232</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="database_8c.html#a83b41657c512e3ecaf7590cacffd1788">versionExists</a>(identifier)) {</div>
+<div class="line"><span class="lineno">  233</span>        printf(<span class="stringliteral">&quot;A versão %s não existe.\n&quot;</span>, identifier);</div>
+<div class="line"><span class="lineno">  234</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  235</span>    }</div>
+<div class="line"><span class="lineno">  236</span> </div>
+<div class="line"><span class="lineno">  237</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="database_8c.html#a6d77151ddd12d32300de275deb0415f5">directoryExists</a>(<span class="stringliteral">&quot;.versionador/backup&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  238</span>        <a class="code hl_function" href="database_8c.html#a7c3ec9acd7bc538ce658dd6b8d5072cf">removeDirectory</a>(<span class="stringliteral">&quot;.versionador/backup&quot;</span>);</div>
+<div class="line"><span class="lineno">  239</span>    }</div>
+<div class="line"><span class="lineno">  240</span> </div>
+<div class="line"><span class="lineno">  241</span>    <a class="code hl_function" href="util_8c.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a>(<span class="stringliteral">&quot;.versionador/backup&quot;</span>);    </div>
+<div class="line"><span class="lineno">  242</span>    </div>
+<div class="line"><span class="lineno">  243</span>    <a class="code hl_struct" href="struct_tree_node.html">TreeNode</a>* root = <a class="code hl_function" href="arvore_8c.html#a27196c126bea1ebdd05d3c9eb42e48d6">createTree</a>(<span class="stringliteral">&quot;.versionador/content/dados.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  244</span>    <span class="keywordtype">char</span> name[100];</div>
+<div class="line"><span class="lineno">  245</span>    <span class="keywordtype">char</span> file[100];</div>
+<div class="line"><span class="lineno">  246</span>    <span class="keywordtype">char</span> version[100];</div>
+<div class="line"><span class="lineno">  247</span> </div>
+<div class="line"><span class="lineno">  248</span>    <span class="keywordtype">char</span> paht[300];</div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordtype">char</span> paht1[300];</div>
+<div class="line"><span class="lineno">  250</span>    <span class="keywordtype">char</span> paht2[500];</div>
+<div class="line"><span class="lineno">  251</span>    </div>
+<div class="line"><span class="lineno">  252</span>    <a class="code hl_function" href="arvore_8c.html#aba1a81fffeb9d2ab7b5dd8a5a2250140">searchVersion</a>(root, identifier, name, version, file);</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>        sprintf(paht, <span class="stringliteral">&quot;%s&quot;</span>, file);</div>
+<div class="line"><span class="lineno">  255</span>        sprintf(paht1, <span class="stringliteral">&quot;.versionador/content/%s/%s&quot;</span>, name, version);</div>
+<div class="line"><span class="lineno">  256</span>        sprintf(paht2, <span class="stringliteral">&quot;.versionador/content/%s/%s/%s&quot;</span>, name, version, file);</div>
+<div class="line"><span class="lineno">  257</span>    </div>
+<div class="line"><span class="lineno">  258</span>        <span class="keywordtype">char</span> *fileDest = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(<span class="stringliteral">&quot;.versionador/backup&quot;</span>, paht);</div>
+<div class="line"><span class="lineno">  259</span>        <a class="code hl_function" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(fileDest, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  260</span>        <a class="code hl_function" href="database_8c.html#a83f468e8ade161152bc4d29189e7f3d2">copyFile</a>(paht, fileDest);</div>
+<div class="line"><span class="lineno">  261</span>        free(fileDest);</div>
+<div class="line"><span class="lineno">  262</span>     </div>
+<div class="line"><span class="lineno">  263</span>        <a class="code hl_function" href="util_8c.html#a5628063ce7a14580bc43484f7bc6f63f">removeFile</a>(paht);</div>
+<div class="line"><span class="lineno">  264</span>        <a class="code hl_function" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(paht, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  265</span>        <a class="code hl_function" href="database_8c.html#a83f468e8ade161152bc4d29189e7f3d2">copyFile</a>(paht2, paht);</div>
+<div class="line"><span class="lineno">  266</span> </div>
+<div class="line"><span class="lineno">  267</span>    <a class="code hl_function" href="arvore_8c.html#a88d4ac8357a8f57f7e0307523f674877">freeTree</a>(root);</div>
+<div class="line"><span class="lineno">  268</span>}</div>
+<div class="ttc" id="aarvore_8c_html_a27196c126bea1ebdd05d3c9eb42e48d6"><div class="ttname"><a href="arvore_8c.html#a27196c126bea1ebdd05d3c9eb42e48d6">createTree</a></div><div class="ttdeci">TreeNode * createTree(const char *fileName)</div><div class="ttdef"><b>Definição</b> arvore.c:238</div></div>
+<div class="ttc" id="aarvore_8c_html_a88d4ac8357a8f57f7e0307523f674877"><div class="ttname"><a href="arvore_8c.html#a88d4ac8357a8f57f7e0307523f674877">freeTree</a></div><div class="ttdeci">void freeTree(TreeNode *node)</div><div class="ttdef"><b>Definição</b> arvore.c:155</div></div>
+<div class="ttc" id="aarvore_8c_html_aba1a81fffeb9d2ab7b5dd8a5a2250140"><div class="ttname"><a href="arvore_8c.html#aba1a81fffeb9d2ab7b5dd8a5a2250140">searchVersion</a></div><div class="ttdeci">void searchVersion(TreeNode *node, const char *version, char *name, char *versionName, char *file)</div><div class="ttdef"><b>Definição</b> arvore.c:254</div></div>
+<div class="ttc" id="adatabase_8c_html_a6d77151ddd12d32300de275deb0415f5"><div class="ttname"><a href="database_8c.html#a6d77151ddd12d32300de275deb0415f5">directoryExists</a></div><div class="ttdeci">int directoryExists(const char *path)</div><div class="ttdoc">Verifica se um diretório existe.</div><div class="ttdef"><b>Definição</b> database.c:453</div></div>
+<div class="ttc" id="adatabase_8c_html_a7c3ec9acd7bc538ce658dd6b8d5072cf"><div class="ttname"><a href="database_8c.html#a7c3ec9acd7bc538ce658dd6b8d5072cf">removeDirectory</a></div><div class="ttdeci">void removeDirectory(const char *path)</div><div class="ttdoc">Remove um diretório e todo o seu conteúdo.</div><div class="ttdef"><b>Definição</b> database.c:565</div></div>
+<div class="ttc" id="adatabase_8c_html_a83b41657c512e3ecaf7590cacffd1788"><div class="ttname"><a href="database_8c.html#a83b41657c512e3ecaf7590cacffd1788">versionExists</a></div><div class="ttdeci">int versionExists(const char *identifier)</div><div class="ttdoc">Verifica se uma determinada versão existe.</div><div class="ttdef"><b>Definição</b> database.c:417</div></div>
+<div class="ttc" id="adatabase_8c_html_a83f468e8ade161152bc4d29189e7f3d2"><div class="ttname"><a href="database_8c.html#a83f468e8ade161152bc4d29189e7f3d2">copyFile</a></div><div class="ttdeci">void copyFile(const char *sourceFile, const char *destFile)</div><div class="ttdoc">Copia um arquivo de origem para um destino específico.</div><div class="ttdef"><b>Definição</b> database.c:535</div></div>
+<div class="ttc" id="astruct_tree_node_html"><div class="ttname"><a href="struct_tree_node.html">TreeNode</a></div><div class="ttdef"><b>Definição</b> arvore.c:8</div></div>
+<div class="ttc" id="autil_8c_html_a23f7fb91c9c504dba07e29b781875cf1"><div class="ttname"><a href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a></div><div class="ttdeci">char * concatenatePaths(const char *path1, const char *path2)</div><div class="ttdoc">Concatena dois caminhos em uma única string.</div><div class="ttdef"><b>Definição</b> util.c:101</div></div>
+<div class="ttc" id="autil_8c_html_a5628063ce7a14580bc43484f7bc6f63f"><div class="ttname"><a href="util_8c.html#a5628063ce7a14580bc43484f7bc6f63f">removeFile</a></div><div class="ttdeci">void removeFile(char *file)</div><div class="ttdoc">Remove um arquivo.</div><div class="ttdef"><b>Definição</b> util.c:298</div></div>
+<div class="ttc" id="autil_8c_html_a8ac584ddf2ae0297798ad8a3ad12fab5"><div class="ttname"><a href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a></div><div class="ttdeci">void writeTextFile(const char *filename, const char *content)</div><div class="ttdoc">Escreve o conteúdo em um arquivo de texto.</div><div class="ttdef"><b>Definição</b> util.c:202</div></div>
+<div class="ttc" id="autil_8c_html_ac2ce5ff55187c7dfa54489e17e2f7deb"><div class="ttname"><a href="util_8c.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a></div><div class="ttdeci">void createDirectory(const char *path)</div><div class="ttdoc">Cria um diretório.</div><div class="ttdef"><b>Definição</b> util.c:48</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2f1413d418f22031a626c9fb3538d29f" name="a2f1413d418f22031a626c9fb3538d29f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f1413d418f22031a626c9fb3538d29f">&#9670;&#160;</a></span>createBranch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createBranch </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                             {</div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(<span class="stringliteral">&quot;ENTREI&quot;</span>);</div>
+<div class="line"><span class="lineno">   32</span>    FILE* file = fopen(<span class="stringliteral">&quot;.versionador/atual.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">   33</span> </div>
+<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">if</span> (file != NULL) {</div>
+<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">char</span> linha[50];</div>
+<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">char</span> branchName[50];</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">char</span> versionName[50];</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordflow">while</span> (fgets(linha, <span class="keyword">sizeof</span>(linha), file) != NULL) {</div>
+<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">if</span> (strcmp(linha, <span class="stringliteral">&quot;&lt;INICIO&gt;\n&quot;</span>) == 0) {</div>
+<div class="line"><span class="lineno">   40</span>                fgets(branchName, 50, file);</div>
+<div class="line"><span class="lineno">   41</span>                fgets(versionName, 50, file);</div>
+<div class="line"><span class="lineno">   42</span>               </div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   44</span>                <span class="comment">// Removendo o caractere de nova linha (\n) no final de cada string</span></div>
+<div class="line"><span class="lineno">   45</span>                branchName[strcspn(branchName, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   46</span>                versionName[strcspn(versionName, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">   47</span>            }</div>
+<div class="line"><span class="lineno">   48</span>        }</div>
+<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">if</span>(strcmp(versionName, <span class="stringliteral">&quot;Nenhum&quot;</span>)==0){</div>
+<div class="line"><span class="lineno">   50</span>                <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;nenhuma versão foi encontrada na branch atual pra gerar uma nova branch.&quot;</span>);</div>
+<div class="line"><span class="lineno">   51</span>                printf(<span class="stringliteral">&quot;branch atual: %s\nVersão atual da branch: %s&quot;</span>,branchName, versionName);</div>
+<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   53</span>            }</div>
+<div class="line"><span class="lineno">   54</span>        <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(name);</div>
+<div class="line"><span class="lineno">   55</span>        <a class="code hl_function" href="database_8c.html#aa922560421db59e531501475585a34d3">createBranchInDatabase</a>(name, branchName, versionName);</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>        fclose(file);</div>
+<div class="line"><span class="lineno">   58</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   59</span>        printf(<span class="stringliteral">&quot;Erro ao abrir o arquivo para ler as structs.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   60</span>    }</div>
+<div class="line"><span class="lineno">   61</span>}</div>
+<div class="ttc" id="adatabase_8c_html_aa922560421db59e531501475585a34d3"><div class="ttname"><a href="database_8c.html#aa922560421db59e531501475585a34d3">createBranchInDatabase</a></div><div class="ttdeci">void createBranchInDatabase(char *name, char *branchName, char *versionName)</div><div class="ttdoc">Cria um novo ramo no banco de dados.</div><div class="ttdef"><b>Definição</b> database.c:49</div></div>
+<div class="ttc" id="autil_8c_html_abb09396ee13a44215695d146ba593be5"><div class="ttname"><a href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a></div><div class="ttdeci">void printError(const char *message)</div><div class="ttdoc">Imprime uma mensagem de erro.</div><div class="ttdef"><b>Definição</b> util.c:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeaec5ecab3b57770fd335262a7d1ba8c" name="aeaec5ecab3b57770fd335262a7d1ba8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaec5ecab3b57770fd335262a7d1ba8c">&#9670;&#160;</a></span>exibirLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void exibirLog </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>showContent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exibe o log do versionador. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">showContent</td><td>Flag para exibir o conteúdo dos arquivos nas versões.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Obtém o número de versões e exibe uma mensagem informando que o log será exibido. Se o flag showContent for verdadeiro, exibe o conteúdo dos arquivos em cada versão. </p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                                {</div>
+<div class="line"><span class="lineno">  109</span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="database_8c.html#acd051ec62eda05e00f82dad304afca95">numVersions</a> = <a class="code hl_function" href="database_8c.html#ad6ef2c6a7cc7035402586d864396008d">getSnapshotInfo</a>();</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span> (showContent) {</div>
+<div class="line"><span class="lineno">  111</span>        <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(<span class="stringliteral">&quot;Exibindo conteúdo dos arquivos nas versões:&quot;</span>);</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>        <span class="comment">// Exibir o conteúdo dos arquivos registrados em cada versão</span></div>
+<div class="line"><span class="lineno">  114</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="database_8c.html#acd051ec62eda05e00f82dad304afca95">numVersions</a>; i++) {</div>
+<div class="line"><span class="lineno">  115</span>            <span class="keyword">const</span> <span class="keywordtype">char</span>* versionIdentifier = <a class="code hl_function" href="database_8c.html#a2cd87cc8b64aa63e846ea58181aab7a5">getCurrentVersionIdentifier</a>(i);</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  117</span>            <span class="comment">// Obter o conteúdo dos arquivos versionados na versão atual</span></div>
+<div class="line"><span class="lineno">  118</span>            <a class="code hl_function" href="database_8c.html#a33f0cb5145da177bc6f95229eaa05f5a">getVersionContent</a>(versionIdentifier, 1);</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+<div class="ttc" id="adatabase_8c_html_a2cd87cc8b64aa63e846ea58181aab7a5"><div class="ttname"><a href="database_8c.html#a2cd87cc8b64aa63e846ea58181aab7a5">getCurrentVersionIdentifier</a></div><div class="ttdeci">char * getCurrentVersionIdentifier()</div><div class="ttdoc">Obtém o identificador da versão atual.</div><div class="ttdef"><b>Definição</b> database.c:464</div></div>
+<div class="ttc" id="adatabase_8c_html_a33f0cb5145da177bc6f95229eaa05f5a"><div class="ttname"><a href="database_8c.html#a33f0cb5145da177bc6f95229eaa05f5a">getVersionContent</a></div><div class="ttdeci">void getVersionContent(const char *id, int showContent)</div><div class="ttdoc">Obtém o conteúdo de uma determinada versão.</div><div class="ttdef"><b>Definição</b> database.c:337</div></div>
+<div class="ttc" id="adatabase_8c_html_acd051ec62eda05e00f82dad304afca95"><div class="ttname"><a href="database_8c.html#acd051ec62eda05e00f82dad304afca95">numVersions</a></div><div class="ttdeci">int numVersions</div><div class="ttdef"><b>Definição</b> database.c:17</div></div>
+<div class="ttc" id="adatabase_8c_html_ad6ef2c6a7cc7035402586d864396008d"><div class="ttname"><a href="database_8c.html#ad6ef2c6a7cc7035402586d864396008d">getSnapshotInfo</a></div><div class="ttdeci">int getSnapshotInfo()</div><div class="ttdoc">Obtém informações sobre os snapshots registrados no banco de dados.</div><div class="ttdef"><b>Definição</b> database.c:294</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a83f539fd31fd40ba064eb8db9a42e99d" name="a83f539fd31fd40ba064eb8db9a42e99d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83f539fd31fd40ba064eb8db9a42e99d">&#9670;&#160;</a></span>exibirLogInCommands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void exibirLogInCommands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  333</span>                          {</div>
+<div class="line"><span class="lineno">  334</span>    <a class="code hl_struct" href="struct_tree_node.html">TreeNode</a>* root = <a class="code hl_function" href="arvore_8c.html#a27196c126bea1ebdd05d3c9eb42e48d6">createTree</a>(<span class="stringliteral">&quot;.versionador/content/dados.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  335</span>    <a class="code hl_function" href="arvore_8c.html#ac5def1aa0d57fead4489c9ad48c1c588">printTree</a>(root, 4);</div>
+<div class="line"><span class="lineno">  336</span>}</div>
+<div class="ttc" id="aarvore_8c_html_ac5def1aa0d57fead4489c9ad48c1c588"><div class="ttname"><a href="arvore_8c.html#ac5def1aa0d57fead4489c9ad48c1c588">printTree</a></div><div class="ttdeci">void printTree(TreeNode *node, int depth)</div><div class="ttdef"><b>Definição</b> arvore.c:140</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afa419d53953b8b69b8b62831ad8255a8" name="afa419d53953b8b69b8b62831ad8255a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa419d53953b8b69b8b62831ad8255a8">&#9670;&#160;</a></span>getLogsContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getLogsContent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém o conteúdo dos logs. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Arquivo dos logs.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cria uma lista e a preenche com o conteúdo do arquivo dos logs. Percorre a lista e exibe o conteúdo das versões correspondentes. Libera a memória alocada. </p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>                     {</div>
+<div class="line"><span class="lineno">  209</span>    <a class="code hl_struct" href="struct_tree_node.html">TreeNode</a>* root = <a class="code hl_function" href="arvore_8c.html#a27196c126bea1ebdd05d3c9eb42e48d6">createTree</a>(<span class="stringliteral">&quot;.versionador/content/dados.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  210</span>    <a class="code hl_function" href="arvore_8c.html#a444306a4e198f8a42e5e3bb9cf83ac67">printTreeContent</a>(root, 4);</div>
+<div class="line"><span class="lineno">  211</span>    <a class="code hl_function" href="arvore_8c.html#a88d4ac8357a8f57f7e0307523f674877">freeTree</a>(root);</div>
+<div class="line"><span class="lineno">  212</span>    </div>
+<div class="line"><span class="lineno">  213</span>}</div>
+<div class="ttc" id="aarvore_8c_html_a444306a4e198f8a42e5e3bb9cf83ac67"><div class="ttname"><a href="arvore_8c.html#a444306a4e198f8a42e5e3bb9cf83ac67">printTreeContent</a></div><div class="ttdeci">void printTreeContent(TreeNode *node, int depth)</div><div class="ttdef"><b>Definição</b> arvore.c:97</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4d2dd7b285f4f229d11679504ccfcb07" name="a4d2dd7b285f4f229d11679504ccfcb07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d2dd7b285f4f229d11679504ccfcb07">&#9670;&#160;</a></span>iniciarVersionador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void iniciarVersionador </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicia o versionador. </p>
+<p>Cria o banco de dados e exibe uma mensagem de sucesso. </p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>                          {</div>
+<div class="line"><span class="lineno">   17</span>    <a class="code hl_function" href="database_8c.html#ab4aabfdcc9a54dc707a10e2ecbe19e54">createDatabase</a>();</div>
+<div class="line"><span class="lineno">   18</span>    <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(<span class="stringliteral">&quot;Versionador iniciado com sucesso.&quot;</span>);</div>
+<div class="line"><span class="lineno">   19</span>}</div>
+<div class="ttc" id="adatabase_8c_html_ab4aabfdcc9a54dc707a10e2ecbe19e54"><div class="ttname"><a href="database_8c.html#ab4aabfdcc9a54dc707a10e2ecbe19e54">createDatabase</a></div><div class="ttdeci">void createDatabase()</div><div class="ttdoc">Cria o banco de dados necessário para o versionador.</div><div class="ttdef"><b>Definição</b> database.c:22</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad30cce477e9c4766a11231c73fff293d" name="ad30cce477e9c4766a11231c73fff293d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad30cce477e9c4766a11231c73fff293d">&#9670;&#160;</a></span>mostrarLogInCommands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarLogInCommands </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>identifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  322</span>                                           {</div>
+<div class="line"><span class="lineno">  323</span>    <a class="code hl_struct" href="struct_tree_node.html">TreeNode</a>* root = <a class="code hl_function" href="arvore_8c.html#a27196c126bea1ebdd05d3c9eb42e48d6">createTree</a>(<span class="stringliteral">&quot;.versionador/content/dados.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  324</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="database_8c.html#a83b41657c512e3ecaf7590cacffd1788">versionExists</a>(identifier)){</div>
+<div class="line"><span class="lineno">  325</span>        <a class="code hl_function" href="arvore_8c.html#ac5def1aa0d57fead4489c9ad48c1c588">printTree</a>(root, 4);</div>
+<div class="line"><span class="lineno">  326</span>    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="database_8c.html#a98a20f8b453e5356faaf845fd3bffb2d">branchExists</a>(identifier)){</div>
+<div class="line"><span class="lineno">  327</span>        <a class="code hl_function" href="arvore_8c.html#aac2586c559de49cd89dbbedb6d9e1216">printBranchByName</a>(root,identifier, NULL);</div>
+<div class="line"><span class="lineno">  328</span>    }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  329</span>        <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">  330</span>    }</div>
+<div class="line"><span class="lineno">  331</span>    <a class="code hl_function" href="arvore_8c.html#a88d4ac8357a8f57f7e0307523f674877">freeTree</a>(root);</div>
+<div class="line"><span class="lineno">  332</span>}</div>
+<div class="ttc" id="aarvore_8c_html_aac2586c559de49cd89dbbedb6d9e1216"><div class="ttname"><a href="arvore_8c.html#aac2586c559de49cd89dbbedb6d9e1216">printBranchByName</a></div><div class="ttdeci">void printBranchByName(TreeNode *node, const char *name, const char *versionStop)</div><div class="ttdef"><b>Definição</b> arvore.c:294</div></div>
+<div class="ttc" id="adatabase_8c_html_a98a20f8b453e5356faaf845fd3bffb2d"><div class="ttname"><a href="database_8c.html#a98a20f8b453e5356faaf845fd3bffb2d">branchExists</a></div><div class="ttdeci">int branchExists(char *name)</div><div class="ttdoc">Verifica se um ramo existe no banco de dados.</div><div class="ttdef"><b>Definição</b> database.c:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a74d4a62a5cba5ec8e0ef9088ad347c2f" name="a74d4a62a5cba5ec8e0ef9088ad347c2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d4a62a5cba5ec8e0ef9088ad347c2f">&#9670;&#160;</a></span>mostrarVersao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarVersao </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>identificador</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mostra o conteúdo de uma versão específica. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identificador</td><td>Identificador da versão.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Obtém o conteúdo dos arquivos na versão correspondente ao identificador informado. Exibe o conteúdo dos arquivos. </p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>                                              {</div>
+<div class="line"><span class="lineno">  132</span>    <a class="code hl_function" href="database_8c.html#a33f0cb5145da177bc6f95229eaa05f5a">getVersionContent</a>(identificador, 1);</div>
+<div class="line"><span class="lineno">  133</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8d155d6034bbd711c085c0cf28d08b48" name="a8d155d6034bbd711c085c0cf28d08b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d155d6034bbd711c085c0cf28d08b48">&#9670;&#160;</a></span>mudarVersao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mudarVersao </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>identificador</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muda para uma versão específica. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identificador</td><td>Identificador da versão.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Verifica se a versão com o identificador informado existe. Se existir, muda para essa versão. Caso contrário, exibe uma mensagem informando que a versão não existe. </p>
+<div class="fragment"><div class="line"><span class="lineno">  144</span>                                            {</div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="database_8c.html#a83b41657c512e3ecaf7590cacffd1788">versionExists</a>(identificador)) {</div>
+<div class="line"><span class="lineno">  146</span>        <a class="code hl_function" href="commands_8c.html#a442c0d06b8e876525a559a55b1f31895">changeVersion</a>(identificador);</div>
+<div class="line"><span class="lineno">  147</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  148</span>        printf(<span class="stringliteral">&quot;A versão %s não existe.&quot;</span>, identificador);</div>
+<div class="line"><span class="lineno">  149</span>    }</div>
+<div class="line"><span class="lineno">  150</span>}</div>
+<div class="ttc" id="acommands_8c_html_a442c0d06b8e876525a559a55b1f31895"><div class="ttname"><a href="commands_8c.html#a442c0d06b8e876525a559a55b1f31895">changeVersion</a></div><div class="ttdeci">void changeVersion(const char *identifier)</div><div class="ttdoc">Muda para uma versão específica.</div><div class="ttdef"><b>Definição</b> commands.c:226</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7235c2a813b1ba295b85ec1d2826544d" name="a7235c2a813b1ba295b85ec1d2826544d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7235c2a813b1ba295b85ec1d2826544d">&#9670;&#160;</a></span>registrarSnapshot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * registrarSnapshot </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>texto</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registra um snapshot. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texto</td><td>Texto do snapshot. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o identificador único do snapshot.</dd></dl>
+<p>Gera um identificador único para o snapshot e o registra no banco de dados. Exibe uma mensagem de sucesso com o identificador gerado. Retorna o identificador gerado. </p>
+<div class="fragment"><div class="line"><span class="lineno">   93</span>                                           {</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordtype">char</span>* identifier = <a class="code hl_function" href="util_8c.html#a72d4d2a982a2ba42f56f62bb7266898d">generateUniqueIdentifier</a>();</div>
+<div class="line"><span class="lineno">   95</span>    <a class="code hl_function" href="database_8c.html#a918677cf693dde8088a1793fc5cea415">registerSnapshot</a>(identifier, texto);</div>
+<div class="line"><span class="lineno">   96</span>    printf(<span class="stringliteral">&quot;Snapshot registrado com sucesso. Identificador: %s&quot;</span>, identifier);</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> identifier;</div>
+<div class="line"><span class="lineno">   98</span>}</div>
+<div class="ttc" id="adatabase_8c_html_a918677cf693dde8088a1793fc5cea415"><div class="ttname"><a href="database_8c.html#a918677cf693dde8088a1793fc5cea415">registerSnapshot</a></div><div class="ttdeci">void registerSnapshot(const char *identifier, const char *commit)</div><div class="ttdoc">Registra um snapshot no banco de dados.</div><div class="ttdef"><b>Definição</b> database.c:235</div></div>
+<div class="ttc" id="autil_8c_html_a72d4d2a982a2ba42f56f62bb7266898d"><div class="ttname"><a href="util_8c.html#a72d4d2a982a2ba42f56f62bb7266898d">generateUniqueIdentifier</a></div><div class="ttdeci">char * generateUniqueIdentifier()</div><div class="ttdoc">Gera um identificador único.</div><div class="ttdef"><b>Definição</b> util.c:247</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa74ecc1cbd9a93efe3dc1a9b2f36d9ec" name="aa74ecc1cbd9a93efe3dc1a9b2f36d9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74ecc1cbd9a93efe3dc1a9b2f36d9ec">&#9670;&#160;</a></span>removeBranch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeBranch </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>branchName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   21</span>                                   {</div>
+<div class="line"><span class="lineno">   22</span>    <a class="code hl_function" href="database_8c.html#a7e65c532d019bcba63512d4e5d229099">removeBranchInDatabase</a>(branchName);</div>
+<div class="line"><span class="lineno">   23</span>}</div>
+<div class="ttc" id="adatabase_8c_html_a7e65c532d019bcba63512d4e5d229099"><div class="ttname"><a href="database_8c.html#a7e65c532d019bcba63512d4e5d229099">removeBranchInDatabase</a></div><div class="ttdeci">void removeBranchInDatabase(char *branchName)</div><div class="ttdoc">Remove um ramo do banco de dados.</div><div class="ttdef"><b>Definição</b> database.c:148</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad666f9c17a62bc35e8de0c9dfbab1609" name="ad666f9c17a62bc35e8de0c9dfbab1609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad666f9c17a62bc35e8de0c9dfbab1609">&#9670;&#160;</a></span>renameBranch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renameBranch </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nameAtual</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>novoNome</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                                                 {</div>
+<div class="line"><span class="lineno">   26</span>    </div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_function" href="database_8c.html#ab91e6fbe54cb2dac5ac89f106d3506f4">renameBranchInDatabase</a>(nameAtual, novoNome);</div>
+<div class="line"><span class="lineno">   28</span>}</div>
+<div class="ttc" id="adatabase_8c_html_ab91e6fbe54cb2dac5ac89f106d3506f4"><div class="ttname"><a href="database_8c.html#ab91e6fbe54cb2dac5ac89f106d3506f4">renameBranchInDatabase</a></div><div class="ttdeci">void renameBranchInDatabase(char *branchName, char *newBranchName)</div><div class="ttdoc">Renomeia um ramo no banco de dados.</div><div class="ttdef"><b>Definição</b> database.c:72</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae15e48fad77840a372296fb093cb0d58" name="ae15e48fad77840a372296fb093cb0d58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae15e48fad77840a372296fb093cb0d58">&#9670;&#160;</a></span>restoreCurrentVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void restoreCurrentVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Restaura a versão atual. </p>
+<p>Verifica se a pasta temporária de backup existe. Se não existir, exibe uma mensagem de erro e retorna. Obtém a lista de arquivos na pasta de backup. Percorre a lista e restaura os arquivos para a versão atual. Remove a pasta de backup. Exibe uma mensagem informando que os arquivos foram restaurados. </p>
+<div class="fragment"><div class="line"><span class="lineno">  281</span>                             {</div>
+<div class="line"><span class="lineno">  282</span> </div>
+<div class="line"><span class="lineno">  283</span>    <span class="comment">// Verificar se a pasta temporária de backup existe</span></div>
+<div class="line"><span class="lineno">  284</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="database_8c.html#a6d77151ddd12d32300de275deb0415f5">directoryExists</a>(<span class="stringliteral">&quot;.versionador/backup&quot;</span>)) {</div>
+<div class="line"><span class="lineno">  285</span>        <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;A pasta de backup não existe.&quot;</span>);</div>
+<div class="line"><span class="lineno">  286</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>    <span class="keywordtype">char</span> path[] = <span class="stringliteral">&quot;.versionador/backup&quot;</span>;</div>
+<div class="line"><span class="lineno">  290</span>    <a class="code hl_struct" href="structlista.html">Lista</a> *header = <a class="code hl_function" href="lista_8c.html#a83096b4d001058b50d929f7d93c66d86">lst_cria</a>();</div>
+<div class="line"><span class="lineno">  291</span>    <a class="code hl_function" href="util_8c.html#ad91a8cbb44c269a12302c7fea0f6db89">searchDirectoryFiles</a>(path, header);</div>
+<div class="line"><span class="lineno">  292</span>    <a class="code hl_struct" href="structlista__no.html">ListaNo</a>* ptr = <a class="code hl_function" href="lista_8c.html#ab45807f5bff86a9a38a03263606bb0ba">lst_returnNodeValid</a>(header);</div>
+<div class="line"><span class="lineno">  293</span> </div>
+<div class="line"><span class="lineno">  294</span>    </div>
+<div class="line"><span class="lineno">  295</span>    <span class="keywordtype">char</span> copySec[100];</div>
+<div class="line"><span class="lineno">  296</span>    <span class="keywordflow">if</span>(ptr == NULL){</div>
+<div class="line"><span class="lineno">  297</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  298</span>    }<span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  299</span>    </div>
+<div class="line"><span class="lineno">  300</span> </div>
+<div class="line"><span class="lineno">  301</span>    <span class="keywordtype">char</span>* fileOrigin = <a class="code hl_function" href="lista_8c.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a>(ptr);</div>
+<div class="line"><span class="lineno">  302</span>    </div>
+<div class="line"><span class="lineno">  303</span>    <span class="keywordflow">while</span> (fileOrigin != NULL)</div>
+<div class="line"><span class="lineno">  304</span>    {   </div>
+<div class="line"><span class="lineno">  305</span>        strcpy(copySec, fileOrigin);</div>
+<div class="line"><span class="lineno">  306</span>        <span class="keywordtype">char</span> *fileBackupOrigin = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(path, copySec);</div>
+<div class="line"><span class="lineno">  307</span>        <a class="code hl_function" href="util_8c.html#a5628063ce7a14580bc43484f7bc6f63f">removeFile</a>(copySec);</div>
+<div class="line"><span class="lineno">  308</span>        <a class="code hl_function" href="database_8c.html#a83f468e8ade161152bc4d29189e7f3d2">copyFile</a>(fileBackupOrigin, copySec);</div>
+<div class="line"><span class="lineno">  309</span>        ptr = <a class="code hl_function" href="lista_8c.html#a6592f26095d2dd9ad8b86944e688f876">lst_nextNode</a>(ptr);</div>
+<div class="line"><span class="lineno">  310</span>        fileOrigin = <a class="code hl_function" href="lista_8c.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a>(ptr);</div>
+<div class="line"><span class="lineno">  311</span>        free(fileBackupOrigin);</div>
+<div class="line"><span class="lineno">  312</span>    }</div>
+<div class="line"><span class="lineno">  313</span>    free(fileOrigin);</div>
+<div class="line"><span class="lineno">  314</span>    </div>
+<div class="line"><span class="lineno">  315</span>    }</div>
+<div class="line"><span class="lineno">  316</span> </div>
+<div class="line"><span class="lineno">  317</span>    <a class="code hl_function" href="database_8c.html#a7c3ec9acd7bc538ce658dd6b8d5072cf">removeDirectory</a>(path);</div>
+<div class="line"><span class="lineno">  318</span>    <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(<span class="stringliteral">&quot;Os arquivos foram restaurados para a versão atual.&quot;</span>);</div>
+<div class="line"><span class="lineno">  319</span> </div>
+<div class="line"><span class="lineno">  320</span>    <a class="code hl_function" href="lista_8c.html#ab3065cafc7f22243e573c69152bffa1d">lst_libera</a>(header);</div>
+<div class="line"><span class="lineno">  321</span>}</div>
+<div class="ttc" id="alista_8c_html_a22629f9d8680bbe4d98b511c47a3cdcc"><div class="ttname"><a href="lista_8c.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a></div><div class="ttdeci">char * lst_infoValid(ListaNo *ptr)</div><div class="ttdoc">Retorna a informação válida de um nó.</div><div class="ttdef"><b>Definição</b> lista.c:251</div></div>
+<div class="ttc" id="alista_8c_html_a6592f26095d2dd9ad8b86944e688f876"><div class="ttname"><a href="lista_8c.html#a6592f26095d2dd9ad8b86944e688f876">lst_nextNode</a></div><div class="ttdeci">ListaNo * lst_nextNode(ListaNo *ptr)</div><div class="ttdoc">Retorna o próximo nó válido da lista.</div><div class="ttdef"><b>Definição</b> lista.c:232</div></div>
+<div class="ttc" id="alista_8c_html_a83096b4d001058b50d929f7d93c66d86"><div class="ttname"><a href="lista_8c.html#a83096b4d001058b50d929f7d93c66d86">lst_cria</a></div><div class="ttdeci">Lista * lst_cria(void)</div><div class="ttdoc">Cria uma nova lista vazia.</div><div class="ttdef"><b>Definição</b> lista.c:29</div></div>
+<div class="ttc" id="alista_8c_html_ab3065cafc7f22243e573c69152bffa1d"><div class="ttname"><a href="lista_8c.html#ab3065cafc7f22243e573c69152bffa1d">lst_libera</a></div><div class="ttdeci">void lst_libera(Lista *header)</div><div class="ttdoc">Libera a memória ocupada pela lista.</div><div class="ttdef"><b>Definição</b> lista.c:190</div></div>
+<div class="ttc" id="alista_8c_html_ab45807f5bff86a9a38a03263606bb0ba"><div class="ttname"><a href="lista_8c.html#ab45807f5bff86a9a38a03263606bb0ba">lst_returnNodeValid</a></div><div class="ttdeci">ListaNo * lst_returnNodeValid(Lista *header)</div><div class="ttdoc">Retorna o primeiro nó válido da lista.</div><div class="ttdef"><b>Definição</b> lista.c:213</div></div>
+<div class="ttc" id="astructlista__no_html"><div class="ttname"><a href="structlista__no.html">lista_no</a></div><div class="ttdoc">Estrutura de nó da lista.</div><div class="ttdef"><b>Definição</b> lista.c:10</div></div>
+<div class="ttc" id="astructlista_html"><div class="ttname"><a href="structlista.html">lista</a></div><div class="ttdoc">Estrutura da lista.</div><div class="ttdef"><b>Definição</b> lista.c:18</div></div>
+<div class="ttc" id="autil_8c_html_ad91a8cbb44c269a12302c7fea0f6db89"><div class="ttname"><a href="util_8c.html#ad91a8cbb44c269a12302c7fea0f6db89">searchDirectoryFiles</a></div><div class="ttdeci">void searchDirectoryFiles(char *path, Lista *header)</div><div class="ttdoc">Pesquisa os arquivos em um diretório.</div><div class="ttdef"><b>Definição</b> util.c:333</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a35dabf1a4e62844344b1f73fbbf9cf91" name="a35dabf1a4e62844344b1f73fbbf9cf91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35dabf1a4e62844344b1f73fbbf9cf91">&#9670;&#160;</a></span>reverterVersaoAtual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reverterVersaoAtual </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reverte a versão atual. </p>
+<p>Restaura a versão anterior da versão atual. Exibe uma mensagem de sucesso. </p>
+<div class="fragment"><div class="line"><span class="lineno">  159</span>                           {</div>
+<div class="line"><span class="lineno">  160</span>    <a class="code hl_function" href="commands_8c.html#ae15e48fad77840a372296fb093cb0d58">restoreCurrentVersion</a>();</div>
+<div class="line"><span class="lineno">  161</span>    <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(<span class="stringliteral">&quot;Versão atual revertida com sucesso.&quot;</span>);</div>
+<div class="line"><span class="lineno">  162</span>}</div>
+<div class="ttc" id="acommands_8c_html_ae15e48fad77840a372296fb093cb0d58"><div class="ttname"><a href="commands_8c.html#ae15e48fad77840a372296fb093cb0d58">restoreCurrentVersion</a></div><div class="ttdeci">void restoreCurrentVersion()</div><div class="ttdoc">Restaura a versão atual.</div><div class="ttdef"><b>Definição</b> commands.c:281</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adcbd9e1523dfa92f3c6922e4cc682c2a" name="adcbd9e1523dfa92f3c6922e4cc682c2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcbd9e1523dfa92f3c6922e4cc682c2a">&#9670;&#160;</a></span>saveSnapshotFilesInContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void saveSnapshotFilesInContent </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>identifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Salva os arquivos do snapshot no conteúdo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Identificador do snapshot.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Define o caminho para o identificador do snapshot. Popula uma lista com os nomes dos arquivos do próximo snapshot. Percorre a lista e adiciona o conteúdo dos arquivos ao snapshot atual. Remove o arquivo que lista os arquivos do próximo snapshot. Libera a memória alocada. </p>
+<div class="fragment"><div class="line"><span class="lineno">  175</span>                                                        {</div>
+<div class="line"><span class="lineno">  176</span>    <a class="code hl_function" href="database_8c.html#a8238f0f1e7746c36fed4efa22e88fc9d">setPathToSnapshotIdentifier</a>(identifier);</div>
+<div class="line"><span class="lineno">  177</span>    <a class="code hl_struct" href="structlista.html">Lista</a>* header = <a class="code hl_function" href="lista_8c.html#a83096b4d001058b50d929f7d93c66d86">lst_cria</a>();</div>
+<div class="line"><span class="lineno">  178</span>    <a class="code hl_function" href="lista_8c.html#ab359066b129d437ca24c9cff09181cd8">lst_populateList</a>(<span class="stringliteral">&quot;.versionador/snapshots/next_snapshot.txt&quot;</span>, header);</div>
+<div class="line"><span class="lineno">  179</span>    <a class="code hl_struct" href="structlista__no.html">ListaNo</a>* ptr = <a class="code hl_function" href="lista_8c.html#ab45807f5bff86a9a38a03263606bb0ba">lst_returnNodeValid</a>(header);</div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">if</span>(ptr == NULL)</div>
+<div class="line"><span class="lineno">  181</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  182</span> </div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordtype">char</span>* info = <a class="code hl_function" href="lista_8c.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a>(ptr);</div>
+<div class="line"><span class="lineno">  184</span>    <span class="keywordflow">while</span> (info != NULL)</div>
+<div class="line"><span class="lineno">  185</span>    {   </div>
+<div class="line"><span class="lineno">  186</span>        </div>
+<div class="line"><span class="lineno">  187</span>        <a class="code hl_function" href="database_8c.html#a72e502882b3b3aae5700c64f03dad5f1">addContent</a>(identifier, info);</div>
+<div class="line"><span class="lineno">  188</span>        ptr = <a class="code hl_function" href="lista_8c.html#a6592f26095d2dd9ad8b86944e688f876">lst_nextNode</a>(ptr);</div>
+<div class="line"><span class="lineno">  189</span>        info = <a class="code hl_function" href="lista_8c.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a>(ptr);</div>
+<div class="line"><span class="lineno">  190</span>    }</div>
+<div class="line"><span class="lineno">  191</span>    <a class="code hl_function" href="util_8c.html#a5628063ce7a14580bc43484f7bc6f63f">removeFile</a>(<span class="stringliteral">&quot;.versionador/snapshots/next_snapshot.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  192</span>    </div>
+<div class="line"><span class="lineno">  193</span>    free(info);</div>
+<div class="line"><span class="lineno">  194</span>    free(ptr);</div>
+<div class="line"><span class="lineno">  195</span>    <a class="code hl_function" href="lista_8c.html#ab3065cafc7f22243e573c69152bffa1d">lst_libera</a>(header);</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>}</div>
+<div class="ttc" id="adatabase_8c_html_a72e502882b3b3aae5700c64f03dad5f1"><div class="ttname"><a href="database_8c.html#a72e502882b3b3aae5700c64f03dad5f1">addContent</a></div><div class="ttdeci">void addContent(const char *identifier, const char *text)</div><div class="ttdoc">Adiciona conteúdo a um arquivo específico.</div><div class="ttdef"><b>Definição</b> database.c:637</div></div>
+<div class="ttc" id="adatabase_8c_html_a8238f0f1e7746c36fed4efa22e88fc9d"><div class="ttname"><a href="database_8c.html#a8238f0f1e7746c36fed4efa22e88fc9d">setPathToSnapshotIdentifier</a></div><div class="ttdeci">void setPathToSnapshotIdentifier(const char *identifier)</div><div class="ttdoc">Define o caminho para o identificador do próximo snapshot.</div><div class="ttdef"><b>Definição</b> database.c:246</div></div>
+<div class="ttc" id="alista_8c_html_ab359066b129d437ca24c9cff09181cd8"><div class="ttname"><a href="lista_8c.html#ab359066b129d437ca24c9cff09181cd8">lst_populateList</a></div><div class="ttdeci">void lst_populateList(char *path, Lista *header)</div><div class="ttdoc">Preenche a lista com palavras do conteúdo de um arquivo.</div><div class="ttdef"><b>Definição</b> lista.c:66</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

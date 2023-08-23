@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Versionador: Código-Fonte de src/utils/lista.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Versionador<span id="projectnumber">&#160;2.0.0</span>
+   </div>
+   <div id="projectbrief">Estudo de Caso ED</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">lista.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lista_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LISTA_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LISTA_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="lista_8h.html#ad7efd5bac5f63673a2fe8c13aee9ec6d">    4</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structlista__no.html">lista_no</a> <a class="code hl_struct" href="structlista__no.html">ListaNo</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">    5</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structlista.html">lista</a> <a class="code hl_struct" href="structlista.html">Lista</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Interface das funções</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><a class="code hl_struct" href="structlista.html">Lista</a>* <a class="code hl_function" href="lista_8h.html#a83096b4d001058b50d929f7d93c66d86">lst_cria</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a2f6196c49aadc4f065081ff81ccb5992">lst_insere</a>(<a class="code hl_struct" href="structlista.html">Lista</a> *header, <span class="keywordtype">char</span>* text);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a481a2008be5d50002a5c48c089ec85ea">lst_imprime</a>(<a class="code hl_struct" href="structlista.html">Lista</a> *header);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">int</span> <a class="code hl_function" href="lista_8h.html#a082ed80572cb3a76e625c7715a5bd9c2">pertence</a> (<a class="code hl_struct" href="structlista.html">Lista</a> *header, <span class="keywordtype">char</span>* text);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a149a1209a39761cd5a35961b5d96654f">lst_retira</a>(<a class="code hl_struct" href="structlista.html">Lista</a> *header, <span class="keywordtype">char</span>* text);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">int</span> <a class="code hl_function" href="lista_8h.html#a1b6842b213e9b6afece7fdb9398df0e9">lst_vazia</a>(<a class="code hl_struct" href="structlista.html">Lista</a> *header);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#ab3065cafc7f22243e573c69152bffa1d">lst_libera</a>(<a class="code hl_struct" href="structlista.html">Lista</a> *header);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#ab359066b129d437ca24c9cff09181cd8">lst_populateList</a>(<span class="keywordtype">char</span>* path, <a class="code hl_struct" href="structlista.html">Lista</a>* header);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_struct" href="structlista__no.html">ListaNo</a>* <a class="code hl_function" href="lista_8h.html#ab45807f5bff86a9a38a03263606bb0ba">lst_returnNodeValid</a>(<a class="code hl_struct" href="structlista.html">Lista</a> *header);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><a class="code hl_struct" href="structlista__no.html">ListaNo</a>* <a class="code hl_function" href="lista_8h.html#a6592f26095d2dd9ad8b86944e688f876">lst_nextNode</a>(<a class="code hl_struct" href="structlista__no.html">ListaNo</a> *ptr);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">char</span>* <a class="code hl_function" href="lista_8h.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a>(<a class="code hl_struct" href="structlista__no.html">ListaNo</a> *ptr);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="alista_8h_html_a082ed80572cb3a76e625c7715a5bd9c2"><div class="ttname"><a href="lista_8h.html#a082ed80572cb3a76e625c7715a5bd9c2">pertence</a></div><div class="ttdeci">int pertence(Lista *header, char *text)</div><div class="ttdoc">Verifica se a lista contém um determinado elemento.</div><div class="ttdef"><b>Definição</b> lista.c:122</div></div>
+<div class="ttc" id="alista_8h_html_a149a1209a39761cd5a35961b5d96654f"><div class="ttname"><a href="lista_8h.html#a149a1209a39761cd5a35961b5d96654f">lst_retira</a></div><div class="ttdeci">void lst_retira(Lista *header, char *text)</div><div class="ttdoc">Remove um elemento da lista.</div><div class="ttdef"><b>Definição</b> lista.c:146</div></div>
+<div class="ttc" id="alista_8h_html_a1b6842b213e9b6afece7fdb9398df0e9"><div class="ttname"><a href="lista_8h.html#a1b6842b213e9b6afece7fdb9398df0e9">lst_vazia</a></div><div class="ttdeci">int lst_vazia(Lista *header)</div><div class="ttdoc">Verifica se a lista está vazia.</div><div class="ttdef"><b>Definição</b> lista.c:177</div></div>
+<div class="ttc" id="alista_8h_html_a22629f9d8680bbe4d98b511c47a3cdcc"><div class="ttname"><a href="lista_8h.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a></div><div class="ttdeci">char * lst_infoValid(ListaNo *ptr)</div><div class="ttdoc">Retorna a informação válida de um nó.</div><div class="ttdef"><b>Definição</b> lista.c:251</div></div>
+<div class="ttc" id="alista_8h_html_a2f6196c49aadc4f065081ff81ccb5992"><div class="ttname"><a href="lista_8h.html#a2f6196c49aadc4f065081ff81ccb5992">lst_insere</a></div><div class="ttdeci">void lst_insere(Lista *header, char *text)</div><div class="ttdoc">Insere um novo nó na lista.</div><div class="ttdef"><b>Definição</b> lista.c:47</div></div>
+<div class="ttc" id="alista_8h_html_a481a2008be5d50002a5c48c089ec85ea"><div class="ttname"><a href="lista_8h.html#a481a2008be5d50002a5c48c089ec85ea">lst_imprime</a></div><div class="ttdeci">void lst_imprime(Lista *header)</div><div class="ttdoc">Imprime os elementos da lista.</div><div class="ttdef"><b>Definição</b> lista.c:101</div></div>
+<div class="ttc" id="alista_8h_html_a6592f26095d2dd9ad8b86944e688f876"><div class="ttname"><a href="lista_8h.html#a6592f26095d2dd9ad8b86944e688f876">lst_nextNode</a></div><div class="ttdeci">ListaNo * lst_nextNode(ListaNo *ptr)</div><div class="ttdoc">Retorna o próximo nó válido da lista.</div><div class="ttdef"><b>Definição</b> lista.c:232</div></div>
+<div class="ttc" id="alista_8h_html_a83096b4d001058b50d929f7d93c66d86"><div class="ttname"><a href="lista_8h.html#a83096b4d001058b50d929f7d93c66d86">lst_cria</a></div><div class="ttdeci">Lista * lst_cria(void)</div><div class="ttdoc">Cria uma nova lista vazia.</div><div class="ttdef"><b>Definição</b> lista.c:29</div></div>
+<div class="ttc" id="alista_8h_html_ab3065cafc7f22243e573c69152bffa1d"><div class="ttname"><a href="lista_8h.html#ab3065cafc7f22243e573c69152bffa1d">lst_libera</a></div><div class="ttdeci">void lst_libera(Lista *header)</div><div class="ttdoc">Libera a memória ocupada pela lista.</div><div class="ttdef"><b>Definição</b> lista.c:190</div></div>
+<div class="ttc" id="alista_8h_html_ab359066b129d437ca24c9cff09181cd8"><div class="ttname"><a href="lista_8h.html#ab359066b129d437ca24c9cff09181cd8">lst_populateList</a></div><div class="ttdeci">void lst_populateList(char *path, Lista *header)</div><div class="ttdoc">Preenche a lista com palavras do conteúdo de um arquivo.</div><div class="ttdef"><b>Definição</b> lista.c:66</div></div>
+<div class="ttc" id="alista_8h_html_ab45807f5bff86a9a38a03263606bb0ba"><div class="ttname"><a href="lista_8h.html#ab45807f5bff86a9a38a03263606bb0ba">lst_returnNodeValid</a></div><div class="ttdeci">ListaNo * lst_returnNodeValid(Lista *header)</div><div class="ttdoc">Retorna o primeiro nó válido da lista.</div><div class="ttdef"><b>Definição</b> lista.c:213</div></div>
+<div class="ttc" id="astructlista__no_html"><div class="ttname"><a href="structlista__no.html">lista_no</a></div><div class="ttdoc">Estrutura de nó da lista.</div><div class="ttdef"><b>Definição</b> lista.c:10</div></div>
+<div class="ttc" id="astructlista_html"><div class="ttname"><a href="structlista.html">lista</a></div><div class="ttdoc">Estrutura da lista.</div><div class="ttdef"><b>Definição</b> lista.c:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

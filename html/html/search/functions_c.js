@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['salvarstruct_0',['salvarStruct',['../util_8c.html#a29353e59047a0e0eeee4cfa76583e982',1,'salvarStruct(const struct Raiz *raiz, const char *arquivo):&#160;util.c'],['../utils_8h.html#a29353e59047a0e0eeee4cfa76583e982',1,'salvarStruct(const struct Raiz *raiz, const char *arquivo):&#160;util.c']]],
+  ['savesnapshotfilesincontent_1',['saveSnapshotFilesInContent',['../commands_8c.html#adcbd9e1523dfa92f3c6922e4cc682c2a',1,'saveSnapshotFilesInContent(const char *identifier):&#160;commands.c'],['../commands_8h.html#adcbd9e1523dfa92f3c6922e4cc682c2a',1,'saveSnapshotFilesInContent(const char *identifier):&#160;commands.c']]],
+  ['searchdirectoryfiles_2',['searchDirectoryFiles',['../util_8c.html#ad91a8cbb44c269a12302c7fea0f6db89',1,'searchDirectoryFiles(char *path, Lista *header):&#160;util.c'],['../utils_8h.html#ad91a8cbb44c269a12302c7fea0f6db89',1,'searchDirectoryFiles(char *path, Lista *header):&#160;util.c']]],
+  ['searchversion_3',['searchVersion',['../arvore_8c.html#aba1a81fffeb9d2ab7b5dd8a5a2250140',1,'searchVersion(TreeNode *node, const char *version, char *name, char *versionName, char *file):&#160;arvore.c'],['../arvore_8h.html#aba1a81fffeb9d2ab7b5dd8a5a2250140',1,'searchVersion(TreeNode *node, const char *version, char *name, char *versionName, char *file):&#160;arvore.c']]],
+  ['setpathtosnapshotidentifier_4',['setPathToSnapshotIdentifier',['../database_8c.html#a8238f0f1e7746c36fed4efa22e88fc9d',1,'setPathToSnapshotIdentifier(const char *identifier):&#160;database.c'],['../database_8h.html#a8238f0f1e7746c36fed4efa22e88fc9d',1,'setPathToSnapshotIdentifier(const char *identifier):&#160;database.c']]]
+];

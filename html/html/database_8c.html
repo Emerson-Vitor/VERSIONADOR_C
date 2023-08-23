@@ -1,0 +1,1371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Versionador: Referência do Arquivo src/database/database.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Versionador<span id="projectnumber">&#160;2.0.0</span>
+   </div>
+   <div id="projectbrief">Estudo de Caso ED</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_803ee67260c130b45d29089798491ab2.html">database</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo database.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="database_8h_source.html">../database/database.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">../utils/utils.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="lista_8h_source.html">../utils/lista.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="arvore_8h_source.html">../utils/arvore.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a8fb447618db946a9e2a596d9ea18763f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a8fb447618db946a9e2a596d9ea18763f">_DEFAULT_SOURCE</a></td></tr>
+<tr class="separator:a8fb447618db946a9e2a596d9ea18763f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ab4aabfdcc9a54dc707a10e2ecbe19e54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#ab4aabfdcc9a54dc707a10e2ecbe19e54">createDatabase</a> ()</td></tr>
+<tr class="memdesc:ab4aabfdcc9a54dc707a10e2ecbe19e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria o banco de dados necessário para o versionador.  <br /></td></tr>
+<tr class="separator:ab4aabfdcc9a54dc707a10e2ecbe19e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98a20f8b453e5356faaf845fd3bffb2d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a98a20f8b453e5356faaf845fd3bffb2d">branchExists</a> (char *name)</td></tr>
+<tr class="memdesc:a98a20f8b453e5356faaf845fd3bffb2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um ramo existe no banco de dados.  <br /></td></tr>
+<tr class="separator:a98a20f8b453e5356faaf845fd3bffb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa922560421db59e531501475585a34d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#aa922560421db59e531501475585a34d3">createBranchInDatabase</a> (char *name, char *branchName, char *versionName)</td></tr>
+<tr class="memdesc:aa922560421db59e531501475585a34d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um novo ramo no banco de dados.  <br /></td></tr>
+<tr class="separator:aa922560421db59e531501475585a34d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab91e6fbe54cb2dac5ac89f106d3506f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#ab91e6fbe54cb2dac5ac89f106d3506f4">renameBranchInDatabase</a> (char *branchName, char *newBranchName)</td></tr>
+<tr class="memdesc:ab91e6fbe54cb2dac5ac89f106d3506f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renomeia um ramo no banco de dados.  <br /></td></tr>
+<tr class="separator:ab91e6fbe54cb2dac5ac89f106d3506f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e65c532d019bcba63512d4e5d229099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a7e65c532d019bcba63512d4e5d229099">removeBranchInDatabase</a> (char *branchName)</td></tr>
+<tr class="memdesc:a7e65c532d019bcba63512d4e5d229099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um ramo do banco de dados.  <br /></td></tr>
+<tr class="separator:a7e65c532d019bcba63512d4e5d229099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f7156b1678fabe1036805c30758279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a01f7156b1678fabe1036805c30758279">addFileToSnapshot</a> (const char *filename)</td></tr>
+<tr class="memdesc:a01f7156b1678fabe1036805c30758279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona um arquivo ao próximo snapshot.  <br /></td></tr>
+<tr class="separator:a01f7156b1678fabe1036805c30758279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918677cf693dde8088a1793fc5cea415"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a918677cf693dde8088a1793fc5cea415">registerSnapshot</a> (const char *identifier, const char *commit)</td></tr>
+<tr class="memdesc:a918677cf693dde8088a1793fc5cea415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registra um snapshot no banco de dados.  <br /></td></tr>
+<tr class="separator:a918677cf693dde8088a1793fc5cea415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8238f0f1e7746c36fed4efa22e88fc9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a8238f0f1e7746c36fed4efa22e88fc9d">setPathToSnapshotIdentifier</a> (const char *identifier)</td></tr>
+<tr class="memdesc:a8238f0f1e7746c36fed4efa22e88fc9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o caminho para o identificador do próximo snapshot.  <br /></td></tr>
+<tr class="separator:a8238f0f1e7746c36fed4efa22e88fc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ef2c6a7cc7035402586d864396008d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#ad6ef2c6a7cc7035402586d864396008d">getSnapshotInfo</a> ()</td></tr>
+<tr class="memdesc:ad6ef2c6a7cc7035402586d864396008d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém informações sobre os snapshots registrados no banco de dados.  <br /></td></tr>
+<tr class="separator:ad6ef2c6a7cc7035402586d864396008d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f0cb5145da177bc6f95229eaa05f5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a33f0cb5145da177bc6f95229eaa05f5a">getVersionContent</a> (const char *id, int showContent)</td></tr>
+<tr class="memdesc:a33f0cb5145da177bc6f95229eaa05f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o conteúdo de uma determinada versão.  <br /></td></tr>
+<tr class="separator:a33f0cb5145da177bc6f95229eaa05f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b41657c512e3ecaf7590cacffd1788"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a83b41657c512e3ecaf7590cacffd1788">versionExists</a> (const char *identifier)</td></tr>
+<tr class="memdesc:a83b41657c512e3ecaf7590cacffd1788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se uma determinada versão existe.  <br /></td></tr>
+<tr class="separator:a83b41657c512e3ecaf7590cacffd1788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b86308c494025180053cc18cf4cdd1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a2b86308c494025180053cc18cf4cdd1d">restoreVersionFiles</a> (const char *identifier, const char *backupPath)</td></tr>
+<tr class="memdesc:a2b86308c494025180053cc18cf4cdd1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restaura os arquivos de uma determinada versão.  <br /></td></tr>
+<tr class="separator:a2b86308c494025180053cc18cf4cdd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d77151ddd12d32300de275deb0415f5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a6d77151ddd12d32300de275deb0415f5">directoryExists</a> (const char *path)</td></tr>
+<tr class="memdesc:a6d77151ddd12d32300de275deb0415f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um diretório existe.  <br /></td></tr>
+<tr class="separator:a6d77151ddd12d32300de275deb0415f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd87cc8b64aa63e846ea58181aab7a5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a2cd87cc8b64aa63e846ea58181aab7a5">getCurrentVersionIdentifier</a> ()</td></tr>
+<tr class="memdesc:a2cd87cc8b64aa63e846ea58181aab7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o identificador da versão atual.  <br /></td></tr>
+<tr class="separator:a2cd87cc8b64aa63e846ea58181aab7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a942903aaafe895b24848f7e382892d06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a942903aaafe895b24848f7e382892d06">copyDirectory</a> (const char *sourceDir, const char *destDir)</td></tr>
+<tr class="memdesc:a942903aaafe895b24848f7e382892d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copia um diretório e seu conteúdo para um destino específico.  <br /></td></tr>
+<tr class="separator:a942903aaafe895b24848f7e382892d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83f468e8ade161152bc4d29189e7f3d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a83f468e8ade161152bc4d29189e7f3d2">copyFile</a> (const char *sourceFile, const char *destFile)</td></tr>
+<tr class="memdesc:a83f468e8ade161152bc4d29189e7f3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copia um arquivo de origem para um destino específico.  <br /></td></tr>
+<tr class="separator:a83f468e8ade161152bc4d29189e7f3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3ec9acd7bc538ce658dd6b8d5072cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a7c3ec9acd7bc538ce658dd6b8d5072cf">removeDirectory</a> (const char *path)</td></tr>
+<tr class="memdesc:a7c3ec9acd7bc538ce658dd6b8d5072cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um diretório e todo o seu conteúdo.  <br /></td></tr>
+<tr class="separator:a7c3ec9acd7bc538ce658dd6b8d5072cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab8d436cba807a984bd177b2345bf28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a5ab8d436cba807a984bd177b2345bf28">renameDirectory</a> (const char *oldPath, const char *newPath)</td></tr>
+<tr class="memdesc:a5ab8d436cba807a984bd177b2345bf28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renomeia um diretório.  <br /></td></tr>
+<tr class="separator:a5ab8d436cba807a984bd177b2345bf28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e502882b3b3aae5700c64f03dad5f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a72e502882b3b3aae5700c64f03dad5f1">addContent</a> (const char *identifier, const char *text)</td></tr>
+<tr class="memdesc:a72e502882b3b3aae5700c64f03dad5f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona conteúdo a um arquivo específico.  <br /></td></tr>
+<tr class="separator:a72e502882b3b3aae5700c64f03dad5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:a3e5cf845fd75d549de1c9a771985c5ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_version.html">Version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#a3e5cf845fd75d549de1c9a771985c5ed">versions</a> [<a class="el" href="database_8h.html#af6ea2ccc7d9e40299d01c417845f9e4c">MAX_NUM_VERSIONS</a>]</td></tr>
+<tr class="separator:a3e5cf845fd75d549de1c9a771985c5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd051ec62eda05e00f82dad304afca95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database_8c.html#acd051ec62eda05e00f82dad304afca95">numVersions</a> = 0</td></tr>
+<tr class="separator:acd051ec62eda05e00f82dad304afca95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Definições e macros</h2>
+<a id="a8fb447618db946a9e2a596d9ea18763f" name="a8fb447618db946a9e2a596d9ea18763f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb447618db946a9e2a596d9ea18763f">&#9670;&#160;</a></span>_DEFAULT_SOURCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _DEFAULT_SOURCE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a id="a72e502882b3b3aae5700c64f03dad5f1" name="a72e502882b3b3aae5700c64f03dad5f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e502882b3b3aae5700c64f03dad5f1">&#9670;&#160;</a></span>addContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addContent </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>identifier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona conteúdo a um arquivo específico. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Identificador do arquivo. </td></tr>
+    <tr><td class="paramname">text</td><td>Texto a ser adicionado.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Extrai o nome do arquivo do texto fornecido e, em seguida, cria o caminho completo para o arquivo dentro da pasta ".versionador/content". Em seguida, lê o conteúdo do arquivo fornecido e o escreve no arquivo correspondente no local especificado. </p>
+<div class="fragment"><div class="line"><span class="lineno">  637</span>                                                         {</div>
+<div class="line"><span class="lineno">  638</span>    <span class="keywordtype">char</span> filename[100];</div>
+<div class="line"><span class="lineno">  639</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="lineno">  640</span>    <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><span class="lineno">  641</span>   </div>
+<div class="line"><span class="lineno">  642</span>   <span class="keywordflow">while</span> (text[i] != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><span class="lineno">  643</span>            filename[j] = text[i]; <span class="comment">// Armazena o caractere na palavra</span></div>
+<div class="line"><span class="lineno">  644</span>            j++;</div>
+<div class="line"><span class="lineno">  645</span>            i++;</div>
+<div class="line"><span class="lineno">  646</span>    }</div>
+<div class="line"><span class="lineno">  647</span>    filename[j] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  648</span>    FILE* file = fopen(<span class="stringliteral">&quot;.versionador/atual.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  649</span> </div>
+<div class="line"><span class="lineno">  650</span>    <span class="keywordflow">if</span> (file != NULL) {</div>
+<div class="line"><span class="lineno">  651</span>        <span class="keywordtype">char</span> linha[50];</div>
+<div class="line"><span class="lineno">  652</span>        <span class="keywordtype">char</span> branchName[50];</div>
+<div class="line"><span class="lineno">  653</span>        <span class="keywordtype">char</span> versionName[50];</div>
+<div class="line"><span class="lineno">  654</span>        <span class="keywordtype">char</span> concatBranchPath[100];</div>
+<div class="line"><span class="lineno">  655</span> </div>
+<div class="line"><span class="lineno">  656</span>        <span class="keywordflow">while</span> (fgets(linha, <span class="keyword">sizeof</span>(linha), file) != NULL) {</div>
+<div class="line"><span class="lineno">  657</span>            <span class="keywordflow">if</span> (strcmp(linha, <span class="stringliteral">&quot;&lt;INICIO&gt;\n&quot;</span>) == 0) {</div>
+<div class="line"><span class="lineno">  658</span>                fgets(branchName, 50, file);</div>
+<div class="line"><span class="lineno">  659</span>                fgets(versionName, 50, file);</div>
+<div class="line"><span class="lineno">  660</span>               </div>
+<div class="line"><span class="lineno">  661</span> </div>
+<div class="line"><span class="lineno">  662</span>                <span class="comment">// Removendo o caractere de nova linha (\n) no final de cada string</span></div>
+<div class="line"><span class="lineno">  663</span>                branchName[strcspn(branchName, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  664</span>                versionName[strcspn(versionName, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  665</span>            }</div>
+<div class="line"><span class="lineno">  666</span>        }</div>
+<div class="line"><span class="lineno">  667</span>         </div>
+<div class="line"><span class="lineno">  668</span>        </div>
+<div class="line"><span class="lineno">  669</span>        sprintf(concatBranchPath, <span class="stringliteral">&quot;.versionador/content/%s&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">  670</span>        <span class="keywordtype">char</span>* fileConcat = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(concatBranchPath, <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(identifier, filename));</div>
+<div class="line"><span class="lineno">  671</span>        <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(filename);</div>
+<div class="line"><span class="lineno">  672</span>        <a class="code hl_function" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(fileConcat, <a class="code hl_function" href="util_8c.html#ad69118b8ad0f71842378f1997e1a6a5c">readTextFile</a>(filename));</div>
+<div class="line"><span class="lineno">  673</span>        free(fileConcat);</div>
+<div class="line"><span class="lineno">  674</span>        fclose(file);</div>
+<div class="line"><span class="lineno">  675</span> </div>
+<div class="line"><span class="lineno">  676</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  677</span>        printf(<span class="stringliteral">&quot;Erro ao abrir o arquivo para ler as structs.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  678</span>    }</div>
+<div class="line"><span class="lineno">  679</span>}</div>
+<div class="ttc" id="autil_8c_html_a23f7fb91c9c504dba07e29b781875cf1"><div class="ttname"><a href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a></div><div class="ttdeci">char * concatenatePaths(const char *path1, const char *path2)</div><div class="ttdoc">Concatena dois caminhos em uma única string.</div><div class="ttdef"><b>Definição</b> util.c:101</div></div>
+<div class="ttc" id="autil_8c_html_a2ecc69cced4dcf1393217677224d08b7"><div class="ttname"><a href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a></div><div class="ttdeci">void printInfo(const char *message)</div><div class="ttdoc">Imprime uma mensagem de informação.</div><div class="ttdef"><b>Definição</b> util.c:37</div></div>
+<div class="ttc" id="autil_8c_html_a8ac584ddf2ae0297798ad8a3ad12fab5"><div class="ttname"><a href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a></div><div class="ttdeci">void writeTextFile(const char *filename, const char *content)</div><div class="ttdoc">Escreve o conteúdo em um arquivo de texto.</div><div class="ttdef"><b>Definição</b> util.c:202</div></div>
+<div class="ttc" id="autil_8c_html_ad69118b8ad0f71842378f1997e1a6a5c"><div class="ttname"><a href="util_8c.html#ad69118b8ad0f71842378f1997e1a6a5c">readTextFile</a></div><div class="ttdeci">char * readTextFile(const char *name)</div><div class="ttdoc">Lê o conteúdo de um arquivo de texto.</div><div class="ttdef"><b>Definição</b> util.c:124</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a01f7156b1678fabe1036805c30758279" name="a01f7156b1678fabe1036805c30758279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f7156b1678fabe1036805c30758279">&#9670;&#160;</a></span>addFileToSnapshot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addFileToSnapshot </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona um arquivo ao próximo snapshot. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Nome do arquivo a ser adicionado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  205</span>                                             {</div>
+<div class="line"><span class="lineno">  206</span>     <span class="comment">// Marcar o arquivo para ser adicionado ao próximo snapshot</span></div>
+<div class="line"><span class="lineno">  207</span>    <span class="keywordtype">char</span>* snapshotPath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(<span class="stringliteral">&quot;.versionador/snapshots&quot;</span>, <span class="stringliteral">&quot;next_snapshot.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">  208</span>    <span class="keywordtype">size_t</span> len1 = strlen(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  209</span>    <span class="keywordtype">size_t</span> len2 = strlen(filename);</div>
+<div class="line"><span class="lineno">  210</span>    <span class="keywordtype">char</span>* combined = (<span class="keywordtype">char</span>*)malloc(len1 + len2 + 1);</div>
+<div class="line"><span class="lineno">  211</span>    strcpy(combined, <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  212</span>    strcat(combined, filename);</div>
+<div class="line"><span class="lineno">  213</span>     </div>
+<div class="line"><span class="lineno">  214</span>    FILE* snapshotFile = fopen(snapshotPath, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno">  215</span>    <span class="keywordflow">if</span> (snapshotFile == NULL) {</div>
+<div class="line"><span class="lineno">  216</span>        <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;Failed to open snapshot file for appending.&quot;</span>);</div>
+<div class="line"><span class="lineno">  217</span>        free(snapshotPath);</div>
+<div class="line"><span class="lineno">  218</span>       </div>
+<div class="line"><span class="lineno">  219</span>        free(combined);</div>
+<div class="line"><span class="lineno">  220</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  221</span>    }</div>
+<div class="line"><span class="lineno">  222</span> </div>
+<div class="line"><span class="lineno">  223</span>    fputs(combined, snapshotFile);</div>
+<div class="line"><span class="lineno">  224</span>    fclose(snapshotFile);</div>
+<div class="line"><span class="lineno">  225</span>    free(combined);</div>
+<div class="line"><span class="lineno">  226</span>    free(snapshotPath);</div>
+<div class="line"><span class="lineno">  227</span> </div>
+<div class="line"><span class="lineno">  228</span>}</div>
+<div class="ttc" id="autil_8c_html_abb09396ee13a44215695d146ba593be5"><div class="ttname"><a href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a></div><div class="ttdeci">void printError(const char *message)</div><div class="ttdoc">Imprime uma mensagem de erro.</div><div class="ttdef"><b>Definição</b> util.c:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a98a20f8b453e5356faaf845fd3bffb2d" name="a98a20f8b453e5356faaf845fd3bffb2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a20f8b453e5356faaf845fd3bffb2d">&#9670;&#160;</a></span>branchExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int branchExists </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se um ramo existe no banco de dados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nome do ramo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>1 se o ramo existe, 0 caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                            {</div>
+<div class="line"><span class="lineno">   38</span>    <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(<span class="stringliteral">&quot;ola&quot;</span>);</div>
+<div class="line"><span class="lineno">   39</span>   <span class="keywordflow">return</span> <a class="code hl_function" href="arvore_8c.html#ad708c2d8f660ac312da05cbf81edab40">branchExistsInTree</a>(name);</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+<div class="ttc" id="aarvore_8c_html_ad708c2d8f660ac312da05cbf81edab40"><div class="ttname"><a href="arvore_8c.html#ad708c2d8f660ac312da05cbf81edab40">branchExistsInTree</a></div><div class="ttdeci">int branchExistsInTree(char *branch)</div><div class="ttdef"><b>Definição</b> arvore.c:360</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a942903aaafe895b24848f7e382892d06" name="a942903aaafe895b24848f7e382892d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a942903aaafe895b24848f7e382892d06">&#9670;&#160;</a></span>copyDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void copyDirectory </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>sourceDir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>destDir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copia um diretório e seu conteúdo para um destino específico. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceDir</td><td>Diretório de origem. </td></tr>
+    <tr><td class="paramname">destDir</td><td>Diretório de destino. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  493</span>                                                               { </div>
+<div class="line"><span class="lineno">  494</span> </div>
+<div class="line"><span class="lineno">  495</span>    <span class="comment">// Abrir o diretório de origem</span></div>
+<div class="line"><span class="lineno">  496</span>    DIR* dir = opendir(sourceDir);</div>
+<div class="line"><span class="lineno">  497</span>    <span class="keywordflow">if</span> (dir == NULL) {</div>
+<div class="line"><span class="lineno">  498</span>        printf(<span class="stringliteral">&quot;Failed to open source directory.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  499</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  500</span>    }</div>
+<div class="line"><span class="lineno">  501</span> </div>
+<div class="line"><span class="lineno">  502</span>    <span class="comment">// Ler os arquivos no diretório de origem</span></div>
+<div class="line"><span class="lineno">  503</span>    <span class="keyword">struct </span>dirent* entry;</div>
+<div class="line"><span class="lineno">  504</span>    <span class="keywordflow">while</span> ((entry = readdir(dir)) != NULL) {</div>
+<div class="line"><span class="lineno">  505</span>        <span class="keywordflow">if</span> (strcmp(entry-&gt;d_name, <span class="stringliteral">&quot;.&quot;</span>) == 0 || strcmp(entry-&gt;d_name, <span class="stringliteral">&quot;..&quot;</span>) == 0) {</div>
+<div class="line"><span class="lineno">  506</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  507</span>        }</div>
+<div class="line"><span class="lineno">  508</span> </div>
+<div class="line"><span class="lineno">  509</span>        <span class="comment">// Construir os caminhos completos para o arquivo de origem e destino</span></div>
+<div class="line"><span class="lineno">  510</span>        <span class="keywordtype">char</span>* sourcePath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(sourceDir, entry-&gt;d_name);</div>
+<div class="line"><span class="lineno">  511</span>        <span class="keywordtype">char</span>* destPath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(destDir, entry-&gt;d_name);</div>
+<div class="line"><span class="lineno">  512</span> </div>
+<div class="line"><span class="lineno">  513</span>        <span class="comment">// Verificar se é um diretório</span></div>
+<div class="line"><span class="lineno">  514</span>        <span class="keyword">struct </span>stat st;</div>
+<div class="line"><span class="lineno">  515</span>        <span class="keywordflow">if</span> (stat(sourcePath, &amp;st) == 0 &amp;&amp; S_ISDIR(st.st_mode)) {</div>
+<div class="line"><span class="lineno">  516</span>            <span class="comment">// Se for um diretório, chamar recursivamente a função copyDirectory</span></div>
+<div class="line"><span class="lineno">  517</span>            <a class="code hl_function" href="database_8c.html#a942903aaafe895b24848f7e382892d06">copyDirectory</a>(sourcePath, destPath);</div>
+<div class="line"><span class="lineno">  518</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  519</span>            <span class="comment">// Se for um arquivo, copiar o arquivo para o destino</span></div>
+<div class="line"><span class="lineno">  520</span>            <a class="code hl_function" href="database_8c.html#a83f468e8ade161152bc4d29189e7f3d2">copyFile</a>(sourcePath, destPath);</div>
+<div class="line"><span class="lineno">  521</span>        }</div>
+<div class="line"><span class="lineno">  522</span> </div>
+<div class="line"><span class="lineno">  523</span>        free(sourcePath);</div>
+<div class="line"><span class="lineno">  524</span>        free(destPath);</div>
+<div class="line"><span class="lineno">  525</span>    }</div>
+<div class="line"><span class="lineno">  526</span> </div>
+<div class="line"><span class="lineno">  527</span>    closedir(dir);</div>
+<div class="line"><span class="lineno">  528</span>}</div>
+<div class="ttc" id="adatabase_8c_html_a83f468e8ade161152bc4d29189e7f3d2"><div class="ttname"><a href="database_8c.html#a83f468e8ade161152bc4d29189e7f3d2">copyFile</a></div><div class="ttdeci">void copyFile(const char *sourceFile, const char *destFile)</div><div class="ttdoc">Copia um arquivo de origem para um destino específico.</div><div class="ttdef"><b>Definição</b> database.c:535</div></div>
+<div class="ttc" id="adatabase_8c_html_a942903aaafe895b24848f7e382892d06"><div class="ttname"><a href="database_8c.html#a942903aaafe895b24848f7e382892d06">copyDirectory</a></div><div class="ttdeci">void copyDirectory(const char *sourceDir, const char *destDir)</div><div class="ttdoc">Copia um diretório e seu conteúdo para um destino específico.</div><div class="ttdef"><b>Definição</b> database.c:493</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a83f468e8ade161152bc4d29189e7f3d2" name="a83f468e8ade161152bc4d29189e7f3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83f468e8ade161152bc4d29189e7f3d2">&#9670;&#160;</a></span>copyFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void copyFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>sourceFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>destFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copia um arquivo de origem para um destino específico. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sourceFile</td><td>Arquivo de origem. </td></tr>
+    <tr><td class="paramname">destFile</td><td>Arquivo de destino. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  535</span>                                                            {</div>
+<div class="line"><span class="lineno">  536</span>    <span class="keywordtype">char</span> destino[100];</div>
+<div class="line"><span class="lineno">  537</span>    strcpy(destino, destFile);</div>
+<div class="line"><span class="lineno">  538</span>    FILE* dest = fopen(destino, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno">  539</span>    FILE* source = fopen(sourceFile, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  540</span>    </div>
+<div class="line"><span class="lineno">  541</span> </div>
+<div class="line"><span class="lineno">  542</span>    <span class="keywordflow">if</span> (source == NULL || dest == NULL) {</div>
+<div class="line"><span class="lineno">  543</span>        printf(<span class="stringliteral">&quot;Failed to open source or destination file.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  544</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  545</span>    }</div>
+<div class="line"><span class="lineno">  546</span> </div>
+<div class="line"><span class="lineno">  547</span>    fseek(source, 0, SEEK_END);</div>
+<div class="line"><span class="lineno">  548</span>    <span class="keywordtype">long</span> fileLength = ftell(source);</div>
+<div class="line"><span class="lineno">  549</span>    fseek(source, 0, SEEK_SET);</div>
+<div class="line"><span class="lineno">  550</span>    <span class="keywordtype">char</span> *buffer = (<span class="keywordtype">char</span>*)malloc(fileLength);</div>
+<div class="line"><span class="lineno">  551</span> </div>
+<div class="line"><span class="lineno">  552</span>    <span class="keywordtype">size_t</span> bytesRead;</div>
+<div class="line"><span class="lineno">  553</span> </div>
+<div class="line"><span class="lineno">  554</span>    <span class="keywordflow">if</span> ((bytesRead = fread(buffer, 1, fileLength+1, source)) &gt; 0) {</div>
+<div class="line"><span class="lineno">  555</span>        fwrite(buffer, 1, bytesRead, dest);</div>
+<div class="line"><span class="lineno">  556</span>    }</div>
+<div class="line"><span class="lineno">  557</span> </div>
+<div class="line"><span class="lineno">  558</span>    fclose(source);</div>
+<div class="line"><span class="lineno">  559</span>    fclose(dest);</div>
+<div class="line"><span class="lineno">  560</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa922560421db59e531501475585a34d3" name="aa922560421db59e531501475585a34d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa922560421db59e531501475585a34d3">&#9670;&#160;</a></span>createBranchInDatabase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createBranchInDatabase </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>branchName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>versionName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um novo ramo no banco de dados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nome do ramo. </td></tr>
+    <tr><td class="paramname">branchName</td><td>Nome do ramo de origem. </td></tr>
+    <tr><td class="paramname">versionName</td><td>Nome da versão de origem. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                                            {</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordtype">char</span> contentAtual[200];</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordtype">char</span> concatAtual[200];</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordtype">char</span> concatDirectory[200];</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    sprintf(concatDirectory, <span class="stringliteral">&quot;.versionador/content/%s&quot;</span>, name);</div>
+<div class="line"><span class="lineno">   55</span>    <a class="code hl_function" href="util_8c.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a>(concatDirectory);</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_function" href="util_8c.html#a47b771074091af4c6e8cc32b0a951e3e">fillNode</a>(name, versionName, branchName, <span class="stringliteral">&quot;.versionador/content/dados.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    sprintf(contentAtual, <span class="stringliteral">&quot;&lt;INICIO&gt;\n%s\nNenhum\n&lt;FIM&gt;&quot;</span>, name);</div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_function" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(<span class="stringliteral">&quot;.versionador/atual.txt&quot;</span>, contentAtual);</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    sprintf(concatAtual, <span class="stringliteral">&quot;.versionador/versions%s.txt&quot;</span>, name);</div>
+<div class="line"><span class="lineno">   63</span>    <a class="code hl_function" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(concatAtual, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   64</span>}</div>
+<div class="ttc" id="autil_8c_html_a47b771074091af4c6e8cc32b0a951e3e"><div class="ttname"><a href="util_8c.html#a47b771074091af4c6e8cc32b0a951e3e">fillNode</a></div><div class="ttdeci">void fillNode(char *name, char *initVersion, char *initParent, char *file)</div><div class="ttdef"><b>Definição</b> util.c:403</div></div>
+<div class="ttc" id="autil_8c_html_ac2ce5ff55187c7dfa54489e17e2f7deb"><div class="ttname"><a href="util_8c.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a></div><div class="ttdeci">void createDirectory(const char *path)</div><div class="ttdoc">Cria um diretório.</div><div class="ttdef"><b>Definição</b> util.c:48</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab4aabfdcc9a54dc707a10e2ecbe19e54" name="ab4aabfdcc9a54dc707a10e2ecbe19e54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4aabfdcc9a54dc707a10e2ecbe19e54">&#9670;&#160;</a></span>createDatabase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createDatabase </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria o banco de dados necessário para o versionador. </p>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                      {</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_function" href="util_8c.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a>(<span class="stringliteral">&quot;.versionador&quot;</span>);</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_function" href="util_8c.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a>(<span class="stringliteral">&quot;.versionador/content&quot;</span>);</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_function" href="util_8c.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a>(<span class="stringliteral">&quot;.versionador/content/principal&quot;</span>);</div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_function" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(<span class="stringliteral">&quot;.versionador/content/dados.txt&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><span class="lineno">   27</span>    <a class="code hl_function" href="util_8c.html#a47b771074091af4c6e8cc32b0a951e3e">fillNode</a>(<span class="stringliteral">&quot;principal&quot;</span>, <span class="stringliteral">&quot;Nenhum&quot;</span>, <span class="stringliteral">&quot;Nenhum&quot;</span>, <span class="stringliteral">&quot;.versionador/content/dados.txt&quot;</span>);</div>
+<div class="line"><span class="lineno">   28</span>    <a class="code hl_function" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(<span class="stringliteral">&quot;.versionador/atual.txt&quot;</span>, <span class="stringliteral">&quot;&lt;INICIO&gt;\nprincipal\nNenhum\n&lt;FIM&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">   29</span>    <a class="code hl_function" href="util_8c.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a>(<span class="stringliteral">&quot;.versionador/snapshots&quot;</span>);</div>
+<div class="line"><span class="lineno">   30</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6d77151ddd12d32300de275deb0415f5" name="a6d77151ddd12d32300de275deb0415f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d77151ddd12d32300de275deb0415f5">&#9670;&#160;</a></span>directoryExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int directoryExists </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se um diretório existe. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Caminho do diretório. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>1 se o diretório existe, 0 caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  453</span>                                      {</div>
+<div class="line"><span class="lineno">  454</span>    <span class="keyword">struct </span>stat st;</div>
+<div class="line"><span class="lineno">  455</span>    <span class="keywordflow">if</span> (stat(path, &amp;st) == 0 &amp;&amp; S_ISDIR(st.st_mode)) {</div>
+<div class="line"><span class="lineno">  456</span>        <span class="keywordflow">return</span> 1;  <span class="comment">// Diretório existe</span></div>
+<div class="line"><span class="lineno">  457</span>    }</div>
+<div class="line"><span class="lineno">  458</span>    <span class="keywordflow">return</span> 0;  <span class="comment">// Diretório não existe</span></div>
+<div class="line"><span class="lineno">  459</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2cd87cc8b64aa63e846ea58181aab7a5" name="a2cd87cc8b64aa63e846ea58181aab7a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd87cc8b64aa63e846ea58181aab7a5">&#9670;&#160;</a></span>getCurrentVersionIdentifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * getCurrentVersionIdentifier </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém o identificador da versão atual. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Identificador da versão atual. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  464</span>                                    {</div>
+<div class="line"><span class="lineno">  465</span>    <span class="keywordtype">char</span> line[200];</div>
+<div class="line"><span class="lineno">  466</span>    <span class="keywordtype">char</span>* cuerrentCopy = (<span class="keywordtype">char</span>*)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>)*200);</div>
+<div class="line"><span class="lineno">  467</span>    <span class="keywordtype">char</span> cuerrent[200];</div>
+<div class="line"><span class="lineno">  468</span> </div>
+<div class="line"><span class="lineno">  469</span>    FILE* file = fopen(<span class="stringliteral">&quot;.versionador/atual.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  470</span>    <span class="keywordflow">if</span> (file == NULL) {</div>
+<div class="line"><span class="lineno">  471</span>        printf(<span class="stringliteral">&quot;Erro ao abrir o arquivo de metadados.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  472</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  473</span>    }</div>
+<div class="line"><span class="lineno">  474</span> </div>
+<div class="line"><span class="lineno">  475</span>    <span class="keywordflow">while</span> (fgets(line, <span class="keyword">sizeof</span>(line), file) != NULL) {</div>
+<div class="line"><span class="lineno">  476</span>        <span class="keywordflow">if</span> (strcmp(line, <span class="stringliteral">&quot;&lt;INICIO&gt;\n&quot;</span>) == 0) {</div>
+<div class="line"><span class="lineno">  477</span>            fgets(line, <span class="keyword">sizeof</span>(line), file);  <span class="comment">// Ler o nome da branch</span></div>
+<div class="line"><span class="lineno">  478</span>            fgets(cuerrent, <span class="keyword">sizeof</span>(cuerrent), file);  <span class="comment">// Ler a versão da branch</span></div>
+<div class="line"><span class="lineno">  479</span>            cuerrent[strcspn(cuerrent, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  480</span>        }</div>
+<div class="line"><span class="lineno">  481</span>    }</div>
+<div class="line"><span class="lineno">  482</span> </div>
+<div class="line"><span class="lineno">  483</span>    fclose(file);</div>
+<div class="line"><span class="lineno">  484</span> </div>
+<div class="line"><span class="lineno">  485</span>    strcpy(cuerrentCopy, cuerrent);</div>
+<div class="line"><span class="lineno">  486</span>    <span class="keywordflow">return</span> cuerrentCopy;</div>
+<div class="line"><span class="lineno">  487</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad6ef2c6a7cc7035402586d864396008d" name="ad6ef2c6a7cc7035402586d864396008d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ef2c6a7cc7035402586d864396008d">&#9670;&#160;</a></span>getSnapshotInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getSnapshotInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém informações sobre os snapshots registrados no banco de dados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Número total de snapshots. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  294</span>                      {</div>
+<div class="line"><span class="lineno">  295</span>    printf(<span class="stringliteral">&quot;Lista de snapshots:\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  296</span> </div>
+<div class="line"><span class="lineno">  297</span>    <span class="comment">// Abrir a pasta de snapshots</span></div>
+<div class="line"><span class="lineno">  298</span>    DIR* snapshotsDir = opendir(<span class="stringliteral">&quot;.versionador/snapshots&quot;</span>);</div>
+<div class="line"><span class="lineno">  299</span>    <span class="keywordflow">if</span> (snapshotsDir == NULL) {</div>
+<div class="line"><span class="lineno">  300</span>        <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;Failed to open snapshots directory.&quot;</span>);</div>
+<div class="line"><span class="lineno">  301</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  302</span>    }</div>
+<div class="line"><span class="lineno">  303</span> </div>
+<div class="line"><span class="lineno">  304</span>    <span class="comment">// Ler os arquivos na pasta de snapshots</span></div>
+<div class="line"><span class="lineno">  305</span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="database_8c.html#acd051ec62eda05e00f82dad304afca95">numVersions</a> = 0;</div>
+<div class="line"><span class="lineno">  306</span>    <span class="keyword">struct </span>dirent* entry;</div>
+<div class="line"><span class="lineno">  307</span>    <span class="keywordflow">while</span> ((entry = readdir(snapshotsDir)) != NULL) {</div>
+<div class="line"><span class="lineno">  308</span>        <span class="keywordflow">if</span> (entry-&gt;d_type == DT_REG) {  <span class="comment">// Verificar se é um arquivo regular</span></div>
+<div class="line"><span class="lineno">  309</span>            <span class="keywordtype">char</span>* identifier = entry-&gt;d_name;</div>
+<div class="line"><span class="lineno">  310</span> </div>
+<div class="line"><span class="lineno">  311</span>            <span class="comment">// Construir o caminho completo para o arquivo do snapshot</span></div>
+<div class="line"><span class="lineno">  312</span>            <span class="keywordtype">char</span>* snapshotPath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(<span class="stringliteral">&quot;.versionador/snapshots&quot;</span>, identifier);</div>
+<div class="line"><span class="lineno">  313</span> </div>
+<div class="line"><span class="lineno">  314</span> </div>
+<div class="line"><span class="lineno">  315</span>            <span class="comment">// Ler o texto do snapshot</span></div>
+<div class="line"><span class="lineno">  316</span>            <span class="keywordtype">char</span>* snapshotText = <a class="code hl_function" href="util_8c.html#ad69118b8ad0f71842378f1997e1a6a5c">readTextFile</a>(snapshotPath);</div>
+<div class="line"><span class="lineno">  317</span>            <span class="keywordflow">if</span> (snapshotText != NULL) {</div>
+<div class="line"><span class="lineno">  318</span>                printf(<span class="stringliteral">&quot;Identificador: %s\n&quot;</span>, identifier);</div>
+<div class="line"><span class="lineno">  319</span>                printf(<span class="stringliteral">&quot;Texto: %s\n\n&quot;</span>, snapshotText);</div>
+<div class="line"><span class="lineno">  320</span>                free(snapshotText);</div>
+<div class="line"><span class="lineno">  321</span>                <a class="code hl_variable" href="database_8c.html#acd051ec62eda05e00f82dad304afca95">numVersions</a>++;</div>
+<div class="line"><span class="lineno">  322</span>            }</div>
+<div class="line"><span class="lineno">  323</span> </div>
+<div class="line"><span class="lineno">  324</span>            free(snapshotPath);</div>
+<div class="line"><span class="lineno">  325</span>        }</div>
+<div class="line"><span class="lineno">  326</span>    }</div>
+<div class="line"><span class="lineno">  327</span> </div>
+<div class="line"><span class="lineno">  328</span>    closedir(snapshotsDir);</div>
+<div class="line"><span class="lineno">  329</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="database_8c.html#acd051ec62eda05e00f82dad304afca95">numVersions</a>;</div>
+<div class="line"><span class="lineno">  330</span>}</div>
+<div class="ttc" id="adatabase_8c_html_acd051ec62eda05e00f82dad304afca95"><div class="ttname"><a href="database_8c.html#acd051ec62eda05e00f82dad304afca95">numVersions</a></div><div class="ttdeci">int numVersions</div><div class="ttdef"><b>Definição</b> database.c:17</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a33f0cb5145da177bc6f95229eaa05f5a" name="a33f0cb5145da177bc6f95229eaa05f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f0cb5145da177bc6f95229eaa05f5a">&#9670;&#160;</a></span>getVersionContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getVersionContent </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>showContent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém o conteúdo de uma determinada versão. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Identificador da versão. </td></tr>
+    <tr><td class="paramname">showContent</td><td>Flag para indicar se o conteúdo dos arquivos deve ser exibido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  337</span>                                                        {</div>
+<div class="line"><span class="lineno">  338</span>    <span class="keywordtype">char</span> identifier[100];</div>
+<div class="line"><span class="lineno">  339</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="lineno">  340</span>    <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><span class="lineno">  341</span>   </div>
+<div class="line"><span class="lineno">  342</span>   <span class="keywordflow">while</span> (<span class="keywordtype">id</span>[i] != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><span class="lineno">  343</span>            identifier[j] = <span class="keywordtype">id</span>[i]; <span class="comment">// Armazena o caractere na palavra</span></div>
+<div class="line"><span class="lineno">  344</span>            j++;</div>
+<div class="line"><span class="lineno">  345</span>            i++;</div>
+<div class="line"><span class="lineno">  346</span>    }</div>
+<div class="line"><span class="lineno">  347</span>    identifier[j] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  348</span>    <span class="comment">// Obter o texto registrado para a versão com o identificador especificado</span></div>
+<div class="line"><span class="lineno">  349</span>    <span class="comment">// Obter o conteúdo dos arquivos versionados naquela versão</span></div>
+<div class="line"><span class="lineno">  350</span>    <span class="comment">// Se showContent for verdadeiro, exibir o conteúdo dos arquivos no console</span></div>
+<div class="line"><span class="lineno">  351</span>    <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(identifier);</div>
+<div class="line"><span class="lineno">  352</span>    <span class="comment">// Construir o caminho completo para o arquivo do snapshot</span></div>
+<div class="line"><span class="lineno">  353</span>    <span class="keywordtype">char</span>* snapshotPath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(<span class="stringliteral">&quot;.versionador/snapshots&quot;</span>, identifier);</div>
+<div class="line"><span class="lineno">  354</span>   </div>
+<div class="line"><span class="lineno">  355</span> </div>
+<div class="line"><span class="lineno">  356</span>    <span class="comment">// Ler o texto do snapshot</span></div>
+<div class="line"><span class="lineno">  357</span>    <span class="keywordtype">char</span>* snapshotText = <a class="code hl_function" href="util_8c.html#ad69118b8ad0f71842378f1997e1a6a5c">readTextFile</a>(snapshotPath);</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>    <span class="keywordflow">if</span> (snapshotText != NULL) {</div>
+<div class="line"><span class="lineno">  360</span>        printf(<span class="stringliteral">&quot;Texto registrado para a versão %s:\n&quot;</span>, identifier);</div>
+<div class="line"><span class="lineno">  361</span>        printf(<span class="stringliteral">&quot;%s\n\n&quot;</span>, snapshotText);</div>
+<div class="line"><span class="lineno">  362</span>        free(snapshotText);</div>
+<div class="line"><span class="lineno">  363</span>    }</div>
+<div class="line"><span class="lineno">  364</span> </div>
+<div class="line"><span class="lineno">  365</span>    <span class="keywordflow">if</span> (showContent) {</div>
+<div class="line"><span class="lineno">  366</span>        <span class="comment">// Construir o caminho completo para a pasta de conteúdo</span></div>
+<div class="line"><span class="lineno">  367</span>        <span class="keywordtype">char</span>* contentPath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(<span class="stringliteral">&quot;.versionador/content&quot;</span>, identifier);</div>
+<div class="line"><span class="lineno">  368</span> </div>
+<div class="line"><span class="lineno">  369</span>        <span class="comment">// Abrir a pasta de conteúdo</span></div>
+<div class="line"><span class="lineno">  370</span>        DIR* contentDir = opendir(contentPath);</div>
+<div class="line"><span class="lineno">  371</span>        <span class="keywordflow">if</span> (contentDir == NULL) {</div>
+<div class="line"><span class="lineno">  372</span>            <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;Failed to open content directory.&quot;</span>);</div>
+<div class="line"><span class="lineno">  373</span>            free(contentPath);</div>
+<div class="line"><span class="lineno">  374</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  375</span>        }</div>
+<div class="line"><span class="lineno">  376</span> </div>
+<div class="line"><span class="lineno">  377</span>        printf(<span class="stringliteral">&quot;Conteúdo dos arquivos versionados:\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  378</span> </div>
+<div class="line"><span class="lineno">  379</span>        <span class="comment">// Ler os arquivos na pasta de conteúdo</span></div>
+<div class="line"><span class="lineno">  380</span>        <span class="keyword">struct </span>dirent* entry;</div>
+<div class="line"><span class="lineno">  381</span>        <span class="keywordflow">while</span> ((entry = readdir(contentDir)) != NULL) {</div>
+<div class="line"><span class="lineno">  382</span>            <span class="keywordflow">if</span> (entry-&gt;d_type == DT_REG) {  <span class="comment">// Verificar se é um arquivo regular</span></div>
+<div class="line"><span class="lineno">  383</span>                <span class="comment">// Construir o caminho completo para o arquivo de conteúdo</span></div>
+<div class="line"><span class="lineno">  384</span>                <span class="keywordtype">char</span>* filePath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(contentPath, entry-&gt;d_name);</div>
+<div class="line"><span class="lineno">  385</span> </div>
+<div class="line"><span class="lineno">  386</span>                <span class="comment">// Ler o conteúdo do arquivo</span></div>
+<div class="line"><span class="lineno">  387</span>                <span class="keywordtype">char</span>* fileContent = <a class="code hl_function" href="util_8c.html#ad69118b8ad0f71842378f1997e1a6a5c">readTextFile</a>(filePath);</div>
+<div class="line"><span class="lineno">  388</span>              </div>
+<div class="line"><span class="lineno">  389</span>                <span class="keywordflow">if</span> (fileContent != NULL) {</div>
+<div class="line"><span class="lineno">  390</span>                    printf(<span class="stringliteral">&quot;Arquivo: %s\n&quot;</span>, entry-&gt;d_name);</div>
+<div class="line"><span class="lineno">  391</span>                    printf(<span class="stringliteral">&quot;Conteúdo:\n%s\n\n&quot;</span>, fileContent);</div>
+<div class="line"><span class="lineno">  392</span>                    free(fileContent);</div>
+<div class="line"><span class="lineno">  393</span>                }</div>
+<div class="line"><span class="lineno">  394</span>                free(filePath);</div>
+<div class="line"><span class="lineno">  395</span>            }</div>
+<div class="line"><span class="lineno">  396</span>        }</div>
+<div class="line"><span class="lineno">  397</span> </div>
+<div class="line"><span class="lineno">  398</span>        closedir(contentDir);</div>
+<div class="line"><span class="lineno">  399</span>        free(contentPath);</div>
+<div class="line"><span class="lineno">  400</span>    }</div>
+<div class="line"><span class="lineno">  401</span> </div>
+<div class="line"><span class="lineno">  402</span>    free(snapshotPath);</div>
+<div class="line"><span class="lineno">  403</span>    </div>
+<div class="line"><span class="lineno">  404</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a918677cf693dde8088a1793fc5cea415" name="a918677cf693dde8088a1793fc5cea415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a918677cf693dde8088a1793fc5cea415">&#9670;&#160;</a></span>registerSnapshot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void registerSnapshot </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>identifier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>commit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registra um snapshot no banco de dados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Identificador do snapshot. </td></tr>
+    <tr><td class="paramname">commit</td><td>Texto do commit associado ao snapshot. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  235</span>                                                                  {</div>
+<div class="line"><span class="lineno">  236</span>    <span class="comment">// Criar um snapshot dos arquivos marcados e registrar no banco de dados</span></div>
+<div class="line"><span class="lineno">  237</span>    <span class="keywordtype">char</span>* snapshotPath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(<span class="stringliteral">&quot;.versionador/snapshots&quot;</span>, identifier);</div>
+<div class="line"><span class="lineno">  238</span>    <a class="code hl_function" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(snapshotPath, commit);</div>
+<div class="line"><span class="lineno">  239</span>   </div>
+<div class="line"><span class="lineno">  240</span>    free(snapshotPath);</div>
+<div class="line"><span class="lineno">  241</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7e65c532d019bcba63512d4e5d229099" name="a7e65c532d019bcba63512d4e5d229099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e65c532d019bcba63512d4e5d229099">&#9670;&#160;</a></span>removeBranchInDatabase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeBranchInDatabase </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>branchName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove um ramo do banco de dados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nome do ramo a ser removido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>                                              {</div>
+<div class="line"><span class="lineno">  149</span>    </div>
+<div class="line"><span class="lineno">  150</span>    <span class="comment">//Verificar se o ramo existe no banco de dados</span></div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="database_8c.html#a98a20f8b453e5356faaf845fd3bffb2d">branchExists</a>(branchName)) {</div>
+<div class="line"><span class="lineno">  152</span>        printf(<span class="stringliteral">&quot;Branch &#39;%s&#39; não existe.\n&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  154</span>    }</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>    <span class="comment">// Remover o ramo da árvore de versões</span></div>
+<div class="line"><span class="lineno">  157</span>    <a class="code hl_struct" href="structlista.html">Lista</a>* root = <a class="code hl_function" href="lista_8c.html#a83096b4d001058b50d929f7d93c66d86">lst_cria</a>();</div>
+<div class="line"><span class="lineno">  158</span>    <a class="code hl_function" href="arvore_8c.html#a0c108b77f88c33fd1355fd4f624b7ee4">removeBranchFromFileReturnChildren</a>(branchName, root);</div>
+<div class="line"><span class="lineno">  159</span> </div>
+<div class="line"><span class="lineno">  160</span>    <span class="comment">// Remover o diretório do ramo</span></div>
+<div class="line"><span class="lineno">  161</span>    </div>
+<div class="line"><span class="lineno">  162</span>    <a class="code hl_struct" href="structlista__no.html">ListaNo</a>* ptr = <a class="code hl_function" href="lista_8c.html#ab45807f5bff86a9a38a03263606bb0ba">lst_returnNodeValid</a>(root);</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordtype">char</span>* fileOrigin = <a class="code hl_function" href="lista_8c.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a>(ptr);</div>
+<div class="line"><span class="lineno">  164</span>    </div>
+<div class="line"><span class="lineno">  165</span>    <span class="keywordflow">while</span> (fileOrigin != NULL)</div>
+<div class="line"><span class="lineno">  166</span>    {   </div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordtype">char</span> branchPath[100];</div>
+<div class="line"><span class="lineno">  168</span>        sprintf(branchPath, <span class="stringliteral">&quot;.versionador/content/%s&quot;</span>, fileOrigin);</div>
+<div class="line"><span class="lineno">  169</span>        <a class="code hl_function" href="database_8c.html#a7c3ec9acd7bc538ce658dd6b8d5072cf">removeDirectory</a>(branchPath);</div>
+<div class="line"><span class="lineno">  170</span>    </div>
+<div class="line"><span class="lineno">  171</span>        <span class="comment">// Remover o arquivo de versões do ramo</span></div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordtype">char</span> versionsPath[100];</div>
+<div class="line"><span class="lineno">  173</span>        sprintf(versionsPath, <span class="stringliteral">&quot;.versionador/versions%s.txt&quot;</span>, fileOrigin);</div>
+<div class="line"><span class="lineno">  174</span>        <span class="keywordflow">if</span> (remove(versionsPath) != 0) {</div>
+<div class="line"><span class="lineno">  175</span>            printf(<span class="stringliteral">&quot;Failed to remove versions file for branch &#39;%s&#39;.\n&quot;</span>, fileOrigin);</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>        </div>
+<div class="line"><span class="lineno">  178</span>        ptr = <a class="code hl_function" href="lista_8c.html#a6592f26095d2dd9ad8b86944e688f876">lst_nextNode</a>(ptr);</div>
+<div class="line"><span class="lineno">  179</span>        fileOrigin = <a class="code hl_function" href="lista_8c.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a>(ptr);</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+<div class="line"><span class="lineno">  181</span>    free(fileOrigin);</div>
+<div class="line"><span class="lineno">  182</span>    <a class="code hl_function" href="lista_8c.html#ab3065cafc7f22243e573c69152bffa1d">lst_libera</a>(root);</div>
+<div class="line"><span class="lineno">  183</span> </div>
+<div class="line"><span class="lineno">  184</span>    <span class="keywordtype">char</span> branchPath[100];</div>
+<div class="line"><span class="lineno">  185</span>    sprintf(branchPath, <span class="stringliteral">&quot;.versionador/content/%s&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">  186</span>    <a class="code hl_function" href="database_8c.html#a7c3ec9acd7bc538ce658dd6b8d5072cf">removeDirectory</a>(branchPath);</div>
+<div class="line"><span class="lineno">  187</span> </div>
+<div class="line"><span class="lineno">  188</span>    <span class="comment">// Remover o arquivo de versões do ramo</span></div>
+<div class="line"><span class="lineno">  189</span>    <span class="keywordtype">char</span> versionsPath[100];</div>
+<div class="line"><span class="lineno">  190</span>    sprintf(versionsPath, <span class="stringliteral">&quot;.versionador/versions%s.txt&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">  191</span>    <span class="keywordflow">if</span> (remove(versionsPath) != 0) {</div>
+<div class="line"><span class="lineno">  192</span>        printf(<span class="stringliteral">&quot;Failed to remove versions file for branch &#39;%s&#39;.\n&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">  193</span>    }</div>
+<div class="line"><span class="lineno">  194</span> </div>
+<div class="line"><span class="lineno">  195</span>    printf(<span class="stringliteral">&quot;Branch &#39;%s&#39; removida com sucesso.\n&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">  196</span>}</div>
+<div class="ttc" id="aarvore_8c_html_a0c108b77f88c33fd1355fd4f624b7ee4"><div class="ttname"><a href="arvore_8c.html#a0c108b77f88c33fd1355fd4f624b7ee4">removeBranchFromFileReturnChildren</a></div><div class="ttdeci">void removeBranchFromFileReturnChildren(const char *branchName, Lista *root)</div><div class="ttdef"><b>Definição</b> arvore.c:435</div></div>
+<div class="ttc" id="adatabase_8c_html_a7c3ec9acd7bc538ce658dd6b8d5072cf"><div class="ttname"><a href="database_8c.html#a7c3ec9acd7bc538ce658dd6b8d5072cf">removeDirectory</a></div><div class="ttdeci">void removeDirectory(const char *path)</div><div class="ttdoc">Remove um diretório e todo o seu conteúdo.</div><div class="ttdef"><b>Definição</b> database.c:565</div></div>
+<div class="ttc" id="adatabase_8c_html_a98a20f8b453e5356faaf845fd3bffb2d"><div class="ttname"><a href="database_8c.html#a98a20f8b453e5356faaf845fd3bffb2d">branchExists</a></div><div class="ttdeci">int branchExists(char *name)</div><div class="ttdoc">Verifica se um ramo existe no banco de dados.</div><div class="ttdef"><b>Definição</b> database.c:37</div></div>
+<div class="ttc" id="alista_8c_html_a22629f9d8680bbe4d98b511c47a3cdcc"><div class="ttname"><a href="lista_8c.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a></div><div class="ttdeci">char * lst_infoValid(ListaNo *ptr)</div><div class="ttdoc">Retorna a informação válida de um nó.</div><div class="ttdef"><b>Definição</b> lista.c:251</div></div>
+<div class="ttc" id="alista_8c_html_a6592f26095d2dd9ad8b86944e688f876"><div class="ttname"><a href="lista_8c.html#a6592f26095d2dd9ad8b86944e688f876">lst_nextNode</a></div><div class="ttdeci">ListaNo * lst_nextNode(ListaNo *ptr)</div><div class="ttdoc">Retorna o próximo nó válido da lista.</div><div class="ttdef"><b>Definição</b> lista.c:232</div></div>
+<div class="ttc" id="alista_8c_html_a83096b4d001058b50d929f7d93c66d86"><div class="ttname"><a href="lista_8c.html#a83096b4d001058b50d929f7d93c66d86">lst_cria</a></div><div class="ttdeci">Lista * lst_cria(void)</div><div class="ttdoc">Cria uma nova lista vazia.</div><div class="ttdef"><b>Definição</b> lista.c:29</div></div>
+<div class="ttc" id="alista_8c_html_ab3065cafc7f22243e573c69152bffa1d"><div class="ttname"><a href="lista_8c.html#ab3065cafc7f22243e573c69152bffa1d">lst_libera</a></div><div class="ttdeci">void lst_libera(Lista *header)</div><div class="ttdoc">Libera a memória ocupada pela lista.</div><div class="ttdef"><b>Definição</b> lista.c:190</div></div>
+<div class="ttc" id="alista_8c_html_ab45807f5bff86a9a38a03263606bb0ba"><div class="ttname"><a href="lista_8c.html#ab45807f5bff86a9a38a03263606bb0ba">lst_returnNodeValid</a></div><div class="ttdeci">ListaNo * lst_returnNodeValid(Lista *header)</div><div class="ttdoc">Retorna o primeiro nó válido da lista.</div><div class="ttdef"><b>Definição</b> lista.c:213</div></div>
+<div class="ttc" id="astructlista__no_html"><div class="ttname"><a href="structlista__no.html">lista_no</a></div><div class="ttdoc">Estrutura de nó da lista.</div><div class="ttdef"><b>Definição</b> lista.c:10</div></div>
+<div class="ttc" id="astructlista_html"><div class="ttname"><a href="structlista.html">lista</a></div><div class="ttdoc">Estrutura da lista.</div><div class="ttdef"><b>Definição</b> lista.c:18</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7c3ec9acd7bc538ce658dd6b8d5072cf" name="a7c3ec9acd7bc538ce658dd6b8d5072cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c3ec9acd7bc538ce658dd6b8d5072cf">&#9670;&#160;</a></span>removeDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeDirectory </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove um diretório e todo o seu conteúdo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Caminho do diretório a ser removido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  565</span>                                       {</div>
+<div class="line"><span class="lineno">  566</span>    <span class="comment">// Abrir o diretório</span></div>
+<div class="line"><span class="lineno">  567</span>    DIR* dir = opendir(path);</div>
+<div class="line"><span class="lineno">  568</span>    <span class="keywordflow">if</span> (dir == NULL) {</div>
+<div class="line"><span class="lineno">  569</span>        printf(<span class="stringliteral">&quot;Failed to open directory.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  570</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  571</span>    }</div>
+<div class="line"><span class="lineno">  572</span> </div>
+<div class="line"><span class="lineno">  573</span>    <span class="comment">// Ler os arquivos no diretório</span></div>
+<div class="line"><span class="lineno">  574</span>    <span class="keyword">struct </span>dirent* entry;</div>
+<div class="line"><span class="lineno">  575</span>    <span class="keywordflow">while</span> ((entry = readdir(dir)) != NULL) {</div>
+<div class="line"><span class="lineno">  576</span>        <span class="keywordflow">if</span> (strcmp(entry-&gt;d_name, <span class="stringliteral">&quot;.&quot;</span>) == 0 || strcmp(entry-&gt;d_name, <span class="stringliteral">&quot;..&quot;</span>) == 0) {</div>
+<div class="line"><span class="lineno">  577</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  578</span>        }</div>
+<div class="line"><span class="lineno">  579</span> </div>
+<div class="line"><span class="lineno">  580</span>        <span class="comment">// Construir o caminho completo para o arquivo/diretório</span></div>
+<div class="line"><span class="lineno">  581</span>        <span class="keywordtype">char</span>* filePath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(path, entry-&gt;d_name);</div>
+<div class="line"><span class="lineno">  582</span> </div>
+<div class="line"><span class="lineno">  583</span>        <span class="comment">// Verificar se é um diretório</span></div>
+<div class="line"><span class="lineno">  584</span>        <span class="keyword">struct </span>stat st;</div>
+<div class="line"><span class="lineno">  585</span>        <span class="keywordflow">if</span> (stat(filePath, &amp;st) == 0 &amp;&amp; S_ISDIR(st.st_mode)) {</div>
+<div class="line"><span class="lineno">  586</span>            <span class="comment">// Se for um diretório, chamar recursivamente a função removeDirectory</span></div>
+<div class="line"><span class="lineno">  587</span>            <a class="code hl_function" href="database_8c.html#a7c3ec9acd7bc538ce658dd6b8d5072cf">removeDirectory</a>(filePath);</div>
+<div class="line"><span class="lineno">  588</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  589</span>            <span class="comment">// Se for um arquivo, remover o arquivo</span></div>
+<div class="line"><span class="lineno">  590</span>            <span class="keywordflow">if</span> (remove(filePath) != 0) {</div>
+<div class="line"><span class="lineno">  591</span>                printf(<span class="stringliteral">&quot;Failed to remove file: %s\n&quot;</span>, filePath);</div>
+<div class="line"><span class="lineno">  592</span>            }</div>
+<div class="line"><span class="lineno">  593</span>        }</div>
+<div class="line"><span class="lineno">  594</span> </div>
+<div class="line"><span class="lineno">  595</span>        free(filePath);</div>
+<div class="line"><span class="lineno">  596</span>    }</div>
+<div class="line"><span class="lineno">  597</span> </div>
+<div class="line"><span class="lineno">  598</span>    closedir(dir);</div>
+<div class="line"><span class="lineno">  599</span> </div>
+<div class="line"><span class="lineno">  600</span>    <span class="comment">// Remover o diretório</span></div>
+<div class="line"><span class="lineno">  601</span>    <span class="keywordflow">if</span> (rmdir(path) != 0) {</div>
+<div class="line"><span class="lineno">  602</span>        printf(<span class="stringliteral">&quot;Failed to remove directory: %s\n&quot;</span>, path);</div>
+<div class="line"><span class="lineno">  603</span>    }</div>
+<div class="line"><span class="lineno">  604</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab91e6fbe54cb2dac5ac89f106d3506f4" name="ab91e6fbe54cb2dac5ac89f106d3506f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab91e6fbe54cb2dac5ac89f106d3506f4">&#9670;&#160;</a></span>renameBranchInDatabase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renameBranchInDatabase </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>branchName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>newBranchName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renomeia um ramo no banco de dados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">branchName</td><td>Nome do ramo a ser renomeado. </td></tr>
+    <tr><td class="paramname">newBranchName</td><td>Novo nome do ramo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   72</span>                                                                   {</div>
+<div class="line"><span class="lineno">   73</span>    <span class="comment">// Verificar se o ramo existe no banco de dados</span></div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="database_8c.html#a98a20f8b453e5356faaf845fd3bffb2d">branchExists</a>(branchName)) {</div>
+<div class="line"><span class="lineno">   75</span>        printf(<span class="stringliteral">&quot;Branch &#39;%s&#39; não existe.\n&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   77</span>    }</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>    <span class="comment">// Verificar se o novo nome do ramo já existe no banco de dados</span></div>
+<div class="line"><span class="lineno">   80</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="database_8c.html#a98a20f8b453e5356faaf845fd3bffb2d">branchExists</a>(newBranchName)) {</div>
+<div class="line"><span class="lineno">   81</span>        printf(<span class="stringliteral">&quot;O novo nome do ramo &#39;%s&#39; já existe no banco de dados.\n&quot;</span>, newBranchName);</div>
+<div class="line"><span class="lineno">   82</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    <span class="comment">// Renomear o ramo no arquivo da árvore de versões</span></div>
+<div class="line"><span class="lineno">   86</span>    <a class="code hl_function" href="arvore_8c.html#a097b88156b97b967183401a90f8c513b">renameBranchFromFile</a>(branchName, newBranchName);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="comment">// Renomear o diretório do ramo</span></div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordtype">char</span> branchPath[100];</div>
+<div class="line"><span class="lineno">   90</span>    sprintf(branchPath, <span class="stringliteral">&quot;.versionador/content/%s&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordtype">char</span> newBranchPath[100];</div>
+<div class="line"><span class="lineno">   93</span>    sprintf(newBranchPath, <span class="stringliteral">&quot;.versionador/content/%s&quot;</span>, newBranchName);</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">if</span> (rename(branchPath, newBranchPath) != 0) {</div>
+<div class="line"><span class="lineno">   96</span>        printf(<span class="stringliteral">&quot;Erro ao renomear o diretório do ramo.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   98</span>    }</div>
+<div class="line"><span class="lineno">   99</span> </div>
+<div class="line"><span class="lineno">  100</span>    <span class="comment">// Renomear o arquivo de versões do ramo</span></div>
+<div class="line"><span class="lineno">  101</span>    <span class="keywordtype">char</span> versionsPath[100];</div>
+<div class="line"><span class="lineno">  102</span>    sprintf(versionsPath, <span class="stringliteral">&quot;.versionador/versions%s.txt&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordtype">char</span> newVersionsPath[100];</div>
+<div class="line"><span class="lineno">  105</span>    sprintf(newVersionsPath, <span class="stringliteral">&quot;.versionador/versions%s.txt&quot;</span>, newBranchName);</div>
+<div class="line"><span class="lineno">  106</span> </div>
+<div class="line"><span class="lineno">  107</span>    <span class="keywordflow">if</span> (rename(versionsPath, newVersionsPath) != 0) {</div>
+<div class="line"><span class="lineno">  108</span>        printf(<span class="stringliteral">&quot;Erro ao renomear o arquivo de versões do ramo.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  110</span>    }</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>    FILE* file = fopen(<span class="stringliteral">&quot;.versionador/atual.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  113</span> </div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span> (file != NULL) {</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordtype">char</span> linha[50];</div>
+<div class="line"><span class="lineno">  116</span>        <span class="keywordtype">char</span> branchName[50];</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordtype">char</span> versionName[50];</div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">char</span> concatContent[200];</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>        <span class="keywordflow">while</span> (fgets(linha, <span class="keyword">sizeof</span>(linha), file) != NULL) {</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (strcmp(linha, <span class="stringliteral">&quot;&lt;INICIO&gt;\n&quot;</span>) == 0) {</div>
+<div class="line"><span class="lineno">  122</span>                fgets(branchName, 50, file);</div>
+<div class="line"><span class="lineno">  123</span>                fgets(versionName, 50, file);</div>
+<div class="line"><span class="lineno">  124</span>                <span class="comment">// Removendo o caractere de nova linha (\n) no final de cada string</span></div>
+<div class="line"><span class="lineno">  125</span>                branchName[strcspn(branchName, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  126</span>                versionName[strcspn(versionName, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  127</span>            }</div>
+<div class="line"><span class="lineno">  128</span>        }</div>
+<div class="line"><span class="lineno">  129</span> </div>
+<div class="line"><span class="lineno">  130</span>        sprintf(concatContent, <span class="stringliteral">&quot;&lt;INICIO&gt;\n%s\n%s\n&lt;FIM&gt;&quot;</span>, newBranchName, versionName);</div>
+<div class="line"><span class="lineno">  131</span>        <span class="comment">// printf(concatContent);</span></div>
+<div class="line"><span class="lineno">  132</span>        <span class="comment">// remove(&quot;.versionador/atual.txt&quot;);</span></div>
+<div class="line"><span class="lineno">  133</span>        <a class="code hl_function" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(<span class="stringliteral">&quot;.versionador/atual.txt&quot;</span>, concatContent);</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>        fclose(file);</div>
+<div class="line"><span class="lineno">  136</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  137</span>        printf(<span class="stringliteral">&quot;Erro ao abrir o arquivo para ler as structs.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    printf(<span class="stringliteral">&quot;Ramo &#39;%s&#39; renomeado para &#39;%s&#39; com sucesso.\n&quot;</span>, branchName, newBranchName);</div>
+<div class="line"><span class="lineno">  141</span>}</div>
+<div class="ttc" id="aarvore_8c_html_a097b88156b97b967183401a90f8c513b"><div class="ttname"><a href="arvore_8c.html#a097b88156b97b967183401a90f8c513b">renameBranchFromFile</a></div><div class="ttdeci">void renameBranchFromFile(const char *currentBranchName, const char *newBranchName)</div><div class="ttdef"><b>Definição</b> arvore.c:386</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5ab8d436cba807a984bd177b2345bf28" name="a5ab8d436cba807a984bd177b2345bf28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab8d436cba807a984bd177b2345bf28">&#9670;&#160;</a></span>renameDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void renameDirectory </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>oldPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>newPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renomeia um diretório. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">oldPath</td><td>Caminho do diretório antigo. </td></tr>
+    <tr><td class="paramname">newPath</td><td>Novo caminho para o diretório.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Verifica se os caminhos são diferentes e, em seguida, utiliza a função <code>rename</code> para renomear o diretório. </p>
+<div class="fragment"><div class="line"><span class="lineno">  614</span>                                                               {</div>
+<div class="line"><span class="lineno">  615</span>    <span class="comment">// Verificar se os caminhos são diferentes</span></div>
+<div class="line"><span class="lineno">  616</span>    <span class="keywordflow">if</span> (strcmp(oldPath, newPath) == 0) {</div>
+<div class="line"><span class="lineno">  617</span>        printf(<span class="stringliteral">&quot;The old and new paths are the same.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  618</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  619</span>    }</div>
+<div class="line"><span class="lineno">  620</span> </div>
+<div class="line"><span class="lineno">  621</span>    <span class="comment">// Renomear o diretório usando a função rename</span></div>
+<div class="line"><span class="lineno">  622</span>    <span class="keywordflow">if</span> (rename(oldPath, newPath) != 0) {</div>
+<div class="line"><span class="lineno">  623</span>        printf(<span class="stringliteral">&quot;Failed to rename directory.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  624</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  625</span>    }</div>
+<div class="line"><span class="lineno">  626</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2b86308c494025180053cc18cf4cdd1d" name="a2b86308c494025180053cc18cf4cdd1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b86308c494025180053cc18cf4cdd1d">&#9670;&#160;</a></span>restoreVersionFiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void restoreVersionFiles </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>identifier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>backupPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Restaura os arquivos de uma determinada versão. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Identificador da versão. </td></tr>
+    <tr><td class="paramname">backupPath</td><td>Caminho para a pasta de backup dos arquivos da versão. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  430</span>                                                                         {</div>
+<div class="line"><span class="lineno">  431</span>    <span class="comment">// Restaurar os arquivos da versão com o identificador especificado</span></div>
+<div class="line"><span class="lineno">  432</span> </div>
+<div class="line"><span class="lineno">  433</span>    <span class="comment">// Construir o caminho completo para a pasta de conteúdo da versão</span></div>
+<div class="line"><span class="lineno">  434</span>    <span class="keywordtype">char</span>* versionContentPath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(<span class="stringliteral">&quot;.versionador/content&quot;</span>, identifier);</div>
+<div class="line"><span class="lineno">  435</span> </div>
+<div class="line"><span class="lineno">  436</span>    <span class="comment">// Remover a pasta de conteúdo atual</span></div>
+<div class="line"><span class="lineno">  437</span>    <a class="code hl_function" href="database_8c.html#a7c3ec9acd7bc538ce658dd6b8d5072cf">removeDirectory</a>(<span class="stringliteral">&quot;.versionador/content&quot;</span>);</div>
+<div class="line"><span class="lineno">  438</span> </div>
+<div class="line"><span class="lineno">  439</span>    <span class="comment">// Copiar todos os arquivos da pasta de backup para a pasta de conteúdo</span></div>
+<div class="line"><span class="lineno">  440</span>    <a class="code hl_function" href="database_8c.html#a942903aaafe895b24848f7e382892d06">copyDirectory</a>(backupPath, <span class="stringliteral">&quot;.versionador/content&quot;</span>);</div>
+<div class="line"><span class="lineno">  441</span> </div>
+<div class="line"><span class="lineno">  442</span>    <span class="comment">// Renomear a pasta de conteúdo para a versão desejada</span></div>
+<div class="line"><span class="lineno">  443</span>    <a class="code hl_function" href="database_8c.html#a5ab8d436cba807a984bd177b2345bf28">renameDirectory</a>(<span class="stringliteral">&quot;.versionador/content&quot;</span>, versionContentPath);</div>
+<div class="line"><span class="lineno">  444</span> </div>
+<div class="line"><span class="lineno">  445</span>    free(versionContentPath);</div>
+<div class="line"><span class="lineno">  446</span>}</div>
+<div class="ttc" id="adatabase_8c_html_a5ab8d436cba807a984bd177b2345bf28"><div class="ttname"><a href="database_8c.html#a5ab8d436cba807a984bd177b2345bf28">renameDirectory</a></div><div class="ttdeci">void renameDirectory(const char *oldPath, const char *newPath)</div><div class="ttdoc">Renomeia um diretório.</div><div class="ttdef"><b>Definição</b> database.c:614</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8238f0f1e7746c36fed4efa22e88fc9d" name="a8238f0f1e7746c36fed4efa22e88fc9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8238f0f1e7746c36fed4efa22e88fc9d">&#9670;&#160;</a></span>setPathToSnapshotIdentifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPathToSnapshotIdentifier </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>identifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define o caminho para o identificador do próximo snapshot. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Identificador do próximo snapshot. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  246</span>                                                         {</div>
+<div class="line"><span class="lineno">  247</span>     FILE* file = fopen(<span class="stringliteral">&quot;.versionador/atual.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  248</span> </div>
+<div class="line"><span class="lineno">  249</span>    <span class="keywordflow">if</span> (file != NULL) {</div>
+<div class="line"><span class="lineno">  250</span>        <span class="keywordtype">char</span> linha[50];</div>
+<div class="line"><span class="lineno">  251</span>        <span class="keywordtype">char</span> branchName[50];</div>
+<div class="line"><span class="lineno">  252</span>        <span class="keywordtype">char</span> versionName[50];</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordtype">char</span> concatBranchPath[100];</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordtype">char</span> concatBranchFile[100];</div>
+<div class="line"><span class="lineno">  255</span>        <span class="keywordtype">char</span> concatContent[200];</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>        <span class="keywordflow">while</span> (fgets(linha, <span class="keyword">sizeof</span>(linha), file) != NULL) {</div>
+<div class="line"><span class="lineno">  258</span>            <span class="keywordflow">if</span> (strcmp(linha, <span class="stringliteral">&quot;&lt;INICIO&gt;\n&quot;</span>) == 0) {</div>
+<div class="line"><span class="lineno">  259</span>                fgets(branchName, 50, file);</div>
+<div class="line"><span class="lineno">  260</span>                fgets(versionName, 50, file);</div>
+<div class="line"><span class="lineno">  261</span>               </div>
+<div class="line"><span class="lineno">  262</span> </div>
+<div class="line"><span class="lineno">  263</span>                <span class="comment">// Removendo o caractere de nova linha (\n) no final de cada string</span></div>
+<div class="line"><span class="lineno">  264</span>                branchName[strcspn(branchName, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  265</span>                versionName[strcspn(versionName, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  266</span>            }</div>
+<div class="line"><span class="lineno">  267</span>        }</div>
+<div class="line"><span class="lineno">  268</span>         </div>
+<div class="line"><span class="lineno">  269</span>        sprintf(concatBranchPath, <span class="stringliteral">&quot;.versionador/content/%s&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">  270</span>        <span class="keywordtype">char</span>* path = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(concatBranchPath, identifier);</div>
+<div class="line"><span class="lineno">  271</span> </div>
+<div class="line"><span class="lineno">  272</span>        sprintf(concatBranchFile, <span class="stringliteral">&quot;.versionador/versions%s.txt&quot;</span>, branchName);</div>
+<div class="line"><span class="lineno">  273</span>        <a class="code hl_function" href="util_8c.html#a5cd99d95703ef0d9e563c65c8086c98b">writeTextFileNextLine</a>(concatBranchFile, identifier);</div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>        <a class="code hl_function" href="util_8c.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a>(path);</div>
+<div class="line"><span class="lineno">  276</span>        <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(<span class="stringliteral">&quot;create version path&quot;</span>);</div>
+<div class="line"><span class="lineno">  277</span>        free(path);</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span>        sprintf(concatContent, <span class="stringliteral">&quot;&lt;INICIO&gt;\n%s\n%s\n&lt;FIM&gt;&quot;</span>, branchName, identifier);</div>
+<div class="line"><span class="lineno">  280</span>        <span class="comment">// printf(concatContent);</span></div>
+<div class="line"><span class="lineno">  281</span>        <span class="comment">// remove(&quot;.versionador/atual.txt&quot;);</span></div>
+<div class="line"><span class="lineno">  282</span>        <a class="code hl_function" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(<span class="stringliteral">&quot;.versionador/atual.txt&quot;</span>, concatContent);</div>
+<div class="line"><span class="lineno">  283</span> </div>
+<div class="line"><span class="lineno">  284</span>        fclose(file);</div>
+<div class="line"><span class="lineno">  285</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  286</span>        printf(<span class="stringliteral">&quot;Erro ao abrir o arquivo para ler as structs.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  287</span>    }</div>
+<div class="line"><span class="lineno">  288</span>}</div>
+<div class="ttc" id="autil_8c_html_a5cd99d95703ef0d9e563c65c8086c98b"><div class="ttname"><a href="util_8c.html#a5cd99d95703ef0d9e563c65c8086c98b">writeTextFileNextLine</a></div><div class="ttdeci">void writeTextFileNextLine(const char *name, const char *text)</div><div class="ttdoc">Escreve o conteúdo em um arquivo de texto na próxima linha.</div><div class="ttdef"><b>Definição</b> util.c:167</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a83b41657c512e3ecaf7590cacffd1788" name="a83b41657c512e3ecaf7590cacffd1788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83b41657c512e3ecaf7590cacffd1788">&#9670;&#160;</a></span>versionExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int versionExists </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>identifier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se uma determinada versão existe. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Identificador da versão. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>1 se a versão existe, 0 caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  417</span>                                          {</div>
+<div class="line"><span class="lineno">  418</span>    <span class="comment">// Verificar se a versão com o identificador especificado existe</span></div>
+<div class="line"><span class="lineno">  419</span>    <span class="keywordtype">char</span>* snapshotPath = <a class="code hl_function" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(<span class="stringliteral">&quot;.versionador/snapshots&quot;</span>, identifier);</div>
+<div class="line"><span class="lineno">  420</span>    <span class="keywordtype">int</span> exists = <a class="code hl_function" href="util_8c.html#a5c3fee518af0ba8b435624e66e850f73">fileExists</a>(snapshotPath);</div>
+<div class="line"><span class="lineno">  421</span>    free(snapshotPath);</div>
+<div class="line"><span class="lineno">  422</span>    <span class="keywordflow">return</span> exists;</div>
+<div class="line"><span class="lineno">  423</span>}</div>
+<div class="ttc" id="autil_8c_html_a5c3fee518af0ba8b435624e66e850f73"><div class="ttname"><a href="util_8c.html#a5c3fee518af0ba8b435624e66e850f73">fileExists</a></div><div class="ttdeci">int fileExists(const char *filename)</div><div class="ttdoc">Verifica se um arquivo existe.</div><div class="ttdef"><b>Definição</b> util.c:228</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Variáveis</h2>
+<a id="acd051ec62eda05e00f82dad304afca95" name="acd051ec62eda05e00f82dad304afca95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd051ec62eda05e00f82dad304afca95">&#9670;&#160;</a></span>numVersions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int numVersions = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e5cf845fd75d549de1c9a771985c5ed" name="a3e5cf845fd75d549de1c9a771985c5ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e5cf845fd75d549de1c9a771985c5ed">&#9670;&#160;</a></span>versions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_version.html">Version</a> versions[<a class="el" href="database_8h.html#af6ea2ccc7d9e40299d01c417845f9e4c">MAX_NUM_VERSIONS</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

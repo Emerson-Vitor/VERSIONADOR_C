@@ -1,0 +1,912 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Versionador: Referência do Arquivo src/utils/util.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Versionador<span id="projectnumber">&#160;2.0.0</span>
+   </div>
+   <div id="projectbrief">Estudo de Caso ED</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a> &#124;
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo util.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="database_8h_source.html">../database/database.h</a>&quot;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="lista_8h_source.html">lista.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_raiz.html">Raiz</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:a8fb447618db946a9e2a596d9ea18763f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a8fb447618db946a9e2a596d9ea18763f">_DEFAULT_SOURCE</a></td></tr>
+<tr class="separator:a8fb447618db946a9e2a596d9ea18763f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:abb09396ee13a44215695d146ba593be5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a> (const char *message)</td></tr>
+<tr class="memdesc:abb09396ee13a44215695d146ba593be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime uma mensagem de erro.  <br /></td></tr>
+<tr class="separator:abb09396ee13a44215695d146ba593be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ecc69cced4dcf1393217677224d08b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a> (const char *message)</td></tr>
+<tr class="memdesc:a2ecc69cced4dcf1393217677224d08b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime uma mensagem de informação.  <br /></td></tr>
+<tr class="separator:a2ecc69cced4dcf1393217677224d08b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2ce5ff55187c7dfa54489e17e2f7deb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a> (const char *path)</td></tr>
+<tr class="memdesc:ac2ce5ff55187c7dfa54489e17e2f7deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um diretório.  <br /></td></tr>
+<tr class="separator:ac2ce5ff55187c7dfa54489e17e2f7deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13cab120c04021ba89d699aebaef5bad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a13cab120c04021ba89d699aebaef5bad">contLines</a> (char *path)</td></tr>
+<tr class="memdesc:a13cab120c04021ba89d699aebaef5bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conta o número de linhas em um arquivo.  <br /></td></tr>
+<tr class="separator:a13cab120c04021ba89d699aebaef5bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f7fb91c9c504dba07e29b781875cf1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a> (const char *path1, const char *path2)</td></tr>
+<tr class="memdesc:a23f7fb91c9c504dba07e29b781875cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatena dois caminhos em uma única string.  <br /></td></tr>
+<tr class="separator:a23f7fb91c9c504dba07e29b781875cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69118b8ad0f71842378f1997e1a6a5c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#ad69118b8ad0f71842378f1997e1a6a5c">readTextFile</a> (const char *name)</td></tr>
+<tr class="memdesc:ad69118b8ad0f71842378f1997e1a6a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lê o conteúdo de um arquivo de texto.  <br /></td></tr>
+<tr class="separator:ad69118b8ad0f71842378f1997e1a6a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd99d95703ef0d9e563c65c8086c98b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a5cd99d95703ef0d9e563c65c8086c98b">writeTextFileNextLine</a> (const char *name, const char *text)</td></tr>
+<tr class="memdesc:a5cd99d95703ef0d9e563c65c8086c98b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve o conteúdo em um arquivo de texto na próxima linha.  <br /></td></tr>
+<tr class="separator:a5cd99d95703ef0d9e563c65c8086c98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac584ddf2ae0297798ad8a3ad12fab5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a> (const char *filename, const char *content)</td></tr>
+<tr class="memdesc:a8ac584ddf2ae0297798ad8a3ad12fab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escreve o conteúdo em um arquivo de texto.  <br /></td></tr>
+<tr class="separator:a8ac584ddf2ae0297798ad8a3ad12fab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c3fee518af0ba8b435624e66e850f73"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a5c3fee518af0ba8b435624e66e850f73">fileExists</a> (const char *filename)</td></tr>
+<tr class="memdesc:a5c3fee518af0ba8b435624e66e850f73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um arquivo existe.  <br /></td></tr>
+<tr class="separator:a5c3fee518af0ba8b435624e66e850f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d4d2a982a2ba42f56f62bb7266898d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a72d4d2a982a2ba42f56f62bb7266898d">generateUniqueIdentifier</a> ()</td></tr>
+<tr class="memdesc:a72d4d2a982a2ba42f56f62bb7266898d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gera um identificador único.  <br /></td></tr>
+<tr class="separator:a72d4d2a982a2ba42f56f62bb7266898d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f346cbb19b3e8418186b676f8b8b5a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a06f346cbb19b3e8418186b676f8b8b5a">getVersionIdentifier</a> (int versionIndex)</td></tr>
+<tr class="memdesc:a06f346cbb19b3e8418186b676f8b8b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém o identificador da versão correspondente ao índice fornecido.  <br /></td></tr>
+<tr class="separator:a06f346cbb19b3e8418186b676f8b8b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5628063ce7a14580bc43484f7bc6f63f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a5628063ce7a14580bc43484f7bc6f63f">removeFile</a> (char *file)</td></tr>
+<tr class="memdesc:a5628063ce7a14580bc43484f7bc6f63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um arquivo.  <br /></td></tr>
+<tr class="separator:a5628063ce7a14580bc43484f7bc6f63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad91a8cbb44c269a12302c7fea0f6db89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#ad91a8cbb44c269a12302c7fea0f6db89">searchDirectoryFiles</a> (char *path, <a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *header)</td></tr>
+<tr class="memdesc:ad91a8cbb44c269a12302c7fea0f6db89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pesquisa os arquivos em um diretório.  <br /></td></tr>
+<tr class="separator:ad91a8cbb44c269a12302c7fea0f6db89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29353e59047a0e0eeee4cfa76583e982"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a29353e59047a0e0eeee4cfa76583e982">salvarStruct</a> (const struct <a class="el" href="struct_raiz.html">Raiz</a> *raiz, const char *arquivo)</td></tr>
+<tr class="separator:a29353e59047a0e0eeee4cfa76583e982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a2fe19f6634645b7a298a4c6113b6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a70a2fe19f6634645b7a298a4c6113b6b">lerStructs</a> (const char *arquivo)</td></tr>
+<tr class="separator:a70a2fe19f6634645b7a298a4c6113b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b771074091af4c6e8cc32b0a951e3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a47b771074091af4c6e8cc32b0a951e3e">fillNode</a> (char *name, char *initVersion, char *initParent, char *file)</td></tr>
+<tr class="separator:a47b771074091af4c6e8cc32b0a951e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Definições e macros</h2>
+<a id="a8fb447618db946a9e2a596d9ea18763f" name="a8fb447618db946a9e2a596d9ea18763f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb447618db946a9e2a596d9ea18763f">&#9670;&#160;</a></span>_DEFAULT_SOURCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _DEFAULT_SOURCE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a id="a23f7fb91c9c504dba07e29b781875cf1" name="a23f7fb91c9c504dba07e29b781875cf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f7fb91c9c504dba07e29b781875cf1">&#9670;&#160;</a></span>concatenatePaths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * concatenatePaths </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Concatena dois caminhos em uma única string. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path1</td><td>Primeiro caminho. </td></tr>
+    <tr><td class="paramname">path2</td><td>Segundo caminho. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>O caminho combinado resultante da concatenação.</dd></dl>
+<p>Calcula o tamanho necessário para a nova string combinada, aloca memória suficiente e concatena os dois caminhos fornecidos, adicionando uma barra "/" entre eles. Retorna o caminho combinado resultante. </p>
+<div class="fragment"><div class="line"><span class="lineno">  101</span>                                                             {</div>
+<div class="line"><span class="lineno">  102</span>    <span class="keywordtype">size_t</span> len1 = strlen(path1);</div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordtype">size_t</span> len2 = strlen(path2);</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordtype">char</span>* combined = (<span class="keywordtype">char</span>*)malloc(len1 + len2 + 2);</div>
+<div class="line"><span class="lineno">  105</span>    strcpy(combined, path1);</div>
+<div class="line"><span class="lineno">  106</span>    strcat(combined, <span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><span class="lineno">  107</span>    strcat(combined, path2);</div>
+<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">return</span> combined;</div>
+<div class="line"><span class="lineno">  109</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a13cab120c04021ba89d699aebaef5bad" name="a13cab120c04021ba89d699aebaef5bad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13cab120c04021ba89d699aebaef5bad">&#9670;&#160;</a></span>contLines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int contLines </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Conta o número de linhas em um arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Caminho do arquivo a ser contado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>O número de linhas no arquivo.</dd></dl>
+<p>Abre o arquivo especificado em modo leitura e conta o número de quebras de linha para determinar o número de linhas no arquivo. Retorna o total de linhas encontradas. </p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>                         {</div>
+<div class="line"><span class="lineno">   65</span>     <span class="comment">// nome e local do arquivo que será aberto para</span></div>
+<div class="line"><span class="lineno">   66</span>  <span class="comment">// obtermos a quantidade de linhas</span></div>
+<div class="line"><span class="lineno">   67</span>  FILE *arquivo = fopen(path, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">   68</span>  </div>
+<div class="line"><span class="lineno">   69</span>  </div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordtype">int</span> quant_linhas = 0;</div>
+<div class="line"><span class="lineno">   71</span>  <span class="keywordtype">int</span> caractere, existe_linhas = 0;</div>
+<div class="line"><span class="lineno">   72</span>   </div>
+<div class="line"><span class="lineno">   73</span>  <span class="keywordflow">while</span>((caractere = fgetc(arquivo)) != EOF){</div>
+<div class="line"><span class="lineno">   74</span>    existe_linhas = 1; <span class="comment">// há conteúdo no arquivo</span></div>
+<div class="line"><span class="lineno">   75</span>     </div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">if</span>(caractere == <span class="charliteral">&#39;\n&#39;</span>){ <span class="comment">// é uma quebra de linha?</span></div>
+<div class="line"><span class="lineno">   77</span>      <span class="comment">// vamos incrementar a quantidade de linhas</span></div>
+<div class="line"><span class="lineno">   78</span>      quant_linhas++;             </div>
+<div class="line"><span class="lineno">   79</span>    } </div>
+<div class="line"><span class="lineno">   80</span>  }</div>
+<div class="line"><span class="lineno">   81</span> </div>
+<div class="line"><span class="lineno">   82</span>  <span class="comment">// se não houver uma quebra de linha na última linha</span></div>
+<div class="line"><span class="lineno">   83</span>  <span class="comment">// a contagem será sempre um a menos. Assim, é melhor</span></div>
+<div class="line"><span class="lineno">   84</span>  <span class="comment">// incrementar quant_linhas mais uma vez</span></div>
+<div class="line"><span class="lineno">   85</span>  <span class="keywordflow">if</span>(existe_linhas)</div>
+<div class="line"><span class="lineno">   86</span>    quant_linhas++;</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>    <span class="keywordflow">return</span> quant_linhas;</div>
+<div class="line"><span class="lineno">   89</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac2ce5ff55187c7dfa54489e17e2f7deb" name="ac2ce5ff55187c7dfa54489e17e2f7deb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ce5ff55187c7dfa54489e17e2f7deb">&#9670;&#160;</a></span>createDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createDirectory </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um diretório. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Caminho do diretório a ser criado.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cria um diretório utilizando a função <code>mkdir</code> com as permissões 0777. Se a criação falhar, imprime uma mensagem de erro e encerra o programa. </p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                                       {</div>
+<div class="line"><span class="lineno">   49</span>    <span class="keywordtype">int</span> result = mkdir(path, 0777);</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span> (result != 0) {</div>
+<div class="line"><span class="lineno">   51</span>        <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;Failed to create directory.&quot;</span>);</div>
+<div class="line"><span class="lineno">   52</span>        exit(1);</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="line"><span class="lineno">   54</span>}</div>
+<div class="ttc" id="autil_8c_html_abb09396ee13a44215695d146ba593be5"><div class="ttname"><a href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a></div><div class="ttdeci">void printError(const char *message)</div><div class="ttdoc">Imprime uma mensagem de erro.</div><div class="ttdef"><b>Definição</b> util.c:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5c3fee518af0ba8b435624e66e850f73" name="a5c3fee518af0ba8b435624e66e850f73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3fee518af0ba8b435624e66e850f73">&#9670;&#160;</a></span>fileExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fileExists </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se um arquivo existe. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Nome do arquivo a ser verificado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna 1 se o arquivo existe, caso contrário retorna 0.</dd></dl>
+<p>Verifica se um arquivo com o nome especificado existe. Tenta abrir o arquivo em modo leitura. Se o arquivo for aberto com sucesso, fecha-o e retorna 1 indicando que o arquivo existe. Caso contrário, retorna 0 indicando que o arquivo não existe. </p>
+<div class="fragment"><div class="line"><span class="lineno">  228</span>                                     {</div>
+<div class="line"><span class="lineno">  229</span>    FILE* file = fopen(filename, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  230</span>    <span class="keywordflow">if</span> (file != NULL) {</div>
+<div class="line"><span class="lineno">  231</span>        fclose(file);</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  233</span>    }</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  235</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a47b771074091af4c6e8cc32b0a951e3e" name="a47b771074091af4c6e8cc32b0a951e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b771074091af4c6e8cc32b0a951e3e">&#9670;&#160;</a></span>fillNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fillNode </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>initVersion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>initParent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  403</span>                                                                          {</div>
+<div class="line"><span class="lineno">  404</span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_raiz.html">Raiz</a> raiz;</div>
+<div class="line"><span class="lineno">  405</span>    strcpy(raiz.nome, name);</div>
+<div class="line"><span class="lineno">  406</span>    strcpy(raiz.initVersion, <a class="code hl_variable" href="struct_raiz.html#a5e0d0f34c6930708fbe5fdb45c5ffb7f">initVersion</a>);</div>
+<div class="line"><span class="lineno">  407</span>    strcpy(raiz.initParent, <a class="code hl_variable" href="struct_raiz.html#af4e2f3455e4dc5ed7669d92788984662">initParent</a>);</div>
+<div class="line"><span class="lineno">  408</span>    <a class="code hl_function" href="util_8c.html#a29353e59047a0e0eeee4cfa76583e982">salvarStruct</a>(&amp;raiz, file);</div>
+<div class="line"><span class="lineno">  409</span>    }</div>
+<div class="ttc" id="astruct_raiz_html"><div class="ttname"><a href="struct_raiz.html">Raiz</a></div><div class="ttdef"><b>Definição</b> util.c:15</div></div>
+<div class="ttc" id="astruct_raiz_html_a5e0d0f34c6930708fbe5fdb45c5ffb7f"><div class="ttname"><a href="struct_raiz.html#a5e0d0f34c6930708fbe5fdb45c5ffb7f">Raiz::initVersion</a></div><div class="ttdeci">char initVersion[100]</div><div class="ttdef"><b>Definição</b> util.c:17</div></div>
+<div class="ttc" id="astruct_raiz_html_af4e2f3455e4dc5ed7669d92788984662"><div class="ttname"><a href="struct_raiz.html#af4e2f3455e4dc5ed7669d92788984662">Raiz::initParent</a></div><div class="ttdeci">char initParent[100]</div><div class="ttdef"><b>Definição</b> util.c:18</div></div>
+<div class="ttc" id="autil_8c_html_a29353e59047a0e0eeee4cfa76583e982"><div class="ttname"><a href="util_8c.html#a29353e59047a0e0eeee4cfa76583e982">salvarStruct</a></div><div class="ttdeci">void salvarStruct(const struct Raiz *raiz, const char *arquivo)</div><div class="ttdef"><b>Definição</b> util.c:356</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a72d4d2a982a2ba42f56f62bb7266898d" name="a72d4d2a982a2ba42f56f62bb7266898d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d4d2a982a2ba42f56f62bb7266898d">&#9670;&#160;</a></span>generateUniqueIdentifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * generateUniqueIdentifier </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gera um identificador único. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o identificador único gerado.</dd></dl>
+<p>Gera um identificador único baseado na data e hora atual. Aloca memória suficiente para armazenar o identificador. Obtém a data e hora atual e formata a string do identificador no formato "%Y%m%d%H%M%S". Retorna o identificador único gerado. </p>
+<div class="fragment"><div class="line"><span class="lineno">  247</span>                                 {</div>
+<div class="line"><span class="lineno">  248</span>    <span class="keywordtype">char</span>* identifier = (<span class="keywordtype">char</span>*)malloc((<a class="code hl_define" href="database_8h.html#a3d5a3c317dcfbb56869875ed4a91ddcc">MAX_IDENTIFIER_LENGTH</a> + 1) * <span class="keyword">sizeof</span>(char));</div>
+<div class="line"><span class="lineno">  249</span> </div>
+<div class="line"><span class="lineno">  250</span>    <span class="comment">// Gerar um identificador único baseado na data e hora atual</span></div>
+<div class="line"><span class="lineno">  251</span>    time_t currentTime = time(NULL);</div>
+<div class="line"><span class="lineno">  252</span>    <span class="keyword">struct </span>tm* timeInfo = localtime(&amp;currentTime);</div>
+<div class="line"><span class="lineno">  253</span>    strftime(identifier, <a class="code hl_define" href="database_8h.html#a3d5a3c317dcfbb56869875ed4a91ddcc">MAX_IDENTIFIER_LENGTH</a>, <span class="stringliteral">&quot;%Y%m%d%H%M%S&quot;</span>, timeInfo);</div>
+<div class="line"><span class="lineno">  254</span> </div>
+<div class="line"><span class="lineno">  255</span>    <span class="keywordflow">return</span> identifier;</div>
+<div class="line"><span class="lineno">  256</span>}</div>
+<div class="ttc" id="adatabase_8h_html_a3d5a3c317dcfbb56869875ed4a91ddcc"><div class="ttname"><a href="database_8h.html#a3d5a3c317dcfbb56869875ed4a91ddcc">MAX_IDENTIFIER_LENGTH</a></div><div class="ttdeci">#define MAX_IDENTIFIER_LENGTH</div><div class="ttdef"><b>Definição</b> database.h:4</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a06f346cbb19b3e8418186b676f8b8b5a" name="a06f346cbb19b3e8418186b676f8b8b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f346cbb19b3e8418186b676f8b8b5a">&#9670;&#160;</a></span>getVersionIdentifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * getVersionIdentifier </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>versionIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém o identificador da versão correspondente ao índice fornecido. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">versionIndex</td><td>O índice da versão. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o identificador da versão correspondente, ou NULL se o índice for inválido.</dd></dl>
+<p>Verifica se o índice da versão fornecido é válido. Se o índice estiver fora dos limites do array de versões, retorna NULL. Caso contrário, aloca memória para armazenar o identificador da versão. Copia o identificador da versão correspondente para a variável "identifier". Retorna o identificador da versão. </p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>                                                   {</div>
+<div class="line"><span class="lineno">  271</span>    <span class="comment">// Verificar se o índice da versão é válido</span></div>
+<div class="line"><span class="lineno">  272</span>    <span class="keywordflow">if</span> (versionIndex &lt; 0 || versionIndex &gt;= <a class="code hl_variable" href="database_8c.html#acd051ec62eda05e00f82dad304afca95">numVersions</a>) {</div>
+<div class="line"><span class="lineno">  273</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  274</span>    }</div>
+<div class="line"><span class="lineno">  275</span>    </div>
+<div class="line"><span class="lineno">  276</span>    <span class="comment">// Obter o identificador da versão correspondente</span></div>
+<div class="line"><span class="lineno">  277</span>    <span class="keywordtype">char</span>* identifier = (<span class="keywordtype">char</span>*)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * <a class="code hl_define" href="database_8h.html#a3d5a3c317dcfbb56869875ed4a91ddcc">MAX_IDENTIFIER_LENGTH</a>);</div>
+<div class="line"><span class="lineno">  278</span>    <span class="keywordflow">if</span> (identifier == NULL) {</div>
+<div class="line"><span class="lineno">  279</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  280</span>    }</div>
+<div class="line"><span class="lineno">  281</span>    </div>
+<div class="line"><span class="lineno">  282</span>    <span class="comment">// Copiar o identificador da versão para a variável &quot;identifier&quot;</span></div>
+<div class="line"><span class="lineno">  283</span>    strncpy(identifier, <a class="code hl_variable" href="database_8c.html#a3e5cf845fd75d549de1c9a771985c5ed">versions</a>[versionIndex].identifier, <a class="code hl_define" href="database_8h.html#a3d5a3c317dcfbb56869875ed4a91ddcc">MAX_IDENTIFIER_LENGTH</a>);</div>
+<div class="line"><span class="lineno">  284</span>    </div>
+<div class="line"><span class="lineno">  285</span>    <span class="keywordflow">return</span> identifier;</div>
+<div class="line"><span class="lineno">  286</span>}</div>
+<div class="ttc" id="adatabase_8c_html_a3e5cf845fd75d549de1c9a771985c5ed"><div class="ttname"><a href="database_8c.html#a3e5cf845fd75d549de1c9a771985c5ed">versions</a></div><div class="ttdeci">Version versions[MAX_NUM_VERSIONS]</div><div class="ttdef"><b>Definição</b> database.c:16</div></div>
+<div class="ttc" id="adatabase_8c_html_acd051ec62eda05e00f82dad304afca95"><div class="ttname"><a href="database_8c.html#acd051ec62eda05e00f82dad304afca95">numVersions</a></div><div class="ttdeci">int numVersions</div><div class="ttdef"><b>Definição</b> database.c:17</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a70a2fe19f6634645b7a298a4c6113b6b" name="a70a2fe19f6634645b7a298a4c6113b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a2fe19f6634645b7a298a4c6113b6b">&#9670;&#160;</a></span>lerStructs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lerStructs </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arquivo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  373</span>                                     {</div>
+<div class="line"><span class="lineno">  374</span>    FILE* file = fopen(arquivo, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  375</span> </div>
+<div class="line"><span class="lineno">  376</span>    <span class="keywordflow">if</span> (file != NULL) {</div>
+<div class="line"><span class="lineno">  377</span>        <span class="keywordtype">char</span> linha[100];</div>
+<div class="line"><span class="lineno">  378</span>        <span class="keyword">struct </span><a class="code hl_struct" href="struct_raiz.html">Raiz</a> raiz;</div>
+<div class="line"><span class="lineno">  379</span> </div>
+<div class="line"><span class="lineno">  380</span>        <span class="keywordflow">while</span> (fgets(linha, <span class="keyword">sizeof</span>(linha), file) != NULL) {</div>
+<div class="line"><span class="lineno">  381</span>            <span class="keywordflow">if</span> (strcmp(linha, <span class="stringliteral">&quot;&lt;INICIO&gt;\n&quot;</span>) == 0) {</div>
+<div class="line"><span class="lineno">  382</span>                fgets(raiz.nome, <span class="keyword">sizeof</span>(raiz.nome), file);</div>
+<div class="line"><span class="lineno">  383</span>                fgets(raiz.initVersion, <span class="keyword">sizeof</span>(raiz.initVersion), file);</div>
+<div class="line"><span class="lineno">  384</span>                fgets(raiz.initParent, <span class="keyword">sizeof</span>(raiz.initParent), file);</div>
+<div class="line"><span class="lineno">  385</span> </div>
+<div class="line"><span class="lineno">  386</span>                <span class="comment">// Removendo o caractere de nova linha (\n) no final de cada string</span></div>
+<div class="line"><span class="lineno">  387</span>                raiz.nome[strcspn(raiz.nome, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  388</span>                raiz.initVersion[strcspn(raiz.initVersion, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  389</span>                raiz.initParent[strcspn(raiz.initParent, <span class="stringliteral">&quot;\n&quot;</span>)] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  390</span> </div>
+<div class="line"><span class="lineno">  391</span>                printf(<span class="stringliteral">&quot;Nome: %s\n&quot;</span>, raiz.nome);</div>
+<div class="line"><span class="lineno">  392</span>                printf(<span class="stringliteral">&quot;Versão Inicial: %s\n&quot;</span>, raiz.initVersion);</div>
+<div class="line"><span class="lineno">  393</span>                printf(<span class="stringliteral">&quot;Pai Inicial: %s\n&quot;</span>, raiz.initParent);</div>
+<div class="line"><span class="lineno">  394</span>            }</div>
+<div class="line"><span class="lineno">  395</span>        }</div>
+<div class="line"><span class="lineno">  396</span> </div>
+<div class="line"><span class="lineno">  397</span>        fclose(file);</div>
+<div class="line"><span class="lineno">  398</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  399</span>        printf(<span class="stringliteral">&quot;Erro ao abrir o arquivo para ler as structs.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  400</span>    }</div>
+<div class="line"><span class="lineno">  401</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abb09396ee13a44215695d146ba593be5" name="abb09396ee13a44215695d146ba593be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb09396ee13a44215695d146ba593be5">&#9670;&#160;</a></span>printError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printError </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime uma mensagem de erro. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Mensagem de erro a ser exibida.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Imprime uma mensagem de erro formatada, precedida pela tag [ERROR]. </p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>                                     {</div>
+<div class="line"><span class="lineno">   28</span>    printf(<span class="stringliteral">&quot;[ERROR] %s\n&quot;</span>, message);</div>
+<div class="line"><span class="lineno">   29</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2ecc69cced4dcf1393217677224d08b7" name="a2ecc69cced4dcf1393217677224d08b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ecc69cced4dcf1393217677224d08b7">&#9670;&#160;</a></span>printInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printInfo </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime uma mensagem de informação. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Mensagem de informação a ser exibida.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Imprime uma mensagem de informação formatada, precedida pela tag [INFO]. </p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                                    {</div>
+<div class="line"><span class="lineno">   38</span>    printf(<span class="stringliteral">&quot;[INFO] %s\n&quot;</span>, message);</div>
+<div class="line"><span class="lineno">   39</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad69118b8ad0f71842378f1997e1a6a5c" name="ad69118b8ad0f71842378f1997e1a6a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69118b8ad0f71842378f1997e1a6a5c">&#9670;&#160;</a></span>readTextFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * readTextFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lê o conteúdo de um arquivo de texto. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nome do arquivo a ser lido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>O conteúdo do arquivo lido como uma string.</dd></dl>
+<p>Lê o conteúdo de um arquivo de texto com o nome especificado. Primeiro, armazena o nome do arquivo em uma variável local. Em seguida, tenta abrir o arquivo em modo leitura. Se a abertura falhar, imprime uma mensagem de erro e retorna NULL. Calcula o tamanho do arquivo, aloca memória suficiente e lê o conteúdo do arquivo para a string. Adiciona um caractere nulo ao final da string e fecha o arquivo. Retorna o conteúdo do arquivo como uma string. </p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                     {</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordtype">char</span> filename[100];</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><span class="lineno">  128</span>   </div>
+<div class="line"><span class="lineno">  129</span>   <span class="keywordflow">while</span> (name[i] != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><span class="lineno">  130</span>            filename[j] = name[i]; <span class="comment">// Armazena o caractere na palavra</span></div>
+<div class="line"><span class="lineno">  131</span>            j++;</div>
+<div class="line"><span class="lineno">  132</span>            i++;</div>
+<div class="line"><span class="lineno">  133</span>    }</div>
+<div class="line"><span class="lineno">  134</span>    filename[j] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>    FILE* file = fopen(filename, <span class="stringliteral">&quot;r&quot;</span>);</div>
+<div class="line"><span class="lineno">  137</span>    <span class="keywordflow">if</span> (file == NULL) {</div>
+<div class="line"><span class="lineno">  138</span>        <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;Failed to open file for reading.&quot;</span>);</div>
+<div class="line"><span class="lineno">  139</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  140</span>    }</div>
+<div class="line"><span class="lineno">  141</span>    </div>
+<div class="line"><span class="lineno">  142</span>    fseek(file, 0, SEEK_END);</div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordtype">long</span> fileLength = ftell(file);</div>
+<div class="line"><span class="lineno">  144</span>    fseek(file, 0, SEEK_SET);</div>
+<div class="line"><span class="lineno">  145</span> </div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordtype">char</span>* content = (<span class="keywordtype">char</span>*)malloc(fileLength + 1);</div>
+<div class="line"><span class="lineno">  147</span>    fread(content, 1, fileLength, file);</div>
+<div class="line"><span class="lineno">  148</span>    content[fileLength] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>    fclose(file);</div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">return</span> content;</div>
+<div class="line"><span class="lineno">  152</span>    </div>
+<div class="line"><span class="lineno">  153</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5628063ce7a14580bc43484f7bc6f63f" name="a5628063ce7a14580bc43484f7bc6f63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5628063ce7a14580bc43484f7bc6f63f">&#9670;&#160;</a></span>removeFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeFile </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove um arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Nome do arquivo a ser removido.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Remove o arquivo com o nome especificado. Verifica se o arquivo existe usando a função access(). Se o arquivo não existir, imprime uma mensagem de erro e retorna. Caso contrário, remove o arquivo usando a função remove(). </p>
+<div class="fragment"><div class="line"><span class="lineno">  298</span>                            {</div>
+<div class="line"><span class="lineno">  299</span> </div>
+<div class="line"><span class="lineno">  300</span>    <span class="keywordtype">char</span> filE[100];</div>
+<div class="line"><span class="lineno">  301</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="lineno">  302</span>    <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><span class="lineno">  303</span>   </div>
+<div class="line"><span class="lineno">  304</span>   <span class="keywordflow">while</span> (file[i] != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><span class="lineno">  305</span>            filE[j] = file[i]; <span class="comment">// Armazena o caractere na palavra</span></div>
+<div class="line"><span class="lineno">  306</span>            j++;</div>
+<div class="line"><span class="lineno">  307</span>            i++;</div>
+<div class="line"><span class="lineno">  308</span>    }</div>
+<div class="line"><span class="lineno">  309</span>    filE[j] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  310</span>    <span class="comment">// Verificar se o arquivo existe</span></div>
+<div class="line"><span class="lineno">  311</span>    <span class="keywordflow">if</span> (access(filE, F_OK) != 0) {</div>
+<div class="line"><span class="lineno">  312</span>        printf(<span class="stringliteral">&quot;O arquivo %s não existe.\n&quot;</span>, filE);</div>
+<div class="line"><span class="lineno">  313</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  314</span>    }</div>
+<div class="line"><span class="lineno">  315</span> </div>
+<div class="line"><span class="lineno">  316</span>    <span class="comment">// Remover o arquivo</span></div>
+<div class="line"><span class="lineno">  317</span>    <span class="keywordtype">int</span> result = remove(filE);</div>
+<div class="line"><span class="lineno">  318</span> </div>
+<div class="line"><span class="lineno">  319</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a29353e59047a0e0eeee4cfa76583e982" name="a29353e59047a0e0eeee4cfa76583e982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29353e59047a0e0eeee4cfa76583e982">&#9670;&#160;</a></span>salvarStruct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void salvarStruct </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="struct_raiz.html">Raiz</a> *&#160;</td>
+          <td class="paramname"><em>raiz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arquivo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  356</span>                                                                {</div>
+<div class="line"><span class="lineno">  357</span>    FILE* file = fopen(arquivo, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><span class="lineno">  358</span> </div>
+<div class="line"><span class="lineno">  359</span>    <span class="keywordflow">if</span> (file != NULL) {</div>
+<div class="line"><span class="lineno">  360</span>        fprintf(file, <span class="stringliteral">&quot;&lt;INICIO&gt;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  361</span>        fprintf(file, <span class="stringliteral">&quot;%s\n&quot;</span>, raiz-&gt;<a class="code hl_variable" href="struct_raiz.html#a4ee1aa02436a8f1f49e75c82ab6a0329">nome</a>);</div>
+<div class="line"><span class="lineno">  362</span>        fprintf(file, <span class="stringliteral">&quot;%s\n&quot;</span>, raiz-&gt;<a class="code hl_variable" href="struct_raiz.html#a5e0d0f34c6930708fbe5fdb45c5ffb7f">initVersion</a>);</div>
+<div class="line"><span class="lineno">  363</span>        fprintf(file, <span class="stringliteral">&quot;%s\n&quot;</span>, raiz-&gt;<a class="code hl_variable" href="struct_raiz.html#af4e2f3455e4dc5ed7669d92788984662">initParent</a>);</div>
+<div class="line"><span class="lineno">  364</span>        fprintf(file, <span class="stringliteral">&quot;&lt;FIM&gt;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  365</span> </div>
+<div class="line"><span class="lineno">  366</span>        fclose(file);</div>
+<div class="line"><span class="lineno">  367</span>        printf(<span class="stringliteral">&quot;Struct salva com sucesso.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  368</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  369</span>        printf(<span class="stringliteral">&quot;Erro ao abrir o arquivo para salvar a struct.\n&quot;</span>);</div>
+<div class="line"><span class="lineno">  370</span>    }</div>
+<div class="line"><span class="lineno">  371</span>}</div>
+<div class="ttc" id="astruct_raiz_html_a4ee1aa02436a8f1f49e75c82ab6a0329"><div class="ttname"><a href="struct_raiz.html#a4ee1aa02436a8f1f49e75c82ab6a0329">Raiz::nome</a></div><div class="ttdeci">char nome[100]</div><div class="ttdef"><b>Definição</b> util.c:16</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad91a8cbb44c269a12302c7fea0f6db89" name="ad91a8cbb44c269a12302c7fea0f6db89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad91a8cbb44c269a12302c7fea0f6db89">&#9670;&#160;</a></span>searchDirectoryFiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchDirectoryFiles </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *&#160;</td>
+          <td class="paramname"><em>header</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pesquisa os arquivos em um diretório. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Caminho do diretório a ser pesquisado. </td></tr>
+    <tr><td class="paramname">header</td><td>Ponteiro para a lista onde os nomes dos arquivos serão armazenados.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Abre o diretório especificado. Se o diretório não puder ser aberto, imprime uma mensagem de erro e retorna. Lê os arquivos no diretório um por um. Para cada arquivo encontrado que não seja um diretório, insere o nome na lista especificada. Fecha o diretório após a leitura. </p>
+<div class="fragment"><div class="line"><span class="lineno">  333</span>                                                    {</div>
+<div class="line"><span class="lineno">  334</span>        <span class="comment">// Abrir a pasta de conteúdo</span></div>
+<div class="line"><span class="lineno">  335</span>        <span class="keywordtype">char</span> pathe[200];</div>
+<div class="line"><span class="lineno">  336</span>        strcpy(pathe, path);</div>
+<div class="line"><span class="lineno">  337</span>        </div>
+<div class="line"><span class="lineno">  338</span>        DIR* contentDir = opendir(pathe);</div>
+<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">if</span> (contentDir == NULL) {</div>
+<div class="line"><span class="lineno">  340</span>            <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;Failed to open content directory.&quot;</span>);</div>
+<div class="line"><span class="lineno">  341</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  342</span>        }</div>
+<div class="line"><span class="lineno">  343</span> </div>
+<div class="line"><span class="lineno">  344</span>        <span class="comment">// Ler os arquivos na pasta de conteúdo</span></div>
+<div class="line"><span class="lineno">  345</span>        <span class="keyword">struct </span>dirent* entry;</div>
+<div class="line"><span class="lineno">  346</span>        <span class="keywordflow">while</span> ((entry = readdir(contentDir)) != NULL) {</div>
+<div class="line"><span class="lineno">  347</span>            <span class="keywordflow">if</span> (entry-&gt;d_type == DT_REG) {  </div>
+<div class="line"><span class="lineno">  348</span>                <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(entry-&gt;d_name);</div>
+<div class="line"><span class="lineno">  349</span>                 <a class="code hl_function" href="lista_8c.html#a2f6196c49aadc4f065081ff81ccb5992">lst_insere</a>(header, entry-&gt;d_name);</div>
+<div class="line"><span class="lineno">  350</span>            }</div>
+<div class="line"><span class="lineno">  351</span>        }</div>
+<div class="line"><span class="lineno">  352</span> </div>
+<div class="line"><span class="lineno">  353</span>        closedir(contentDir);</div>
+<div class="line"><span class="lineno">  354</span>}</div>
+<div class="ttc" id="alista_8c_html_a2f6196c49aadc4f065081ff81ccb5992"><div class="ttname"><a href="lista_8c.html#a2f6196c49aadc4f065081ff81ccb5992">lst_insere</a></div><div class="ttdeci">void lst_insere(Lista *header, char *text)</div><div class="ttdoc">Insere um novo nó na lista.</div><div class="ttdef"><b>Definição</b> lista.c:47</div></div>
+<div class="ttc" id="autil_8c_html_a2ecc69cced4dcf1393217677224d08b7"><div class="ttname"><a href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a></div><div class="ttdeci">void printInfo(const char *message)</div><div class="ttdoc">Imprime uma mensagem de informação.</div><div class="ttdef"><b>Definição</b> util.c:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8ac584ddf2ae0297798ad8a3ad12fab5" name="a8ac584ddf2ae0297798ad8a3ad12fab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac584ddf2ae0297798ad8a3ad12fab5">&#9670;&#160;</a></span>writeTextFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void writeTextFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>content</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve o conteúdo em um arquivo de texto. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Nome do arquivo onde o conteúdo será escrito. </td></tr>
+    <tr><td class="paramname">content</td><td>Conteúdo a ser escrito no arquivo.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Escreve o conteúdo fornecido em um arquivo de texto com o nome especificado. Primeiro, copia o nome do arquivo para uma nova variável local. Em seguida, tenta abrir o arquivo em modo escrita. Se a abertura falhar, imprime uma mensagem de erro e retorna. Escreve o conteúdo no arquivo e fecha-o após a escrita. </p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>                                                              {</div>
+<div class="line"><span class="lineno">  203</span>    </div>
+<div class="line"><span class="lineno">  204</span>    <span class="keywordtype">char</span> fileName[100];</div>
+<div class="line"><span class="lineno">  205</span>    strcpy(fileName, filename);</div>
+<div class="line"><span class="lineno">  206</span> </div>
+<div class="line"><span class="lineno">  207</span>    FILE* file = fopen(fileName, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><span class="lineno">  208</span>    <span class="keywordflow">if</span> (file == NULL) {</div>
+<div class="line"><span class="lineno">  209</span>        <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;Failed to open file for writing.&quot;</span>);</div>
+<div class="line"><span class="lineno">  210</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  211</span>    }</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>    fputs(content, file);</div>
+<div class="line"><span class="lineno">  214</span>    fclose(file);</div>
+<div class="line"><span class="lineno">  215</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5cd99d95703ef0d9e563c65c8086c98b" name="a5cd99d95703ef0d9e563c65c8086c98b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd99d95703ef0d9e563c65c8086c98b">&#9670;&#160;</a></span>writeTextFileNextLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void writeTextFileNextLine </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escreve o conteúdo em um arquivo de texto na próxima linha. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nome do arquivo onde o conteúdo será escrito. </td></tr>
+    <tr><td class="paramname">text</td><td>Conteúdo a ser escrito no arquivo.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Escreve o conteúdo fornecido em um arquivo de texto com o nome especificado. Primeiro, armazena o nome do arquivo em uma variável local. Em seguida, tenta abrir o arquivo em modo anexo (append). Se a abertura falhar, imprime uma mensagem de erro e retorna. Insere uma quebra de linha no arquivo e escreve o texto fornecido. Fecha o arquivo após a escrita. </p>
+<div class="fragment"><div class="line"><span class="lineno">  167</span>                                                              {</div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordtype">char</span> filename[100];</div>
+<div class="line"><span class="lineno">  169</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="lineno">  170</span>    <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><span class="lineno">  171</span>   </div>
+<div class="line"><span class="lineno">  172</span>   <span class="keywordflow">while</span> (name[i] != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><span class="lineno">  173</span>            filename[j] = name[i]; <span class="comment">// Armazena o caractere na palavra</span></div>
+<div class="line"><span class="lineno">  174</span>            j++;</div>
+<div class="line"><span class="lineno">  175</span>            i++;</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+<div class="line"><span class="lineno">  177</span>    filename[j] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><span class="lineno">  178</span>    <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(filename);</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>    FILE* file = fopen(filename, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><span class="lineno">  181</span>    <span class="keywordflow">if</span> (file == NULL) {</div>
+<div class="line"><span class="lineno">  182</span>        <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;Failed to open file for reading.&quot;</span>);</div>
+<div class="line"><span class="lineno">  183</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  184</span>    }</div>
+<div class="line"><span class="lineno">  185</span>    fputc(<span class="charliteral">&#39;\n&#39;</span>, file);</div>
+<div class="line"><span class="lineno">  186</span>    fputs(text, file);</div>
+<div class="line"><span class="lineno">  187</span>    fclose(file);</div>
+<div class="line"><span class="lineno">  188</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

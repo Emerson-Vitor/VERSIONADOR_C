@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Versionador: Código-Fonte de src/utils/utils.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Versionador<span id="projectnumber">&#160;2.0.0</span>
+   </div>
+   <div id="projectbrief">Estudo de Caso ED</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">utils.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="utils_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef UTILS_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define UTILS_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="lista_8h.html">lista.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_raiz.html">Raiz</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* message);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keywordtype">char</span>* <a class="code hl_function" href="utils_8h.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* path1, <span class="keyword">const</span> <span class="keywordtype">char</span>* path2);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">char</span>* <a class="code hl_function" href="utils_8h.html#ad69118b8ad0f71842378f1997e1a6a5c">readTextFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename, <span class="keyword">const</span> <span class="keywordtype">char</span>* content);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">int</span> <a class="code hl_function" href="utils_8h.html#a5c3fee518af0ba8b435624e66e850f73">fileExists</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">char</span>* <a class="code hl_function" href="utils_8h.html#a72d4d2a982a2ba42f56f62bb7266898d">generateUniqueIdentifier</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">int</span> <a class="code hl_function" href="utils_8h.html#a13cab120c04021ba89d699aebaef5bad">contLines</a>(<span class="keywordtype">char</span>* path);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#a5628063ce7a14580bc43484f7bc6f63f">removeFile</a>(<span class="keywordtype">char</span>* file);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#a5cd99d95703ef0d9e563c65c8086c98b">writeTextFileNextLine</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <span class="keywordtype">char</span>* text);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#ad91a8cbb44c269a12302c7fea0f6db89">searchDirectoryFiles</a>(<span class="keywordtype">char</span>* path, <a class="code hl_struct" href="structlista.html">Lista</a>* header);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#a29353e59047a0e0eeee4cfa76583e982">salvarStruct</a>(<span class="keyword">const</span> <span class="keyword">struct</span> <a class="code hl_struct" href="struct_raiz.html">Raiz</a>* raiz, <span class="keyword">const</span> <span class="keywordtype">char</span>* arquivo);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#a70a2fe19f6634645b7a298a4c6113b6b">lerStructs</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* arquivo);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="utils_8h.html#a47b771074091af4c6e8cc32b0a951e3e">fillNode</a>(<span class="keywordtype">char</span>* name, <span class="keywordtype">char</span>* <a class="code hl_variable" href="struct_raiz.html#a5e0d0f34c6930708fbe5fdb45c5ffb7f">initVersion</a>, <span class="keywordtype">char</span>* <a class="code hl_variable" href="struct_raiz.html#af4e2f3455e4dc5ed7669d92788984662">initParent</a>, <span class="keywordtype">char</span>* file);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif  </span><span class="comment">// UTILS_H</span></div>
+<div class="ttc" id="alista_8h_html"><div class="ttname"><a href="lista_8h.html">lista.h</a></div></div>
+<div class="ttc" id="astruct_raiz_html"><div class="ttname"><a href="struct_raiz.html">Raiz</a></div><div class="ttdef"><b>Definição</b> util.c:15</div></div>
+<div class="ttc" id="astruct_raiz_html_a5e0d0f34c6930708fbe5fdb45c5ffb7f"><div class="ttname"><a href="struct_raiz.html#a5e0d0f34c6930708fbe5fdb45c5ffb7f">Raiz::initVersion</a></div><div class="ttdeci">char initVersion[100]</div><div class="ttdef"><b>Definição</b> util.c:17</div></div>
+<div class="ttc" id="astruct_raiz_html_af4e2f3455e4dc5ed7669d92788984662"><div class="ttname"><a href="struct_raiz.html#af4e2f3455e4dc5ed7669d92788984662">Raiz::initParent</a></div><div class="ttdeci">char initParent[100]</div><div class="ttdef"><b>Definição</b> util.c:18</div></div>
+<div class="ttc" id="astructlista_html"><div class="ttname"><a href="structlista.html">lista</a></div><div class="ttdoc">Estrutura da lista.</div><div class="ttdef"><b>Definição</b> lista.c:18</div></div>
+<div class="ttc" id="autils_8h_html_a13cab120c04021ba89d699aebaef5bad"><div class="ttname"><a href="utils_8h.html#a13cab120c04021ba89d699aebaef5bad">contLines</a></div><div class="ttdeci">int contLines(char *path)</div><div class="ttdoc">Conta o número de linhas em um arquivo.</div><div class="ttdef"><b>Definição</b> util.c:64</div></div>
+<div class="ttc" id="autils_8h_html_a23f7fb91c9c504dba07e29b781875cf1"><div class="ttname"><a href="utils_8h.html#a23f7fb91c9c504dba07e29b781875cf1">concatenatePaths</a></div><div class="ttdeci">char * concatenatePaths(const char *path1, const char *path2)</div><div class="ttdoc">Concatena dois caminhos em uma única string.</div><div class="ttdef"><b>Definição</b> util.c:101</div></div>
+<div class="ttc" id="autils_8h_html_a29353e59047a0e0eeee4cfa76583e982"><div class="ttname"><a href="utils_8h.html#a29353e59047a0e0eeee4cfa76583e982">salvarStruct</a></div><div class="ttdeci">void salvarStruct(const struct Raiz *raiz, const char *arquivo)</div><div class="ttdef"><b>Definição</b> util.c:356</div></div>
+<div class="ttc" id="autils_8h_html_a2ecc69cced4dcf1393217677224d08b7"><div class="ttname"><a href="utils_8h.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a></div><div class="ttdeci">void printInfo(const char *message)</div><div class="ttdoc">Imprime uma mensagem de informação.</div><div class="ttdef"><b>Definição</b> util.c:37</div></div>
+<div class="ttc" id="autils_8h_html_a47b771074091af4c6e8cc32b0a951e3e"><div class="ttname"><a href="utils_8h.html#a47b771074091af4c6e8cc32b0a951e3e">fillNode</a></div><div class="ttdeci">void fillNode(char *name, char *initVersion, char *initParent, char *file)</div><div class="ttdef"><b>Definição</b> util.c:403</div></div>
+<div class="ttc" id="autils_8h_html_a5628063ce7a14580bc43484f7bc6f63f"><div class="ttname"><a href="utils_8h.html#a5628063ce7a14580bc43484f7bc6f63f">removeFile</a></div><div class="ttdeci">void removeFile(char *file)</div><div class="ttdoc">Remove um arquivo.</div><div class="ttdef"><b>Definição</b> util.c:298</div></div>
+<div class="ttc" id="autils_8h_html_a5c3fee518af0ba8b435624e66e850f73"><div class="ttname"><a href="utils_8h.html#a5c3fee518af0ba8b435624e66e850f73">fileExists</a></div><div class="ttdeci">int fileExists(const char *filename)</div><div class="ttdoc">Verifica se um arquivo existe.</div><div class="ttdef"><b>Definição</b> util.c:228</div></div>
+<div class="ttc" id="autils_8h_html_a5cd99d95703ef0d9e563c65c8086c98b"><div class="ttname"><a href="utils_8h.html#a5cd99d95703ef0d9e563c65c8086c98b">writeTextFileNextLine</a></div><div class="ttdeci">void writeTextFileNextLine(const char *name, const char *text)</div><div class="ttdoc">Escreve o conteúdo em um arquivo de texto na próxima linha.</div><div class="ttdef"><b>Definição</b> util.c:167</div></div>
+<div class="ttc" id="autils_8h_html_a70a2fe19f6634645b7a298a4c6113b6b"><div class="ttname"><a href="utils_8h.html#a70a2fe19f6634645b7a298a4c6113b6b">lerStructs</a></div><div class="ttdeci">void lerStructs(const char *arquivo)</div><div class="ttdef"><b>Definição</b> util.c:373</div></div>
+<div class="ttc" id="autils_8h_html_a72d4d2a982a2ba42f56f62bb7266898d"><div class="ttname"><a href="utils_8h.html#a72d4d2a982a2ba42f56f62bb7266898d">generateUniqueIdentifier</a></div><div class="ttdeci">char * generateUniqueIdentifier()</div><div class="ttdoc">Gera um identificador único.</div><div class="ttdef"><b>Definição</b> util.c:247</div></div>
+<div class="ttc" id="autils_8h_html_a8ac584ddf2ae0297798ad8a3ad12fab5"><div class="ttname"><a href="utils_8h.html#a8ac584ddf2ae0297798ad8a3ad12fab5">writeTextFile</a></div><div class="ttdeci">void writeTextFile(const char *filename, const char *content)</div><div class="ttdoc">Escreve o conteúdo em um arquivo de texto.</div><div class="ttdef"><b>Definição</b> util.c:202</div></div>
+<div class="ttc" id="autils_8h_html_abb09396ee13a44215695d146ba593be5"><div class="ttname"><a href="utils_8h.html#abb09396ee13a44215695d146ba593be5">printError</a></div><div class="ttdeci">void printError(const char *message)</div><div class="ttdoc">Imprime uma mensagem de erro.</div><div class="ttdef"><b>Definição</b> util.c:27</div></div>
+<div class="ttc" id="autils_8h_html_ac2ce5ff55187c7dfa54489e17e2f7deb"><div class="ttname"><a href="utils_8h.html#ac2ce5ff55187c7dfa54489e17e2f7deb">createDirectory</a></div><div class="ttdeci">void createDirectory(const char *path)</div><div class="ttdoc">Cria um diretório.</div><div class="ttdef"><b>Definição</b> util.c:48</div></div>
+<div class="ttc" id="autils_8h_html_ad69118b8ad0f71842378f1997e1a6a5c"><div class="ttname"><a href="utils_8h.html#ad69118b8ad0f71842378f1997e1a6a5c">readTextFile</a></div><div class="ttdeci">char * readTextFile(const char *name)</div><div class="ttdoc">Lê o conteúdo de um arquivo de texto.</div><div class="ttdef"><b>Definição</b> util.c:124</div></div>
+<div class="ttc" id="autils_8h_html_ad91a8cbb44c269a12302c7fea0f6db89"><div class="ttname"><a href="utils_8h.html#ad91a8cbb44c269a12302c7fea0f6db89">searchDirectoryFiles</a></div><div class="ttdeci">void searchDirectoryFiles(char *path, Lista *header)</div><div class="ttdoc">Pesquisa os arquivos em um diretório.</div><div class="ttdef"><b>Definição</b> util.c:333</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

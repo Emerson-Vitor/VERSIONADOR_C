@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Versionador: Referência do Arquivo src/utils/lista.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Versionador<span id="projectnumber">&#160;2.0.0</span>
+   </div>
+   <div id="projectbrief">Estudo de Caso ED</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a> &#124;
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo lista.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lista_8h_source.html">lista.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="database_8h_source.html">../database/database.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlista__no.html">lista_no</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estrutura de nó da lista.  <a href="structlista__no.html#details">Mais...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlista.html">lista</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estrutura da lista.  <a href="structlista.html#details">Mais...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a83096b4d001058b50d929f7d93c66d86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#a83096b4d001058b50d929f7d93c66d86">lst_cria</a> (void)</td></tr>
+<tr class="memdesc:a83096b4d001058b50d929f7d93c66d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria uma nova lista vazia.  <br /></td></tr>
+<tr class="separator:a83096b4d001058b50d929f7d93c66d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6196c49aadc4f065081ff81ccb5992"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#a2f6196c49aadc4f065081ff81ccb5992">lst_insere</a> (<a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *header, char *text)</td></tr>
+<tr class="memdesc:a2f6196c49aadc4f065081ff81ccb5992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insere um novo nó na lista.  <br /></td></tr>
+<tr class="separator:a2f6196c49aadc4f065081ff81ccb5992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab359066b129d437ca24c9cff09181cd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#ab359066b129d437ca24c9cff09181cd8">lst_populateList</a> (char *path, <a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *header)</td></tr>
+<tr class="memdesc:ab359066b129d437ca24c9cff09181cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preenche a lista com palavras do conteúdo de um arquivo.  <br /></td></tr>
+<tr class="separator:ab359066b129d437ca24c9cff09181cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a481a2008be5d50002a5c48c089ec85ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#a481a2008be5d50002a5c48c089ec85ea">lst_imprime</a> (<a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *header)</td></tr>
+<tr class="memdesc:a481a2008be5d50002a5c48c089ec85ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime os elementos da lista.  <br /></td></tr>
+<tr class="separator:a481a2008be5d50002a5c48c089ec85ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a082ed80572cb3a76e625c7715a5bd9c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#a082ed80572cb3a76e625c7715a5bd9c2">pertence</a> (<a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *header, char *text)</td></tr>
+<tr class="memdesc:a082ed80572cb3a76e625c7715a5bd9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a lista contém um determinado elemento.  <br /></td></tr>
+<tr class="separator:a082ed80572cb3a76e625c7715a5bd9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149a1209a39761cd5a35961b5d96654f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#a149a1209a39761cd5a35961b5d96654f">lst_retira</a> (<a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *header, char *text)</td></tr>
+<tr class="memdesc:a149a1209a39761cd5a35961b5d96654f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um elemento da lista.  <br /></td></tr>
+<tr class="separator:a149a1209a39761cd5a35961b5d96654f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6842b213e9b6afece7fdb9398df0e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#a1b6842b213e9b6afece7fdb9398df0e9">lst_vazia</a> (<a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *header)</td></tr>
+<tr class="memdesc:a1b6842b213e9b6afece7fdb9398df0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a lista está vazia.  <br /></td></tr>
+<tr class="separator:a1b6842b213e9b6afece7fdb9398df0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3065cafc7f22243e573c69152bffa1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#ab3065cafc7f22243e573c69152bffa1d">lst_libera</a> (<a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *header)</td></tr>
+<tr class="memdesc:ab3065cafc7f22243e573c69152bffa1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera a memória ocupada pela lista.  <br /></td></tr>
+<tr class="separator:ab3065cafc7f22243e573c69152bffa1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab45807f5bff86a9a38a03263606bb0ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lista_8h.html#ad7efd5bac5f63673a2fe8c13aee9ec6d">ListaNo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#ab45807f5bff86a9a38a03263606bb0ba">lst_returnNodeValid</a> (<a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *header)</td></tr>
+<tr class="memdesc:ab45807f5bff86a9a38a03263606bb0ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o primeiro nó válido da lista.  <br /></td></tr>
+<tr class="separator:ab45807f5bff86a9a38a03263606bb0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6592f26095d2dd9ad8b86944e688f876"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lista_8h.html#ad7efd5bac5f63673a2fe8c13aee9ec6d">ListaNo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#a6592f26095d2dd9ad8b86944e688f876">lst_nextNode</a> (<a class="el" href="lista_8h.html#ad7efd5bac5f63673a2fe8c13aee9ec6d">ListaNo</a> *ptr)</td></tr>
+<tr class="memdesc:a6592f26095d2dd9ad8b86944e688f876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o próximo nó válido da lista.  <br /></td></tr>
+<tr class="separator:a6592f26095d2dd9ad8b86944e688f876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22629f9d8680bbe4d98b511c47a3cdcc"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lista_8c.html#a22629f9d8680bbe4d98b511c47a3cdcc">lst_infoValid</a> (<a class="el" href="lista_8h.html#ad7efd5bac5f63673a2fe8c13aee9ec6d">ListaNo</a> *ptr)</td></tr>
+<tr class="memdesc:a22629f9d8680bbe4d98b511c47a3cdcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a informação válida de um nó.  <br /></td></tr>
+<tr class="separator:a22629f9d8680bbe4d98b511c47a3cdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funções</h2>
+<a id="a83096b4d001058b50d929f7d93c66d86" name="a83096b4d001058b50d929f7d93c66d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83096b4d001058b50d929f7d93c66d86">&#9670;&#160;</a></span>lst_cria()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> * lst_cria </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria uma nova lista vazia. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna um ponteiro para a lista criada.</dd></dl>
+<p>Aloca memória para uma nova lista e inicializa o ponteiro do primeiro nó como NULL. Retorna o ponteiro para a lista criada. </p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>{</div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_struct" href="structlista.html">Lista</a> *l = (<a class="code hl_struct" href="structlista.html">Lista</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structlista.html">Lista</a>));</div>
+<div class="line"><span class="lineno">   32</span>    l-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a> = NULL;</div>
+<div class="line"><span class="lineno">   33</span>    <span class="keywordflow">return</span> l;</div>
+<div class="line"><span class="lineno">   34</span>}</div>
+<div class="ttc" id="astructlista_html"><div class="ttname"><a href="structlista.html">lista</a></div><div class="ttdoc">Estrutura da lista.</div><div class="ttdef"><b>Definição</b> lista.c:18</div></div>
+<div class="ttc" id="astructlista_html_af0b5e0d1be061b7120e60dfac885cde6"><div class="ttname"><a href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">lista::primeiro</a></div><div class="ttdeci">ListaNo * primeiro</div><div class="ttdef"><b>Definição</b> lista.c:19</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a481a2008be5d50002a5c48c089ec85ea" name="a481a2008be5d50002a5c48c089ec85ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481a2008be5d50002a5c48c089ec85ea">&#9670;&#160;</a></span>lst_imprime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lst_imprime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *&#160;</td>
+          <td class="paramname"><em>header</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime os elementos da lista. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>Ponteiro para a lista a ser impressa.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Percorre a lista a partir do primeiro nó e imprime a informação de cada nó. A função assume que a informação dos nós é do tipo string. Imprime cada informação seguida de uma quebra de linha. </p>
+<div class="fragment"><div class="line"><span class="lineno">  102</span>{</div>
+<div class="line"><span class="lineno">  103</span>    <a class="code hl_struct" href="structlista__no.html">ListaNo</a> *ptr = header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a>;</div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">while</span>(ptr != NULL)</div>
+<div class="line"><span class="lineno">  105</span>    {</div>
+<div class="line"><span class="lineno">  106</span>        printf(<span class="stringliteral">&quot;%s\n&quot;</span>, ptr-&gt;<a class="code hl_variable" href="structlista__no.html#a7a36422bc1461f8799760b08badfcfb7">info</a>);</div>
+<div class="line"><span class="lineno">  107</span>        ptr = ptr-&gt;<a class="code hl_variable" href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">proximo</a>;</div>
+<div class="line"><span class="lineno">  108</span>    }</div>
+<div class="line"><span class="lineno">  109</span>}</div>
+<div class="ttc" id="astructlista__no_html"><div class="ttname"><a href="structlista__no.html">lista_no</a></div><div class="ttdoc">Estrutura de nó da lista.</div><div class="ttdef"><b>Definição</b> lista.c:10</div></div>
+<div class="ttc" id="astructlista__no_html_a4f0ddc2055fb42944a3089346e35117c"><div class="ttname"><a href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">lista_no::proximo</a></div><div class="ttdeci">ListaNo * proximo</div><div class="ttdef"><b>Definição</b> lista.c:12</div></div>
+<div class="ttc" id="astructlista__no_html_a7a36422bc1461f8799760b08badfcfb7"><div class="ttname"><a href="structlista__no.html#a7a36422bc1461f8799760b08badfcfb7">lista_no::info</a></div><div class="ttdeci">char info[200]</div><div class="ttdef"><b>Definição</b> lista.c:11</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a22629f9d8680bbe4d98b511c47a3cdcc" name="a22629f9d8680bbe4d98b511c47a3cdcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22629f9d8680bbe4d98b511c47a3cdcc">&#9670;&#160;</a></span>lst_infoValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * lst_infoValid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#ad7efd5bac5f63673a2fe8c13aee9ec6d">ListaNo</a> *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna a informação válida de um nó. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Ponteiro para o nó. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna a informação do nó.</dd></dl>
+<p>Verifica se o ponteiro para o nó é nulo. Se não for nulo, retorna a informação do nó. Caso contrário, retorna NULL. </p>
+<div class="fragment"><div class="line"><span class="lineno">  252</span>{</div>
+<div class="line"><span class="lineno">  253</span>        <span class="keywordflow">if</span>(ptr != NULL)</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">return</span> ptr-&gt;<a class="code hl_variable" href="structlista__no.html#a7a36422bc1461f8799760b08badfcfb7">info</a>;</div>
+<div class="line"><span class="lineno">  255</span>        </div>
+<div class="line"><span class="lineno">  256</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  257</span>         </div>
+<div class="line"><span class="lineno">  258</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2f6196c49aadc4f065081ff81ccb5992" name="a2f6196c49aadc4f065081ff81ccb5992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f6196c49aadc4f065081ff81ccb5992">&#9670;&#160;</a></span>lst_insere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lst_insere </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *&#160;</td>
+          <td class="paramname"><em>header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Insere um novo nó na lista. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>Ponteiro para a lista onde o nó será inserido. </td></tr>
+    <tr><td class="paramname">text</td><td>Informação a ser armazenada no novo nó.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cria um novo nó e atribui a informação fornecida. O novo nó é inserido no início da lista. O próximo ponteiro do novo nó aponta para o nó que era o primeiro na lista. O ponteiro do primeiro nó da lista é atualizado para o novo nó. </p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>{</div>
+<div class="line"><span class="lineno">   49</span>    <a class="code hl_struct" href="structlista__no.html">ListaNo</a> *novo = (<a class="code hl_struct" href="structlista__no.html">ListaNo</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structlista__no.html">ListaNo</a>));</div>
+<div class="line"><span class="lineno">   50</span>    strcpy(novo-&gt;<a class="code hl_variable" href="structlista__no.html#a7a36422bc1461f8799760b08badfcfb7">info</a>, text);</div>
+<div class="line"><span class="lineno">   51</span>    novo-&gt;<a class="code hl_variable" href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">proximo</a> = header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a>;</div>
+<div class="line"><span class="lineno">   52</span>    header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a> = novo;</div>
+<div class="line"><span class="lineno">   53</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab3065cafc7f22243e573c69152bffa1d" name="ab3065cafc7f22243e573c69152bffa1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3065cafc7f22243e573c69152bffa1d">&#9670;&#160;</a></span>lst_libera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lst_libera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *&#160;</td>
+          <td class="paramname"><em>header</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera a memória ocupada pela lista. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>Ponteiro para a lista a ser liberada.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Percorre a lista a partir do primeiro nó e libera a memória ocupada por cada nó. Libera a memória alocada para a estrutura da lista. </p>
+<div class="fragment"><div class="line"><span class="lineno">  191</span>{</div>
+<div class="line"><span class="lineno">  192</span>    <a class="code hl_struct" href="structlista__no.html">ListaNo</a> *p = header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a>;</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">while</span> (p != NULL)</div>
+<div class="line"><span class="lineno">  194</span>    {</div>
+<div class="line"><span class="lineno">  195</span>        <a class="code hl_struct" href="structlista__no.html">ListaNo</a> *t  = p-&gt;<a class="code hl_variable" href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">proximo</a>;</div>
+<div class="line"><span class="lineno">  196</span>        free(p);</div>
+<div class="line"><span class="lineno">  197</span>        p = t;</div>
+<div class="line"><span class="lineno">  198</span>    }</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>    free(header);</div>
+<div class="line"><span class="lineno">  201</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6592f26095d2dd9ad8b86944e688f876" name="a6592f26095d2dd9ad8b86944e688f876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6592f26095d2dd9ad8b86944e688f876">&#9670;&#160;</a></span>lst_nextNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lista_8h.html#ad7efd5bac5f63673a2fe8c13aee9ec6d">ListaNo</a> * lst_nextNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#ad7efd5bac5f63673a2fe8c13aee9ec6d">ListaNo</a> *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o próximo nó válido da lista. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Ponteiro para o nó atual. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna um ponteiro para o próximo nó válido da lista.</dd></dl>
+<p>Verifica se o ponteiro para o nó atual é nulo. Se não for nulo, retorna o ponteiro para o próximo nó. Caso contrário, imprime uma mensagem de erro e retorna NULL. </p>
+<div class="fragment"><div class="line"><span class="lineno">  232</span>                                   {</div>
+<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">if</span>(ptr != NULL)</div>
+<div class="line"><span class="lineno">  234</span>    <span class="keywordflow">return</span> ptr-&gt;<a class="code hl_variable" href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">proximo</a>;</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>    <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;no invalido&quot;</span>);</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  239</span>}</div>
+<div class="ttc" id="autil_8c_html_abb09396ee13a44215695d146ba593be5"><div class="ttname"><a href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a></div><div class="ttdeci">void printError(const char *message)</div><div class="ttdoc">Imprime uma mensagem de erro.</div><div class="ttdef"><b>Definição</b> util.c:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab359066b129d437ca24c9cff09181cd8" name="ab359066b129d437ca24c9cff09181cd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab359066b129d437ca24c9cff09181cd8">&#9670;&#160;</a></span>lst_populateList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lst_populateList </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *&#160;</td>
+          <td class="paramname"><em>header</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Preenche a lista com palavras do conteúdo de um arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Caminho do arquivo a ser lido. </td></tr>
+    <tr><td class="paramname">header</td><td>Ponteiro para a lista onde as palavras serão armazenadas.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Lê o conteúdo do arquivo especificado. Percorre o conteúdo caractere por caractere e armazena palavras separadas por quebras de linha. Para cada palavra encontrada, cria um novo nó na lista e atribui a palavra como informação do nó. O novo nó é inserido no início da lista. </p>
+<div class="fragment"><div class="line"><span class="lineno">   66</span>                                                {</div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordtype">char</span>* content = <a class="code hl_function" href="util_8c.html#ad69118b8ad0f71842378f1997e1a6a5c">readTextFile</a>(path);</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordtype">char</span> palavra[100]; <span class="comment">// Tamanho máximo da palavra definido como 100</span></div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><span class="lineno">   73</span>    </div>
+<div class="line"><span class="lineno">   74</span>    <span class="keywordflow">while</span> (content[i] != <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><span class="lineno">   75</span>            palavra[j] = content[i]; <span class="comment">// Armazena o caractere na palavra</span></div>
+<div class="line"><span class="lineno">   76</span>            j++;</div>
+<div class="line"><span class="lineno">   77</span>        i++;</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">if</span> (content[i] == <span class="charliteral">&#39;\n&#39;</span> || content[i] == <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><span class="lineno">   79</span>            palavra[j] = <span class="charliteral">&#39;\0&#39;</span>; <span class="comment">// Adiciona o caractere nulo para indicar o fim da palavra</span></div>
+<div class="line"><span class="lineno">   80</span>            <a class="code hl_function" href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a>(palavra);</div>
+<div class="line"><span class="lineno">   81</span>            <a class="code hl_struct" href="structlista__no.html">ListaNo</a> *novo = (<a class="code hl_struct" href="structlista__no.html">ListaNo</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="structlista__no.html">ListaNo</a>));</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordtype">size_t</span> len1 = strlen(palavra);</div>
+<div class="line"><span class="lineno">   83</span>            strcpy(novo-&gt;<a class="code hl_variable" href="structlista__no.html#a7a36422bc1461f8799760b08badfcfb7">info</a>, palavra+1);</div>
+<div class="line"><span class="lineno">   84</span>            novo-&gt;<a class="code hl_variable" href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">proximo</a> = header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a>;</div>
+<div class="line"><span class="lineno">   85</span>            header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a> = novo; <span class="comment">// Imprime a palavra completa</span></div>
+<div class="line"><span class="lineno">   86</span>            j = 0; <span class="comment">// Reseta o índice para a próxima palavra</span></div>
+<div class="line"><span class="lineno">   87</span>        } </div>
+<div class="line"><span class="lineno">   88</span>    }</div>
+<div class="line"><span class="lineno">   89</span>    </div>
+<div class="line"><span class="lineno">   90</span>}</div>
+<div class="ttc" id="autil_8c_html_a2ecc69cced4dcf1393217677224d08b7"><div class="ttname"><a href="util_8c.html#a2ecc69cced4dcf1393217677224d08b7">printInfo</a></div><div class="ttdeci">void printInfo(const char *message)</div><div class="ttdoc">Imprime uma mensagem de informação.</div><div class="ttdef"><b>Definição</b> util.c:37</div></div>
+<div class="ttc" id="autil_8c_html_ad69118b8ad0f71842378f1997e1a6a5c"><div class="ttname"><a href="util_8c.html#ad69118b8ad0f71842378f1997e1a6a5c">readTextFile</a></div><div class="ttdeci">char * readTextFile(const char *name)</div><div class="ttdoc">Lê o conteúdo de um arquivo de texto.</div><div class="ttdef"><b>Definição</b> util.c:124</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a149a1209a39761cd5a35961b5d96654f" name="a149a1209a39761cd5a35961b5d96654f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a149a1209a39761cd5a35961b5d96654f">&#9670;&#160;</a></span>lst_retira()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lst_retira </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *&#160;</td>
+          <td class="paramname"><em>header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove um elemento da lista. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>Ponteiro para a lista da qual o elemento será removido. </td></tr>
+    <tr><td class="paramname">text</td><td>Elemento a ser removido da lista.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Percorre a lista a partir do primeiro nó e procura o nó com a informação igual ao elemento fornecido. Se o nó for encontrado, remove-o da lista. Atualiza os ponteiros para manter a integridade da lista. Libera a memória alocada para o nó removido. </p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>{</div>
+<div class="line"><span class="lineno">  148</span>    <a class="code hl_struct" href="structlista__no.html">ListaNo</a> *ant = NULL;</div>
+<div class="line"><span class="lineno">  149</span>    <a class="code hl_struct" href="structlista__no.html">ListaNo</a> *p = header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a>;</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">while</span> (p != NULL &amp;&amp; p-&gt;<a class="code hl_variable" href="structlista__no.html#a7a36422bc1461f8799760b08badfcfb7">info</a> != text)</div>
+<div class="line"><span class="lineno">  152</span>    {</div>
+<div class="line"><span class="lineno">  153</span>        ant = p;</div>
+<div class="line"><span class="lineno">  154</span>        p = p-&gt;<a class="code hl_variable" href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">proximo</a>;</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>    <span class="keywordflow">if</span> (p != NULL) {</div>
+<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (ant == NULL)</div>
+<div class="line"><span class="lineno">  159</span>            header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a> = p-&gt;<a class="code hl_variable" href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">proximo</a>;</div>
+<div class="line"><span class="lineno">  160</span>        <span class="keywordflow">else</span> </div>
+<div class="line"><span class="lineno">  161</span>            ant-&gt;<a class="code hl_variable" href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">proximo</a> = p-&gt;<a class="code hl_variable" href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">proximo</a>;</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  163</span>        free(p);</div>
+<div class="line"><span class="lineno">  164</span>    }</div>
+<div class="line"><span class="lineno">  165</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab45807f5bff86a9a38a03263606bb0ba" name="ab45807f5bff86a9a38a03263606bb0ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab45807f5bff86a9a38a03263606bb0ba">&#9670;&#160;</a></span>lst_returnNodeValid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lista_8h.html#ad7efd5bac5f63673a2fe8c13aee9ec6d">ListaNo</a> * lst_returnNodeValid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *&#160;</td>
+          <td class="paramname"><em>header</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o primeiro nó válido da lista. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>Ponteiro para a lista. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna um ponteiro para o primeiro nó válido da lista.</dd></dl>
+<p>Verifica se o ponteiro para o primeiro nó da lista é nulo. Se não for nulo, retorna o ponteiro para o primeiro nó. Caso contrário, imprime uma mensagem de erro e retorna NULL. </p>
+<div class="fragment"><div class="line"><span class="lineno">  213</span>                                           {</div>
+<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">if</span>(header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a> != NULL)</div>
+<div class="line"><span class="lineno">  215</span>    <span class="keywordflow">return</span> header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a>;</div>
+<div class="line"><span class="lineno">  216</span>    </div>
+<div class="line"><span class="lineno">  217</span>    <a class="code hl_function" href="util_8c.html#abb09396ee13a44215695d146ba593be5">printError</a>(<span class="stringliteral">&quot;lista vazia&quot;</span>);</div>
+<div class="line"><span class="lineno">  218</span> </div>
+<div class="line"><span class="lineno">  219</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  220</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1b6842b213e9b6afece7fdb9398df0e9" name="a1b6842b213e9b6afece7fdb9398df0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6842b213e9b6afece7fdb9398df0e9">&#9670;&#160;</a></span>lst_vazia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lst_vazia </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *&#160;</td>
+          <td class="paramname"><em>header</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se a lista está vazia. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>Ponteiro para a lista a ser verificada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna 1 se a lista está vazia, 0 caso contrário.</dd></dl>
+<p>Verifica se o ponteiro para o primeiro nó da lista é nulo. Se for nulo, a lista está vazia e a função retorna 1. Caso contrário, a lista não está vazia e a função retorna 0. </p>
+<div class="fragment"><div class="line"><span class="lineno">  178</span>{</div>
+<div class="line"><span class="lineno">  179</span>    <span class="keywordflow">return</span> (header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a> == NULL);</div>
+<div class="line"><span class="lineno">  180</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a082ed80572cb3a76e625c7715a5bd9c2" name="a082ed80572cb3a76e625c7715a5bd9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a082ed80572cb3a76e625c7715a5bd9c2">&#9670;&#160;</a></span>pertence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pertence </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lista_8h.html#a83d34a2ef405ccb8e18cf64ba8d2cb0d">Lista</a> *&#160;</td>
+          <td class="paramname"><em>header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se a lista contém um determinado elemento. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">header</td><td>Ponteiro para a lista a ser verificada. </td></tr>
+    <tr><td class="paramname">text</td><td>Elemento a ser procurado na lista. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna 1 se o elemento pertence à lista, 0 caso contrário.</dd></dl>
+<p>Percorre a lista a partir do primeiro nó e compara a informação de cada nó com o elemento fornecido. A função assume que a informação dos nós é do tipo string. Se o elemento for encontrado, retorna 1; caso contrário, retorna 0. </p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>{</div>
+<div class="line"><span class="lineno">  124</span>    <a class="code hl_struct" href="structlista__no.html">ListaNo</a> *ptr = header-&gt;<a class="code hl_variable" href="structlista.html#af0b5e0d1be061b7120e60dfac885cde6">primeiro</a>;</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">while</span>(ptr != NULL)</div>
+<div class="line"><span class="lineno">  126</span>    {</div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">if</span> (ptr-&gt;<a class="code hl_variable" href="structlista__no.html#a7a36422bc1461f8799760b08badfcfb7">info</a> == text)</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  129</span>        ptr = ptr-&gt;<a class="code hl_variable" href="structlista__no.html#a4f0ddc2055fb42944a3089346e35117c">proximo</a>;</div>
+<div class="line"><span class="lineno">  130</span>    }</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  133</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>
